@@ -1,50 +1,19 @@
 # FTC with WPILib
 
-.. admonition:: FTC Documentation Coming Soon
+.. admonition:: Practice Now, Compete in 2027-2028
 
-   Full WPILib support for FIRST Tech Challenge arrives with the
-   **Systemcore** and **Motioncore** controllers.
-   Documentation will be published here ahead of the 2027-2028 FTC season.
+   **Systemcore** and **Motioncore** become competition legal for FTC in the
+   2027-2028 season, but you don't have to wait to start. Systemcore itself
+   already works today: see :doc:`Zero to Robot </docs/zero-to-robot/introduction>`
+   to power one up and start coding on it now.
 
    `Follow the WPILib blog for updates → <https://wpilib.org/blog>`_
 
-Welcome to WPILib for FIRST Tech Challenge! This site will contain everything
-you need to program a competition robot using the same tools and languages as
-FRC: Java, Python, Blockly, and LabVIEW.
-
-.. rubric:: I am a…
-   :class: wl-ftc-text
-
-.. grid:: 1 2 2 4
-   :gutter: 3
-
-   .. grid-item-card:: New FTC Team
-      :link: ../zero-to-robot/introduction
-      :link-type: doc
-      :class-card: sw-card-ftc
-
-      First season competing? Start with the XRP desktop robot to learn
-      WPILib programming before your hardware arrives.
-
-   .. grid-item-card:: Returning FTC: Systemcore
-      :class-card: sw-card-ftc
-
-      Upgrading to Systemcore? Full WPILib documentation arrives for
-      the 2027-2028 season. Start with the XRP to get ahead.
-
-   .. grid-item-card:: Returning FTC: Android Based
-      :link: https://ftc-docs.firstinspires.org/en/latest/
-      :link-type: url
-      :class-card: sw-card-ftc
-
-      Still programming with FTC Legacy (Android Based)? Continue with the FTC SDK as normal.
-      Full documentation at ftc-docs.firstinspires.org.
-
-   .. grid-item-card:: Coach / Mentor
-      :class-card: sw-card-ftc
-
-      Resources for setting up your team, choosing a language, and
-      preparing for the 2027-2028 season.
+This page is a reference for WPILib support in FTC: what's here and what's
+coming. For step-by-step setup, start with
+:doc:`Zero to Robot </docs/zero-to-robot/introduction>` instead. It covers
+the same tools and languages used in FRC: Java, Python, Blockly, and
+LabVIEW.
 
 .. rubric:: Programming
    :class: wl-ftc-text
@@ -106,10 +75,10 @@ FRC: Java, Python, Blockly, and LabVIEW.
       Motor and servo controller hub for FTC robots.
       Works alongside Systemcore to drive mechanisms.
 
-.. rubric:: Get a Head Start Today
+.. rubric:: Related Resources
    :class: wl-shared-text
 
-.. grid:: 1 1 2 2
+.. grid:: 1 1 3 3
    :gutter: 3
 
    .. grid-item-card:: Practice with the XRP
@@ -117,8 +86,6 @@ FRC: Java, Python, Blockly, and LabVIEW.
       :link-type: doc
       :class-card: sw-card-shared
 
-      **Available Now**
-      ^^^
       Learn WPILib programming on the $75 XRP desktop robot.
       Similar code runs on Systemcore.
 
@@ -127,22 +94,28 @@ FRC: Java, Python, Blockly, and LabVIEW.
       :link-type: doc
       :class-card: sw-card-shared
 
-      **Available Now**
-      ^^^
       Overview of WPILib tools, languages, and how FTC fits into
       the broader WPILib ecosystem.
+
+   .. grid-item-card:: Coach / Mentor Resources
+      :link: https://ftc-docs.firstinspires.org/en/latest/persona_pages/rookie_teams/rookie_teams.html
+      :link-type: url
+      :class-card: sw-card-shared
+
+      Team registration, mentor resources, budgeting, and the
+      competition manual, program-wide and independent of which
+      control system your team uses.
 
 .. toctree::
    :maxdepth: 1
    :hidden:
 
-   ftc-kitbot-assembly
    basic-ftc-robot-wiring
    ftc-robot-wiring-overview
 
 .. note::
 
-   **Currently using FTC Legacy (Android Based)?**
+   **Currently using FTC Legacy (REV)?**
    Continue programming with the FTC SDK as normal.
    Full documentation at
    `ftc-docs.firstinspires.org <https://ftc-docs.firstinspires.org>`_.

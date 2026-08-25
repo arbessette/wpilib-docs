@@ -271,6 +271,7 @@ html_sidebars = {
         "sidebar/scroll-start.html",
         "sidebar/brand.html",
         "sidebar/search.html",
+        "sidebar/legend.html",
         "sidebar/navigation.html",
         "sidebar/ethical-ads.html",
         "sidebar/scroll-end.html",

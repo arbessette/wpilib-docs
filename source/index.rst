@@ -16,10 +16,10 @@ WPILib Documentation
      <p style="font-size:1rem;color:var(--color-foreground-secondary,#555);
         max-width:560px;margin:0 auto 20px;line-height:1.6;">
        WPILib is the standard programming library for <em>FIRST</em> Robotics,
-       supporting teams in
-       <strong style="color:#009CD7;">FRC</strong>
+       supporting teams competing in
+       <strong style="color:#009CD7;"><em>FIRST</em> Robotics Competition (FRC)</strong>
        and
-       <strong style="color:#e07000;">FTC</strong>.
+       <strong style="color:#e07000;"><em>FIRST</em> Tech Challenge (FTC)</strong>.
      </p>
    </div>
 
@@ -30,7 +30,7 @@ WPILib Documentation
        <p class="wl-tab-prompt">Where are you starting from?</p>
        <div class="wl-tab-buttons">
          <button class="wl-tab-btn" id="btn-new" onclick="wlSelectTab('new')">New to FIRST Programming</button>
-         <button class="wl-tab-btn" id="btn-returning" onclick="wlSelectTab('returning')">Returning Team</button>
+         <button class="wl-tab-btn" id="btn-returning" onclick="wlSelectTab('returning')">Returning WPILib User</button>
        </div>
      </div>
 
@@ -40,170 +40,27 @@ WPILib Documentation
        <!-- Screen 1: Experience level -->
        <div id="new-s1">
          <div class="wl-welcome">
-           <h2 class="wl-welcome-h">Let us help you find the right starting point.</h2>
-           <p class="wl-welcome-p">WPILib is the standard programming library for FIRST robotics &mdash; supporting both FRC and FTC teams. Built through a partnership between WPI, FIRST, and volunteer developers.</p>
+           <h2 class="wl-welcome-h">You're in the right place.</h2>
+           <p class="wl-welcome-p">No coding background needed. We'll get your tools installed and your robot moving.</p>
          </div>
-         <h3 class="wl-sh">How familiar are you with programming?</h3>
-         <div class="wl-grid">
-           <button class="wl-card wl-card-shared wl-btn" onclick="wlShow('new-s2')">
-             <span class="wl-num wl-shared-text">0</span>
-             <div>
-               <div class="wl-card-title">Brand new to programming</div>
-               <div class="wl-card-desc">Never written code before, or just starting out. We will point you to beginner resources and walk you through every step.</div>
-             </div>
-           </button>
-           <button class="wl-card wl-card-shared wl-btn" onclick="wlShow('new-s2')">
-             <span class="wl-num wl-shared-text">1</span>
-             <div>
-               <div class="wl-card-title">I know some programming basics</div>
-               <div class="wl-card-desc">You have written code before and are ready to jump into robot programming. Let us get your tools installed and your robot moving.</div>
-             </div>
-           </button>
+         <h3 class="wl-sh">Where are you right now?</h3>
+         <div class="wl-legend">
+           <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-frc"></span>FRC</span>
+           <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-ftc"></span>FTC</span>
+           <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-shared"></span>Shared</span>
+           <span class="wl-legend-note">Every card below is clickable.</span>
          </div>
-       </div>
-
-       <!-- Screen 1 continued: 4 steps preview -->
-       <div id="new-s1-steps">
-         <h3 class="wl-sh">Here is What the Steps Look Like</h3>
-         <div class="wl-grid">
-           <div class="wl-card wl-card-frc">
-             <span class="wl-num wl-frc-text">01</span>
-             <div>
-               <div class="wl-card-title">Install and Choose Your Tools</div>
-               <div class="wl-card-desc">WPILib, VS Code, Choose Java, C++, or Python.</div>
-             </div>
+         <a class="wl-card wl-card-shared wl-btn" href="docs/zero-to-robot/introduction.html" style="width:100%;box-sizing:border-box;margin-bottom:24px;">
+           <span class="wl-num wl-shared-text">→</span>
+           <div>
+             <div class="wl-card-title">Zero to Robot</div>
+             <div class="wl-card-desc">The full path: wire your robot, install tools, configure, and drive.</div>
            </div>
-           <div class="wl-card wl-card-frc">
-             <span class="wl-num wl-frc-text">02</span>
-             <div>
-               <div class="wl-card-title">Set Up Your Hardware</div>
-               <div class="wl-card-desc">Wire the control system, image the roboRIO, and configure the radio.</div>
-             </div>
-           </div>
-           <div class="wl-card wl-card-frc">
-             <span class="wl-num wl-frc-text">03</span>
-             <div>
-               <div class="wl-card-title">Write and Deploy Code</div>
-               <div class="wl-card-desc">Create your first project, write drive code, and deploy it to the robot.</div>
-             </div>
-           </div>
-           <div class="wl-card wl-card-frc">
-             <span class="wl-num wl-frc-text">04</span>
-             <div>
-               <div class="wl-card-title">Drive and Test</div>
-               <div class="wl-card-desc">Connect the Driver Station, plug in a joystick, and enable the robot for the first time.</div>
-             </div>
-           </div>
-         </div>
-       </div>
-
-       <!-- Screen 2: Which program -->
-       <div id="new-s2" style="display:none;">
-         <div class="wl-welcome">
-           <h2 class="wl-welcome-h">Which FIRST program are you in?</h2>
-           <p class="wl-welcome-p">WPILib supports multiple FIRST programs. Your setup steps differ slightly depending on which one you are in.</p>
-         </div>
-         <h3 class="wl-sh">Choose your program</h3>
-         <div class="wl-grid">
-           <button class="wl-card wl-card-frc wl-btn" onclick="wlShow('new-s3-frc')">
-             <span class="wl-num wl-frc-text">FRC</span>
-             <div>
-               <div class="wl-card-title">FIRST Robotics Competition</div>
-               <div class="wl-card-desc">Industrial sized robots, Built to play a court sized game. High school program. Now uses Systemcore (as of 2027) and supports Java, C++, or Python.</div>
-             </div>
-           </button>
-           <button class="wl-card wl-card-ftc wl-btn" onclick="wlShow('new-s3-ftc')">
-             <span class="wl-num wl-ftc-text">FTC</span>
-             <div>
-               <div class="wl-card-title">FIRST Tech Challenge</div>
-               <div class="wl-card-desc">Smaller robots. WPILib support is available via the Systemcore controller. FTC Legacy (Android Based) teams can still program with the FTC SDK.</div>
-             </div>
-           </button>
-         </div>
-         <button class="wl-back" onclick="wlBack('new-s1','new-s2')">Back</button>
-       </div>
-
-       <!-- Screen 3a: FRC steps -->
-       <div id="new-s3-frc" style="display:none;">
-         <div class="wl-welcome wl-welcome-frc">
-           <h2 class="wl-welcome-h">FRC : Four steps to a running robot.</h2>
-           <p class="wl-welcome-p">Follow these in order. You will have a driveable robot by the end of Step 4.</p>
-         </div>
-         <h3 class="wl-sh">Start Here</h3>
-         <div class="wl-grid">
-           <a class="wl-card wl-card-frc" href="docs/zero-to-robot/step-1/index.html">
-             <span class="wl-num wl-frc-text">01</span>
-             <div>
-               <div class="wl-card-title">Install Your Tools</div>
-               <div class="wl-card-desc">WPILib, VS Code, and FRC Game Tools. Choose Java, C++, or Python.</div>
-             </div>
-           </a>
-           <a class="wl-card wl-card-frc" href="docs/zero-to-robot/step-2/index.html">
-             <span class="wl-num wl-frc-text">02</span>
-             <div>
-               <div class="wl-card-title">Set Up Your Hardware</div>
-               <div class="wl-card-desc">Wire the control system and configure your devices.</div>
-             </div>
-           </a>
-           <a class="wl-card wl-card-frc" href="docs/zero-to-robot/step-3/index.html">
-             <span class="wl-num wl-frc-text">03</span>
-             <div>
-               <div class="wl-card-title">Write and Deploy Code</div>
-               <div class="wl-card-desc">Create your first project, write drive code, and deploy it to the robot.</div>
-             </div>
-           </a>
-           <a class="wl-card wl-card-frc" href="docs/zero-to-robot/step-4/index.html">
-             <span class="wl-num wl-frc-text">04</span>
-             <div>
-               <div class="wl-card-title">Drive</div>
-               <div class="wl-card-desc">Connect the Driver Station, plug in a joystick, and enable the robot for the first time.</div>
-             </div>
-           </a>
-         </div>
-         <h3 class="wl-sh">Helpful Background Reading</h3>
-         <div class="wl-quicklinks">
-           <a class="wl-ql wl-ql-frc" href="docs/zero-to-robot/introduction.html">Zero-to-Robot Introduction</a>
-           <a class="wl-ql wl-ql-frc" href="docs/hardware/hardware-basics/hardware-overview.html">Hardware Overview</a>
-           <a class="wl-ql wl-ql-frc" href="docs/software/what-is-wpilib.html">What is WPILib?</a>
-           <a class="wl-ql wl-ql-shared" href="docs/xrp-robot/index.html">Practice with the XRP</a>
-         </div>
+         </a>
          <div class="wl-tip wl-tip-shared">
-           <strong>Not ready for a full robot?</strong>
-           The <a href="docs/xrp-robot/index.html">XRP Robot Platform</a> lets you write and test real WPILib code on a low-cost desktop robot : no roboRIO or wiring required.
+           <strong>Already written code before?</strong>
+           See <a href="docs/zero-to-robot/new-to-wpilib.html">New to WPILib</a> first to understand how the pieces fit together.
          </div>
-         <button class="wl-back" onclick="wlBack('new-s2','new-s3-frc')">Back to program select</button>
-       </div>
-
-       <!-- Screen 3b: FTC paths -->
-       <div id="new-s3-ftc" style="display:none;">
-         <div class="wl-welcome wl-welcome-ftc">
-           <h2 class="wl-welcome-h">FTC : Two paths depending on your hardware.</h2>
-           <p class="wl-welcome-p">WPILib is expanding to FIRST Tech Challenge, but your options today depend on which control system your team uses.</p>
-         </div>
-         <h3 class="wl-sh">Choose your path</h3>
-         <div class="wl-grid">
-           <div class="wl-card wl-card-shared">
-             <span class="wl-num wl-shared-text" style="font-size:0.85rem;">NOW</span>
-             <div>
-               <div class="wl-card-title">FTC Legacy (Android based)</div>
-               <div class="wl-card-desc">The current standard FTC control system. Program today using the FTC SDK with Java or Blocks. Fully supported for the current season.</div>
-               <a href="https://ftc-docs.firstinspires.org" class="wl-card-link wl-shared-text" style="margin-top:10px;display:inline-block;">FTC SDK Docs (ftc-docs.firstinspires.org)</a>
-             </div>
-           </div>
-           <div class="wl-card wl-card-ftc">
-             <span class="wl-num wl-ftc-text" style="font-size:0.85rem;">NOW</span>
-             <div>
-               <div class="wl-card-title">Systemcore + Motioncore (WPILib)</div>
-               <div class="wl-card-desc">The new controllers bring full WPILib support to FTC: Now available for the 2027-2028 season.</div>
-               <a href="docs/ftc/index.html" class="wl-card-link wl-ftc-text" style="margin-top:10px;display:inline-block;">WPILib FTC Overview</a>
-             </div>
-           </div>
-         </div>
-         <div class="wl-tip wl-tip-shared">
-           <strong>Getting a head start on WPILib?</strong>
-           The <a href="docs/xrp-robot/index.html">XRP Robot Platform</a> lets you learn WPILib programming on real hardware today : the same code runs on Systemcore.
-         </div>
-         <button class="wl-back" onclick="wlBack('new-s2','new-s3-ftc')">Back to program select</button>
        </div>
 
      </div>
@@ -214,6 +71,23 @@ WPILib Documentation
        <div class="wl-welcome">
          <h2 class="wl-welcome-h">Welcome back. Here is what has changed for 2027.</h2>
          <p class="wl-welcome-p">Run through the checklist below before your first practice session. Several tools were removed in 2027 : check the deprecations section if you have not yet migrated.</p>
+       </div>
+
+       <div class="wl-grid">
+         <a class="wl-card wl-card-shared wl-btn" href="docs/zero-to-robot/returning.html">
+           <span class="wl-num wl-shared-text">0</span>
+           <div>
+             <div class="wl-card-title">Returning this season</div>
+             <div class="wl-card-desc">The full FRC checklist and FTC status, in one place.</div>
+           </div>
+         </a>
+         <a class="wl-card wl-card-shared wl-btn" href="docs/zero-to-robot/step-2/index.html">
+           <span class="wl-num wl-shared-text">1</span>
+           <div>
+             <div class="wl-card-title">Ready to install</div>
+             <div class="wl-card-desc">Skip the explanation and go straight to installing WPILib and your dev tools.</div>
+           </div>
+         </a>
        </div>
 
        <div class="wl-ret-grid">
@@ -237,7 +111,7 @@ WPILib Documentation
            <div class="wl-ret-card wl-ret-frc">
              <div class="wl-ret-label wl-frc-label">FRC</div>
              <h3 class="wl-ret-h">Removed in 2027 : No Longer Available</h3>
-             <p style="font-size:0.875rem;margin-bottom:8px;">These tools were <strong>removed in the 2027 season</strong>. If you have not yet migrated, you need to do so now.</p>
+             <p style="font-size:0.875rem;margin-bottom:8px;">These tools were <strong>removed in the 2027 season</strong>. Migrate now if you haven't already.</p>
              <ul>
                <li><strong>Shuffleboard</strong> : migrate to <a href="https://github.com/Gold872/elastic-dashboard">Elastic</a> or AdvantageScope</li>
                <li><strong>SmartDashboard</strong> : migrate to Glass or Elastic (uses deprecated NT v3)</li>
@@ -266,8 +140,8 @@ WPILib Documentation
            <div class="wl-ret-card wl-ret-ftc">
              <div class="wl-ret-label wl-ftc-label">FTC</div>
              <h3 class="wl-ret-h">FTC Teams : Your Options Right Now</h3>
-             <p style="font-size:0.875rem;margin-bottom:10px;">WPILib FTC support is now available with Systemcore. Here is where things stand for the 2027-2028 season:</p>
-             <strong style="font-size:0.875rem;">Using REV Control Hub / Expansion Hub (FTC Legacy (Android Based))?</strong>
+             <p style="font-size:0.875rem;margin-bottom:10px;">WPILib FTC support is now available with Systemcore, for the 2027-2028 season:</p>
+             <strong style="font-size:0.875rem;">Using REV Control Hub / Expansion Hub?</strong>
              <ul style="font-size:0.82rem;margin-top:6px;">
                <li>Continue programming with the <strong>FTC SDK</strong> as normal : Java or Blocks</li>
                <li>Full documentation at <a href="https://ftc-docs.firstinspires.org">ftc-docs.firstinspires.org</a></li>
@@ -309,19 +183,6 @@ WPILib Documentation
      document.getElementById('btn-' + tab).classList.add('active');
      try { localStorage.setItem('wpilib-tab', tab); } catch(e) {}
    }
-   function wlShow(id) {
-     ['new-s1','new-s1-steps','new-s2','new-s3-frc','new-s3-ftc'].forEach(function(s) {
-       var el = document.getElementById(s);
-       if (el) el.style.display = (s === id) ? 'block' : 'none';
-     });
-   }
-   function wlBack(showId, hideId) {
-     document.getElementById(hideId).style.display = 'none';
-     document.getElementById(showId).style.display  = 'block';
-     if (showId === 'new-s1') {
-       document.getElementById('new-s1-steps').style.display = 'block';
-     }
-   }
    (function() {
      var saved; try { saved = localStorage.getItem('wpilib-tab'); } catch(e) {}
      wlSelectTab(saved || 'new');
@@ -334,15 +195,24 @@ WPILib Documentation
    <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-foreground-secondary,#555);border-bottom:1px solid var(--color-background-border,#ddd);padding-bottom:7px;margin-bottom:6px;">Core Documentation</h2>
    <p style="font-size:0.85rem;color:var(--color-foreground-secondary,#555);margin-bottom:14px;">Shared across all supported programs.</p>
 
+   <h3 class="wl-sh">Foundations</h3>
    <div class="wl-core-grid">
      <a class="wl-core-card" href="docs/hardware/hardware-basics/hardware-overview.html"><div class="wl-core-title">Hardware Overview</div><div class="wl-core-desc">Motors, sensors, pneumatics, cameras, and FRC-legal components.</div></a>
      <a class="wl-core-card" href="docs/software/what-is-wpilib.html"><div class="wl-core-title">Software Overview</div><div class="wl-core-desc">WPILib tools, VS Code extensions, vendor libraries, and the full software ecosystem.</div></a>
      <a class="wl-core-card" href="docs/software/commandbased/index.html"><div class="wl-core-title">Robot Programming</div><div class="wl-core-desc">Command-based framework, subsystems, triggers, and drive code patterns.</div></a>
-     <a class="wl-core-card" href="docs/software/pathplanning/index.html"><div class="wl-core-title">Path Planning</div><div class="wl-core-desc">Autonomous trajectories with PathPlanner, Choreo, and WPILib built-in tools.</div></a>
+   </div>
+
+   <h3 class="wl-sh">Everyday Tools</h3>
+   <div class="wl-core-grid">
      <a class="wl-core-card" href="docs/software/dashboards/index.html"><div class="wl-core-title">Dashboards</div><div class="wl-core-desc">Elastic, AdvantageScope, Glass, and NetworkTables for real-time telemetry.</div></a>
-     <a class="wl-core-card" href="docs/software/advanced-controls/index.html"><div class="wl-core-title">Advanced Controls</div><div class="wl-core-desc">PID, feedforward, state-space, kinematics, and system identification.</div></a>
      <a class="wl-core-card" href="docs/software/wpilib-tools/robot-simulation/index.html"><div class="wl-core-title">Simulation</div><div class="wl-core-desc">Test robot code on your laptop : no hardware required.</div></a>
      <a class="wl-core-card" href="docs/api-reference.html"><div class="wl-core-title">API Reference</div><div class="wl-core-desc">Java, C++, and Python class and method documentation.</div></a>
+   </div>
+
+   <h3 class="wl-sh">Advanced &amp; Autonomy</h3>
+   <div class="wl-core-grid">
+     <a class="wl-core-card" href="docs/software/pathplanning/index.html"><div class="wl-core-title">Path Planning</div><div class="wl-core-desc">Autonomous trajectories with PathPlanner, Choreo, and WPILib built-in tools.</div></a>
+     <a class="wl-core-card" href="docs/software/advanced-controls/index.html"><div class="wl-core-title">Advanced Controls</div><div class="wl-core-desc">PID, feedforward, state-space, kinematics, and system identification.</div></a>
    </div>
 
    <div style="margin-top:8px;padding:14px 18px;
@@ -364,11 +234,15 @@ WPILib Documentation
    :caption: Getting Started
    :hidden:
 
+   docs/zero-to-robot/coding-basics
+   docs/zero-to-robot/new-to-wpilib
+   docs/zero-to-robot/returning
    docs/zero-to-robot/introduction
    docs/zero-to-robot/step-1/index
    docs/zero-to-robot/step-2/index
    docs/zero-to-robot/step-3/index
    docs/zero-to-robot/step-4/index
+   docs/zero-to-robot/step-5/index
 
 .. toctree::
    :maxdepth: 1
@@ -405,6 +279,7 @@ WPILib Documentation
    docs/software/dashboards/index
    docs/software/telemetry/index
    docs/software/hardware-apis/index
+   docs/software/programming-snippets
    docs/software/can-devices/index
    docs/software/basic-programming/index
    docs/software/python/index

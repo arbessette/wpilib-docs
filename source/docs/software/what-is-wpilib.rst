@@ -127,7 +127,7 @@ WPILib supports two families of development environment: a full
 **desktop IDE** and browser-based **OnBot** environments that run
 directly on the Systemcore with no local install.
 
-**Desktop Environment — Java, C++, Python**
+**Desktop Environment: Java, C++, Python**
 
 .. card:: Visual Studio Code + WPILib Extension
    :class-card: sw-card-frc
@@ -169,19 +169,19 @@ directly on the Systemcore with no local install.
 .. tip::
 
    **Python install experience:** WPILib is actively working to
-   provide a more integrated Python setup — reducing the number of
+   provide a more integrated Python setup, reducing the number of
    separate steps compared to Java/C++.
    **C++ build system:** GradleRIO is the baseline; transitioning
    to an alternative build system is possible depending on community contributions.
 
-**OnBot Environments — Blockly, Java, Python, LabVIEW**
+**OnBot Environments: Blockly, Java, Python, LabVIEW**
 
 .. card:: VS Code-derived editor hosted on Systemcore
    :class-card: sw-card-frc
 
    **OnBot (Browser-based)**
 
-   OnBot environments run entirely in the browser — no local
+   OnBot environments run entirely in the browser, no local
    installation required. Code is written, saved, and deployed directly
    on the Systemcore. Supports multiple saved Workspaces with a Deploy
    button to choose which one runs.
@@ -226,7 +226,7 @@ directly on the Systemcore with no local install.
    *Workspaces* with a Deploy button to select which one runs on
    the Systemcore. Simulation is not planned for OnBot environments.
 
-**FTC Legacy (Android Based)**
+**FTC Legacy (REV)**
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -234,16 +234,16 @@ directly on the Systemcore with no local install.
    .. grid-item-card:: OnBot Java / Android Studio
       :class-card: sw-card-ftc
 
-      **FTC Legacy (Android Based)**
+      **FTC Legacy (REV)**
       ^^^
-      Teams using the Android Based FTC SDK with OnBot Java (browser-based)
+      Teams using the REV FTC SDK with OnBot Java (browser-based)
       or Android Studio. Documented at
       `ftc-docs.firstinspires.org <https://ftc-docs.firstinspires.org>`_.
 
    .. grid-item-card:: Blocks (FTC SDK)
       :class-card: sw-card-ftc
 
-      **FTC Legacy (Android Based)**
+      **FTC Legacy (REV)**
       ^^^
       Visual block-based programming via the FTC SDK OnBot interface.
       Documented at
@@ -258,7 +258,7 @@ directly on the Systemcore with no local install.
    * - Feature
      - Desktop (VS Code)
      - OnBot (Java / Python / Blockly / LabVIEW)
-     - FTC Legacy (Android Based)
+     - FTC Legacy (REV)
    * - **Languages**
      - Java, C++, Python
      - Java, Python, Blockly, LabVIEW
@@ -281,7 +281,7 @@ directly on the Systemcore with no local install.
      - ✗ None
    * - **Offline install**
      - ✓
-     - N/A — runs on Systemcore
+     - N/A, runs on Systemcore
      - ✓
    * - **Multi-user**
      - N/A
@@ -305,10 +305,10 @@ directly on the Systemcore with no local install.
      - Status
      - Best for
    * - **Elastic**
-     - ✓ Current — recommended
+     - ✓ Current, recommended
      - Competition driver dashboard. Highly configurable.
    * - **AdvantageScope**
-     - ✓ Current — recommended
+     - ✓ Current, recommended
      - Log review, 3D field visualization, mechanism replay.
    * - **Glass**
      - ✓ Current
@@ -330,11 +330,11 @@ directly on the Systemcore with no local install.
 
    .. grid-item-card:: Common libraries
 
-      - **REVLib** — SPARK MAX, SPARK Flex
-      - **Phoenix 6** — Talon FX, CANcoder
-      - **PathplannerLib** — auto trajectories
-      - **PhotonLib** — PhotonVision cameras
-      - **Limelight** — Limelight cameras
+      - **REVLib**: SPARK MAX, SPARK Flex
+      - **Phoenix 6**: Talon FX, CANcoder
+      - **PathplannerLib**: auto trajectories
+      - **PhotonLib**: PhotonVision cameras
+      - **Limelight**: Limelight cameras
 
 .. rubric:: Path Planning
 
@@ -356,7 +356,7 @@ directly on the Systemcore with no local install.
    .. grid-item-card:: Road Runner and PedroPathing
       :class-card: sw-card-ftc
 
-      **FTC Legacy (Android Based)**
+      **FTC Legacy (REV)**
       ^^^
       Libraries for generating autonomous paths and trajectories.
       RoadRunner focuses on time consistency, while Pedro Pathing

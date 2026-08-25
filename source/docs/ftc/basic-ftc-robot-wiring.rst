@@ -8,7 +8,7 @@
    `Follow the WPILib blog for updates → <https://wpilib.org/blog>`_
 
 This page will cover simplified wiring for the Systemcore and Motioncore
-controllers — a good starting point for rookie FTC teams.
+controllers, a good starting point for rookie FTC teams.
 
 Topics planned for this guide:
 

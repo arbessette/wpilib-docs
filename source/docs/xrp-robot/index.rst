@@ -35,7 +35,7 @@ work on the XRP.
       **Pre-season**
       ^^^
       Learn command-based programming, encoders, PID, and odometry
-      before build season starts — on a desk.
+      before build season starts, right on a desk.
 
    .. grid-item-card:: FTC Prep
       :class-card: sw-card-ftc
@@ -51,7 +51,7 @@ work on the XRP.
 
    XRP code runs on your **laptop as a simulation**, communicating
    with the XRP hardware over Wi-Fi. You use the same
-   **WPILib VS Code tools and Driver Station** as FRC —
+   **WPILib VS Code tools and Driver Station** as FRC:
    the XRP just appears as a simulated robot that drives real motors.
 
 .. grid:: 1 2 3 3
@@ -142,7 +142,7 @@ work on the XRP.
    .. grid-item-card:: Software (all platforms)
 
       - :doc:`WPILib installed <../zero-to-robot/step-2/wpilib-setup>`
-      - FRC Driver Station (Windows — for enabling)
+      - FRC Driver Station (Windows, for enabling)
       - XRP firmware flashed on the board
 
    .. grid-item-card:: Hardware

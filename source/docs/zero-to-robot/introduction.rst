@@ -2,64 +2,68 @@
 
 # Zero to Robot: Introduction
 
-Welcome to WPILib — the standard programming library for *FIRST*\ |reg| Robotics Competition
+Welcome to WPILib, the standard programming library for *FIRST*\ |reg| Robotics Competition
 (FRC\ |reg|) and FIRST Tech Challenge (FTC).
-This guide walks you through everything you need to start driving a robot.
+This guide gets you from parts on a table to a driving robot.
 
 .. rubric:: Choose Your Programming Language
    :class: wl-shared-text
 
 WPILib supports multiple languages. Pick one: your tools and steps are the same regardless of choice.
 
-.. grid:: 1 2 3 5
-   :gutter: 3
+.. list-table::
+   :header-rows: 1
+   :widths: 11 16 8 8 22 35
 
-   .. grid-item-card:: Java
-      :class-card: sw-card-rec
+   * - Language
+     - Style
+     - OnBot
+     - Desktop
+     - Best for
+     - Notes
+   * - **Blockly**
+     - Graphical (blocks)
+     - ✓
+     - ✓
+     - Beginners with no prior syntax knowledge
+     - Outputs Python under the hood
+   * - **Java**
+     - Text, statically typed
+     - ✓
+     - ✓
+     - New teams, most teams
+     - Most community examples
+   * - **C++**
+     - Text, statically typed
+     - ✗
+     - ✓
+     - Teams that already know C++
+     - Highest performance; manual memory management adds
+       complexity for beginners
+   * - **Python**
+     - Text, dynamically typed
+     - ✓
+     - ✓
+     - Teams already using Python
+     - Easiest syntax; growing set of community examples
+   * - **LabVIEW**
+     - Graphical (dataflow)
+     - ✓
+     - ✗
+     - Teams with a LabVIEW background
+     - Graphical dataflow programming
 
-      **Recommended — FRC + FTC**
-      ^^^
-      Statically typed, and has the most community examples.
-      Best choice if you are unsure.
-
-   .. grid-item-card:: C++
-      :class-card: sw-card-shared
-
-      **FRC + FTC**
-      ^^^
-      Highest performance. Good choice if your team already knows C++.
-      Memory management adds complexity for beginners.
-
-   .. grid-item-card:: Python
-      :class-card: sw-card-shared
-
-      **FRC + FTC**
-      ^^^
-      Easiest syntax. Growing community examples. Best if your team
-      already programs in Python and wants a gentle start.
-
-   .. grid-item-card:: Blockly
-      :class-card: sw-card-shared
-
-      **FRC + FTC**
-      ^^^
-      Graphical interface, runs OnBot, outputs Python. Great for
-      beginners with no prior syntax knowledge.
-
-   .. grid-item-card:: LabVIEW
-      :class-card: sw-card-shared
-
-      **FRC + FTC**
-      ^^^
-      Graphical dataflow programming, runs OnBot. Familiar to teams
-      with a LabVIEW background.
+All five are available for both FRC and FTC. OnBot runs directly in the
+browser on the Systemcore with nothing to install; LabVIEW is OnBot
+only.
 
 .. tip::
 
-   **New to programming entirely?** Check out
+   **New to programming entirely?** Start with :doc:`Coding Basics <coding-basics>`
+   for the core concepts you'll see in robot code, or go straight to
    `Codecademy Java <https://www.codecademy.com/learn/learn-java>`_ or
    `Python learning guides <http://docs.python-guide.org/en/latest/intro/learning/>`_
-   before continuing. You can wire and configure your robot first (Steps 1 and 3)
+   for a full course. You can wire and configure your robot first (Steps 1 and 3)
    while learning to code in parallel.
 
 .. rubric:: What You Need
@@ -76,7 +80,7 @@ WPILib supports multiple languages. Pick one: your tools and steps are the same 
       - Systemcore controller
       - Power Distribution Hub (PDH) or Panel (PDP)
       - Vivid VH-109 Radio
-      - Voltage Regulator Module (VRM) — for radio power
+      - Voltage Regulator Module (VRM), for radio power
       - Motor controllers (SPARK MAX, Talon FX, etc.)
       - Drive motors and wheels
       - 12 V robot battery and fuse
@@ -98,66 +102,75 @@ WPILib supports multiple languages. Pick one: your tools and steps are the same 
    :gutter: 3
 
    .. grid-item-card:: What Gets Installed
+      :class-card: sw-card-shared
 
-      **Software — All Teams**
+      **Software: Only If You Need It**
       ^^^
-      - **WPILib** — robot programming library + VS Code
-      - **FRC Game Tools** — Driver Station *(Windows only)*
-      - **RobotPy** — Python framework *(Python teams only)*
-      - Vendor libraries (REVLib, Phoenix 6, etc.) — installed per project
+      OnBot teams don't need to download anything to write code. You only
+      need desktop software if you're not using OnBot, or if you're an
+      FRC team that needs the Driver Station.
 
-      **OS note:** Driver Station requires Windows. Coding and simulation
-      work on macOS and Linux.
+      - **WPILib**: robot programming library + VS Code, for desktop
+        development
+      - **FRC Driver Station**: required for FRC teams. Runs on Windows,
+        macOS, and Linux, but only the Windows version is competition
+        legal
+      - **RobotPy**: Python framework, for desktop Python teams
+      - Vendor libraries (REVLib, Phoenix 6, etc.), installed per project
 
    .. grid-item-card:: Practice with the XRP
       :link: ../xrp-robot/index
       :link-type: doc
       :class-card: sw-card-shared
 
-      **No Full Robot? No Problem.**
+      **No Full Robot Yet?**
       ^^^
       The XRP is a desktop robot that runs real WPILib code.
-      Great for learning before build season — and for FTC teams
+      Great for learning before build season, and for FTC teams
       getting a head start on Systemcore programming.
 
-.. rubric:: The Four Steps
-   :class: wl-frc-text
+.. rubric:: The Steps
+   :class: wl-shared-text
 
-Complete these in order. You will have a driving robot by the end of Step 4.
+Complete these in order. You will have a driving robot by the end of
+Step 4, and Step 5 is there if you get stuck along the way.
 
 .. note::
 
-   **FTC teams:** Full hardware setup guides arrive with Systemcore and Motioncore
-   in the 2027-2028 season. For now, **start at Step 2** (Install Your Tools) and
-   practice with the :doc:`XRP robot <../xrp-robot/index>` — the same WPILib code
-   runs on Systemcore when your hardware is ready.
+   **FTC teams:** Robot assembly and Motioncore-specific wiring arrive with
+   Systemcore and Motioncore in the 2027-2028 season, but you don't need to
+   wait to get started. Powering and connecting to the Systemcore
+   (Step 1, Parts 2-3) and installing your tools (Step 2) already apply
+   today. Practice with the :doc:`XRP robot <../xrp-robot/index>` in the
+   meantime; the same WPILib code runs on Systemcore when your hardware
+   is ready.
 
-.. grid:: 1 2 2 4
+.. grid:: 1 2 3 5
    :gutter: 3
 
    .. grid-item-card:: Build Your Robot
       :link: step-1/index
       :link-type: doc
-      :class-card: sw-card-frc
+      :class-card: sw-card-shared
 
       **01**
       ^^^
       Wire the control system: power distribution, Systemcore,
       motor controllers, and radio.
 
-   .. grid-item-card:: Install Your Tools
+   .. grid-item-card:: Set Up Your Environment
       :link: step-2/index
       :link-type: doc
-      :class-card: sw-card-frc
+      :class-card: sw-card-shared
 
       **02**
       ^^^
-      Install WPILib and Driver Station on your laptop.
+      Choose OnBot or VS Code, and get your Driver Station installed.
 
    .. grid-item-card:: Configure Your Control System
       :link: step-3/index
       :link-type: doc
-      :class-card: sw-card-frc
+      :class-card: sw-card-shared
 
       **03**
       ^^^
@@ -167,12 +180,21 @@ Complete these in order. You will have a driving robot by the end of Step 4.
    .. grid-item-card:: Write and Drive
       :link: step-4/index
       :link-type: doc
-      :class-card: sw-card-frc
+      :class-card: sw-card-shared
 
       **04**
       ^^^
       Create your first robot project, deploy code to the robot,
       and enable it with the Driver Station.
+
+   .. grid-item-card:: Troubleshooting
+      :link: step-5/index
+      :link-type: doc
+      :class-card: sw-card-shared
+
+      **05**
+      ^^^
+      Something not working? Find your symptom and fix it here.
 
 .. rubric:: Tips for New Teams
    :class: wl-shared-text
@@ -199,13 +221,3 @@ Complete these in order. You will have a driving robot by the end of Step 4.
          When something goes wrong on the robot, open the Driver Station log
          viewer. It records exactly when the robot disconnected, what threw
          an exception, and why the robot disabled.
-
-   .. grid-item::
-
-      .. tip::
-
-         **FTC teams: start with the XRP**
-
-         Systemcore hardware arrives in 2027-2028. Use the $75 XRP desktop
-         robot now — it runs real WPILib code and the same programs transfer
-         directly to Systemcore.
