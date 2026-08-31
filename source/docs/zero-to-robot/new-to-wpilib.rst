@@ -44,7 +44,7 @@ Really just the Driver Station and what the motors plug into. FRC uses
 the FRC Driver Station, with motor controllers wired directly to the
 Systemcore; FTC gets its own Driver Station app, and motors and servos
 plug into Motioncore instead. Everything above is the same either way.
-The :doc:`Zero to Robot introduction <introduction>` covers those
+The :doc:`Zero to Robot guide <introduction>` covers those
 program-specific steps.
 
 .. tip::
@@ -57,4 +57,4 @@ program-specific steps.
 
    .. container:: sw-next
 
-      :doc:`Continue to Zero to Robot: Introduction → <introduction>`
+      :doc:`Continue to Zero to Robot → <introduction>`

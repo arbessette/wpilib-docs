@@ -1,9 +1,9 @@
-# FTC Robot Wiring Overview
+# FTC Robot Wiring Reference
 
 .. admonition:: Coming 2027-2028
 
-   This reference will be published ahead of the 2027-2028 FTC season when
-   full WPILib support for FIRST Tech Challenge launches.
+   This reference will be published ahead of the fall 2027 launch for the
+   2027-2028 FTC season.
 
    `Follow the WPILib blog for updates → <https://wpilib.org/blog>`_
 
@@ -11,8 +11,8 @@
    `Robot Wiring Guide <https://ftc-docs.firstinspires.org/en/latest/robot_building/wiring_guide/wiring-guide.html>`_
    covers current control system wiring in detail.
 
-This page will be a full reference for FTC control system wiring, covering
-all components with diagrams.
+This page will be a reference for looking up FTC control system connections
+and component details while wiring or troubleshooting a robot.
 
 Topics planned for this reference:
 

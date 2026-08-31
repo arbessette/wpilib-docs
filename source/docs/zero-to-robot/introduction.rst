@@ -1,15 +1,23 @@
 .. include:: <isonum.txt>
 
-# Zero to Robot: Introduction
+# Zero to Robot
 
 Welcome to WPILib, the standard programming library for *FIRST*\ |reg| Robotics Competition
 (FRC\ |reg|) and FIRST Tech Challenge (FTC).
 This guide gets you from parts on a table to a driving robot.
 
+.. important::
+
+   **Release timeline:** Systemcore launches for the **2027 FRC season in
+   January 2027**. FTC support launches in **fall 2027** for the **2027-2028
+   FTC season**. Alpha and Beta teams may be able to use the hardware earlier,
+   but those testing workflows are not the production competition release.
+
 .. rubric:: Choose Your Programming Language
    :class: wl-shared-text
 
-WPILib supports multiple languages. Pick one: your tools and steps are the same regardless of choice.
+WPILib supports multiple languages. The available tools depend on your
+program and control system, so use the table to choose a supported path.
 
 .. list-table::
    :header-rows: 1
@@ -53,18 +61,23 @@ WPILib supports multiple languages. Pick one: your tools and steps are the same 
      - Teams with a LabVIEW background
      - Graphical dataflow programming
 
-All five are available for both FRC and FTC. OnBot runs directly in the
-browser on the Systemcore with nothing to install; LabVIEW is OnBot
-only.
+The table describes the planned 2027 Systemcore workflow. Until that
+workflow is released, FTC teams using the REV Control Hub should follow
+the `current FTC programming-tool guide
+<https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/choosing_program_lang/choosing-program-lang.html>`_.
+It supports Blocks, OnBot Java, and Android Studio; its instructions are
+not interchangeable with the Systemcore instructions in this guide.
+
+On Systemcore, OnBot runs in a browser with nothing to install. LabVIEW
+is available through OnBot only.
 
 .. tip::
 
-   **New to programming entirely?** Start with :doc:`Coding Basics <coding-basics>`
-   for the core concepts you'll see in robot code, or go straight to
+   **New to programming entirely?** No programming experience is required.
+   This guide introduces variables, objects, methods, and control flow as you
+   build and test the robot. If you want a full course alongside the guide, try
    `Codecademy Java <https://www.codecademy.com/learn/learn-java>`_ or
-   `Python learning guides <http://docs.python-guide.org/en/latest/intro/learning/>`_
-   for a full course. You can wire and configure your robot first (Steps 1 and 3)
-   while learning to code in parallel.
+   `Python learning guides <http://docs.python-guide.org/en/latest/intro/learning/>`_.
 
 .. rubric:: What You Need
    :class: wl-shared-text
@@ -79,12 +92,12 @@ only.
       ^^^
       - Systemcore controller
       - Power Distribution Hub (PDH) or Panel (PDP)
-      - Vivid VH-109 Radio
-      - Voltage Regulator Module (VRM), for radio power
+      - Vivid VH-109 Radio (powered directly from robot battery voltage; no VRM required)
+      - 18 AWG wire for VH-109 power
       - Motor controllers (SPARK MAX, Talon FX, etc.)
       - Drive motors and wheels
       - 12 V robot battery and fuse
-      - Ethernet cable and USB-A cable
+      - Ethernet cable and a USB cable that matches the Systemcore's USB device port
 
    .. grid-item-card:: FTC Robot Components
       :class-card: sw-card-ftc
@@ -132,14 +145,17 @@ only.
 .. rubric:: The Steps
    :class: wl-shared-text
 
-Complete these in order. You will have a driving robot by the end of
-Step 4, and Step 5 is there if you get stuck along the way.
+For the complete **FRC VS Code path**, follow Steps 1 through 4 in order;
+you will have a driving robot by the end of Step 4. Step 5 is a
+troubleshooting reference to use whenever you get stuck. Systemcore
+OnBot, Blockly, and FTC-specific paths are still being completed and are
+clearly marked where they diverge.
 
 .. note::
 
    **FTC teams:** Robot assembly and Motioncore-specific wiring arrive with
-   Systemcore and Motioncore in the 2027-2028 season, but you don't need to
-   wait to get started. Powering and connecting to the Systemcore
+   the FTC launch in fall 2027 for the 2027-2028 season, but you don't need
+   to wait to get started. Powering and connecting to the Systemcore
    (Step 1, Parts 2-3) and installing your tools (Step 2) already apply
    today. Practice with the :doc:`XRP robot <../xrp-robot/index>` in the
    meantime; the same WPILib code runs on Systemcore when your hardware
@@ -148,7 +164,7 @@ Step 4, and Step 5 is there if you get stuck along the way.
 .. grid:: 1 2 3 5
    :gutter: 3
 
-   .. grid-item-card:: Build Your Robot
+   .. grid-item-card:: Build and Wire Your Robot
       :link: step-1/index
       :link-type: doc
       :class-card: sw-card-shared
@@ -221,3 +237,13 @@ Step 4, and Step 5 is there if you get stuck along the way.
          When something goes wrong on the robot, open the Driver Station log
          viewer. It records exactly when the robot disconnected, what threw
          an exception, and why the robot disabled.
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   Step 1: Build and Wire Your Robot <step-1/index>
+   Step 2: Set Up Your Environment <step-2/index>
+   Step 3: Configure Your Control System <step-3/index>
+   Step 4: Write and Drive <step-4/index>
+   Step 5: Troubleshooting <step-5/index>

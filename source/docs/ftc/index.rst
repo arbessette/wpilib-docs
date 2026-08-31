@@ -2,10 +2,12 @@
 
 .. admonition:: Practice Now, Compete in 2027-2028
 
-   **Systemcore** and **Motioncore** become competition legal for FTC in the
-   2027-2028 season, but you don't have to wait to start. Systemcore itself
-   already works today: see :doc:`Zero to Robot </docs/zero-to-robot/introduction>`
-   to power one up and start coding on it now.
+   **Systemcore** and **Motioncore** launch for FTC in **fall 2027** and become
+   competition legal for the **2027-2028 FTC season**. This is separate from
+   the Systemcore launch for the 2027 FRC season in January 2027. Alpha and
+   Beta hardware can be used for testing before the FTC launch: see
+   :doc:`Zero to Robot </docs/zero-to-robot/introduction>` to power one up and
+   start coding.
 
    `Follow the WPILib blog for updates → <https://wpilib.org/blog>`_
 
@@ -105,13 +107,6 @@ LabVIEW.
       Team registration, mentor resources, budgeting, and the
       competition manual, program-wide and independent of which
       control system your team uses.
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-
-   basic-ftc-robot-wiring
-   ftc-robot-wiring-overview
 
 .. note::
 

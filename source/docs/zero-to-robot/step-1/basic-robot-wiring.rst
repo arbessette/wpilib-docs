@@ -102,7 +102,7 @@ For a test board, cut piece of 1/4" or 1/2" (6-12 mm) material (wood or plastic)
 
 Lay out the components on the board. An example layout is shown in the image above.
 
-.. note:: A Vivid-Hosting has a [guide](https://frc-radio.vivid-hosting.net/getting-started/usage/mounting-your-radio) for mounting the VH-109 radio.
+.. note:: Vivid Hosting provides a [VH-109 mounting guide](https://frc-radio.vivid-hosting.net/overview/mounting-your-radio).
 
 ## Step 4: Fasten Components
 
@@ -329,7 +329,11 @@ After making the connection check to be sure that it is clean and secure:
 
 ## Step 11: Radio Power
 
-[Vivid-Hosting Wiring Guide](https://frc-radio.vivid-hosting.net/getting-started/usage/wiring-your-radio)
+[Vivid-Hosting Wiring Guide](https://frc-radio.vivid-hosting.net/overview/wiring-your-radio)
+
+The VH-109 is designed to run directly from robot battery voltage through its
+12 VDC Weidmuller input. A VRM is not required. The instructions below show
+direct power from the robot power distribution system.
 
 .. tab-set::
 
@@ -362,9 +366,12 @@ After making the connection check to be sure that it is clean and secure:
 4. Cut and strip ~5/16" (~8 mm) from the end of the wire.
 5. Connect the wire to the VH-109 "12V" Weidmuller terminals.
 
-.. note:: The radio can additionally be powered by :term:`PoE` to create a more redundant connection.
+.. note:: The radio can additionally be powered by :term:`PoE` to create a more redundant connection. Both inputs must use the same source and voltage; follow the current Vivid-Hosting wiring guide.
 
-.. warning:: If powering the radio this way, the roboRIO must be connected via a PoE injector, modified ethernet cable, or to one of the `AUX` ports of the VH-109 with the corresponding DIP switch in the off (default) position.
+.. warning:: If powering the radio this way, the roboRIO must be connected via
+   a PoE injector, modified Ethernet cable, or to one of the ``AUX`` ports of
+   the VH-109. When using an AUX port, verify in the radio configuration that
+   PoE output is disabled for that port before connecting the roboRIO.
 
 ## Step 12: Pneumatics Power (Optional)
 
@@ -418,7 +425,11 @@ Requires: an Ethernet cable
 
 .. note:: If using :term:`PoE` you may need a second Ethernet cable or longer power wires.
 
-.. warning:: If the VH-109 is powered using the 12V input terminals, the roboRIO should be connected to the VH-109 through a PoE injector, a modified ethernet cable, or to one of the `AUX` ports on the VH-109 instead of the `RIO` port with the corresponding DIP switch in the off (default) position.
+.. warning:: If the VH-109 is powered using the 12 V input terminals, the
+   roboRIO should be connected through a PoE injector, a modified Ethernet
+   cable, or to one of the ``AUX`` ports instead of the ``RIO`` port. When
+   using an AUX port, verify in the radio configuration that PoE output is
+   disabled for that port before connecting the roboRIO.
 
 .. warning:: DO NOT connect the Rev passive :term:`PoE` injector cable directly to the roboRIO. The roboRIO MUST connect to the socket end of the cable using an additional Ethernet cable as shown in the next step.
 

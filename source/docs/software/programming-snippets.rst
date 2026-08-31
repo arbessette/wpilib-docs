@@ -46,7 +46,53 @@ Spin a motor at a set speed:
 
       .. admonition:: Coming Soon
 
-         A Blocks (Blockly) version of this snippet will be added here.
+         A Blocks version of this single-motor snippet will be added here.
+
+      .. _blocks-drivetrain-samples:
+
+      .. rubric:: Complete Drivetrain Samples
+
+      The Blocks interface includes complete drivetrain projects. Select
+      :guilabel:`Samples...`, choose a project, then select
+      :guilabel:`Create New Project From Sample` to make an editable copy.
+
+      .. tab-set::
+
+         .. tab-item:: Differential A301
+
+            ``DifferentialDrive301`` demonstrates a two-motor A301 drivetrain
+            controlled by a gamepad.
+
+            .. image:: images/programming-snippets/differential-drive-blocks-sample.png
+               :alt: The DifferentialDrive301 sample's SimpleDriveTeleop blocks, which use gamepad axes to drive an A301 differential drivetrain.
+               :width: 900
+
+            `View the DifferentialDrive301 source
+            <https://github.com/wpilibsuite/systemcore-blocks-interface/tree/main/frontend/samples/DifferentialDrive301>`_.
+
+         .. tab-item:: Mecanum A301
+
+            ``MecanumRobot301`` demonstrates a four-motor mecanum drivetrain
+            using A301 motor controllers.
+
+            .. image:: images/programming-snippets/mecanum-301-blocks-sample.png
+               :alt: The MecanumRobot301 Teleop blocks, which use three gamepad axes to drive and rotate an A301 mecanum drivetrain.
+               :width: 900
+
+            `View the MecanumRobot301 source
+            <https://github.com/wpilibsuite/systemcore-blocks-interface/tree/main/frontend/samples/MecanumRobot301>`_.
+
+         .. tab-item:: Mecanum Expansion Hub
+
+            ``MecanumRobotExpansionHub`` demonstrates a four-motor mecanum
+            drivetrain using motors connected to a REV Expansion Hub.
+
+            .. image:: images/programming-snippets/mecanum-expansion-hub-blocks-sample.png
+               :alt: The MecanumRobotExpansionHub Teleop blocks, which use three gamepad axes to drive and rotate an Expansion Hub mecanum drivetrain.
+               :width: 900
+
+            `View the MecanumRobotExpansionHub source
+            <https://github.com/wpilibsuite/systemcore-blocks-interface/tree/main/frontend/samples/MecanumRobotExpansionHub>`_.
 
    .. tab-item:: LabVIEW
       :sync: labview

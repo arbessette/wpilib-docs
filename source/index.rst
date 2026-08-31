@@ -8,18 +8,16 @@ WPILib Documentation
 
 .. raw:: html
 
-   <div style="text-align:center;padding:36px 0 8px;">
-     <h1 style="font-size:2rem;font-weight:800;margin:0 0 12px;
-        color:var(--color-foreground-primary,#1a1a1a);">
+   <div class="wl-hero">
+     <h1 class="wl-hero-title">
        Welcome!
      </h1>
-     <p style="font-size:1rem;color:var(--color-foreground-secondary,#555);
-        max-width:560px;margin:0 auto 20px;line-height:1.6;">
+     <p class="wl-hero-copy">
        WPILib is the standard programming library for <em>FIRST</em> Robotics,
        supporting teams competing in
-       <strong style="color:#009CD7;"><em>FIRST</em> Robotics Competition (FRC)</strong>
+       <strong class="wl-hero-frc"><em>FIRST</em> Robotics Competition (FRC)</strong>
        and
-       <strong style="color:#e07000;"><em>FIRST</em> Tech Challenge (FTC)</strong>.
+       <strong class="wl-hero-ftc"><em>FIRST</em> Tech Challenge (FTC)</strong>.
      </p>
    </div>
 
@@ -50,7 +48,7 @@ WPILib Documentation
            <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-shared"></span>Shared</span>
            <span class="wl-legend-note">Every card below is clickable.</span>
          </div>
-         <a class="wl-card wl-card-shared wl-btn" href="docs/zero-to-robot/introduction.html" style="width:100%;box-sizing:border-box;margin-bottom:24px;">
+         <a class="wl-card wl-card-shared wl-btn wl-feature-card" href="docs/zero-to-robot/introduction.html">
            <span class="wl-num wl-shared-text">→</span>
            <div>
              <div class="wl-card-title">Zero to Robot</div>
@@ -93,7 +91,7 @@ WPILib Documentation
        <div class="wl-ret-grid">
 
          <!-- ── FRC column ── -->
-         <div style="display:flex;flex-direction:column;gap:14px;">
+         <div class="wl-ret-column">
 
            <div class="wl-ret-card wl-ret-frc">
              <div class="wl-ret-label wl-frc-label">FRC</div>
@@ -111,7 +109,7 @@ WPILib Documentation
            <div class="wl-ret-card wl-ret-frc">
              <div class="wl-ret-label wl-frc-label">FRC</div>
              <h3 class="wl-ret-h">Removed in 2027 : No Longer Available</h3>
-             <p style="font-size:0.875rem;margin-bottom:8px;">These tools were <strong>removed in the 2027 season</strong>. Migrate now if you haven't already.</p>
+             <p class="wl-ret-copy">These tools were <strong>removed in the 2027 season</strong>. Migrate now if you haven't already.</p>
              <ul>
                <li><strong>Shuffleboard</strong> : migrate to <a href="https://github.com/Gold872/elastic-dashboard">Elastic</a> or AdvantageScope</li>
                <li><strong>SmartDashboard</strong> : migrate to Glass or Elastic (uses deprecated NT v3)</li>
@@ -129,26 +127,26 @@ WPILib Documentation
                <li>Windows 10 is no longer supported: Windows 11 is required</li>
                <li>Vendor library updates required: check the Dependency Manager</li>
              </ul>
-             <a href="docs/yearly-overview/index.html" class="wl-frc-text" style="font-size:0.875rem;">Full 2027 changelog</a>
+             <a href="docs/yearly-overview/index.html" class="wl-frc-text wl-ret-link">Full 2027 changelog</a>
            </div>
 
          </div>
 
          <!-- ── FTC + shared column ── -->
-         <div style="display:flex;flex-direction:column;gap:14px;">
+         <div class="wl-ret-column">
 
            <div class="wl-ret-card wl-ret-ftc">
              <div class="wl-ret-label wl-ftc-label">FTC</div>
              <h3 class="wl-ret-h">FTC Teams : Your Options Right Now</h3>
-             <p style="font-size:0.875rem;margin-bottom:10px;">WPILib FTC support is now available with Systemcore, for the 2027-2028 season:</p>
-             <strong style="font-size:0.875rem;">Using REV Control Hub / Expansion Hub?</strong>
-             <ul style="font-size:0.82rem;margin-top:6px;">
+             <p class="wl-ret-copy wl-ret-copy-spacious">WPILib FTC support launches with Systemcore in fall 2027 for the 2027-2028 FTC season. The FRC Systemcore release is earlier, in January 2027:</p>
+             <strong class="wl-ret-subhead">Using REV Control Hub / Expansion Hub?</strong>
+             <ul class="wl-ret-compact-list">
                <li>Continue programming with the <strong>FTC SDK</strong> as normal : Java or Blocks</li>
                <li>Full documentation at <a href="https://ftc-docs.firstinspires.org">ftc-docs.firstinspires.org</a></li>
                <li>REV Duo hardware remains legal and fully supported for the current season</li>
              </ul>
-             <strong style="font-size:0.875rem;display:block;margin-top:12px;">Using Systemcore with WPILib?</strong>
-             <ul style="font-size:0.82rem;margin-top:6px;">
+             <strong class="wl-ret-subhead wl-ret-subhead-spaced">Using Systemcore with WPILib?</strong>
+             <ul class="wl-ret-compact-list">
                <li>Systemcore and Motioncore bring full WPILib support to FTC</li>
                <li>Same Java / C++ / Python toolchain as FRC : skills transfer directly</li>
                <li>Try the <a href="docs/xrp-robot/index.html">XRP Platform</a> to start learning WPILib today</li>
@@ -164,7 +162,7 @@ WPILib Documentation
                <li>Expanded <strong>FTC</strong> WPILib documentation and library support</li>
                <li>Watch the WPILib blog for 2028 season previews</li>
              </ul>
-             <a href="https://wpilib.org/blog" class="wl-shared-text" style="font-size:0.875rem;">Follow the WPILib blog for previews</a>
+             <a href="https://wpilib.org/blog" class="wl-shared-text wl-ret-link">Follow the WPILib blog for previews</a>
            </div>
 
          </div>
@@ -191,9 +189,9 @@ WPILib Documentation
 
 .. raw:: html
 
-   <hr style="margin:28px 0;"/>
-   <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-foreground-secondary,#555);border-bottom:1px solid var(--color-background-border,#ddd);padding-bottom:7px;margin-bottom:6px;">Core Documentation</h2>
-   <p style="font-size:0.85rem;color:var(--color-foreground-secondary,#555);margin-bottom:14px;">Shared across all supported programs.</p>
+   <hr class="wl-core-intro"/>
+   <h2 class="wl-sh wl-core-heading">Core Documentation</h2>
+   <p class="wl-core-copy">Shared across all supported programs.</p>
 
    <h3 class="wl-sh">Foundations</h3>
    <div class="wl-core-grid">
@@ -215,95 +213,45 @@ WPILib Documentation
      <a class="wl-core-card" href="docs/software/advanced-controls/index.html"><div class="wl-core-title">Advanced Controls</div><div class="wl-core-desc">PID, feedforward, state-space, kinematics, and system identification.</div></a>
    </div>
 
-   <div style="margin-top:8px;padding:14px 18px;
-      background:var(--color-background-secondary,#f8f8f8);
-      border:1px solid var(--color-background-border,#ddd);
-      border-radius:6px;font-size:0.85rem;line-height:1.6;
-      color:var(--color-foreground-secondary,#555);">
-     <strong>Still using a roboRIO?</strong>
+   <div class="wl-legacy-note">
+     <strong>Still using a legacy control system?</strong>
      This site covers the 2027 Systemcore-based control system.
-     For roboRIO documentation, visit the
-     <a href="https://docs.wpilib.org/en/stable/index.html"
-        style="font-weight:600;">2026 WPILib docs (docs.wpilib.org)</a>.
+     FRC teams using a roboRIO should use the
+     <a href="https://docs.wpilib.org/en/stable/index.html">2026 WPILib documentation</a>.
+     FTC teams using a REV Control Hub or Expansion Hub should use the
+     <a href="https://ftc-docs.firstinspires.org/en/latest/">FTC documentation</a>.
    </div>
 
 ----
 
 .. toctree::
    :maxdepth: 1
-   :caption: Getting Started
+   :caption: Start Here
    :hidden:
 
-   docs/zero-to-robot/coding-basics
-   docs/zero-to-robot/new-to-wpilib
-   docs/zero-to-robot/returning
-   docs/zero-to-robot/introduction
-   docs/zero-to-robot/step-1/index
-   docs/zero-to-robot/step-2/index
-   docs/zero-to-robot/step-3/index
-   docs/zero-to-robot/step-4/index
-   docs/zero-to-robot/step-5/index
+   New to WPILib <docs/zero-to-robot/new-to-wpilib>
+   Returning Teams <docs/zero-to-robot/returning>
+   Zero to Robot <docs/zero-to-robot/introduction>
 
 .. toctree::
    :maxdepth: 1
-   :caption: FTC and FRC Notes
+   :caption: FRC, FTC, and Control Systems
    :hidden:
 
    docs/ftc/index
+   docs/xrp-robot/index
+   docs/romi-robot/index
 
 .. toctree::
    :maxdepth: 1
-   :caption: What's New for 2027
+   :caption: Tools, Dashboards, and Networking
    :hidden:
 
-   docs/yearly-overview/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: FRC Robot Hardware
-   :hidden:
-
-   docs/controls-overviews/control-system-hardware
-   docs/hardware/hardware-basics/hardware-overview
-   docs/hardware/hardware-basics/status-lights-ref
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Writing Robot Code
-   :hidden:
-
-   docs/controls-overviews/control-system-software
-   docs/software/what-is-wpilib
    docs/software/vscode-overview/index
    docs/software/vscode-overview/3rd-party-libraries
+   docs/software/driverstation/index
    docs/software/dashboards/index
    docs/software/telemetry/index
-   docs/software/hardware-apis/index
-   docs/software/programming-snippets
-   docs/software/can-devices/index
-   docs/software/basic-programming/index
-   docs/software/python/index
-   docs/software/examples-tutorials/wpilib-examples
-   docs/software/examples-tutorials/third-party-examples
-   docs/software/support/support-resources
-   docs/software/frc-glossary
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Controls and Autonomy
-   :hidden:
-
-   docs/software/commandbased/index
-   docs/software/pathplanning/index
-   docs/software/advanced-controls/index
-   docs/software/wpilib-tools/robot-simulation/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Tools and Dashboards
-   :hidden:
-
-   docs/software/driverstation/index
    docs/software/wpilib-tools/outlineviewer/index
    docs/software/wpilib-tools/wpical/index
    docs/networking/networking-introduction/index
@@ -311,18 +259,48 @@ WPILib Documentation
 
 .. toctree::
    :maxdepth: 1
-   :caption: Practice with XRP
+   :caption: Hardware and Wiring
    :hidden:
 
-   docs/xrp-robot/index
-   docs/romi-robot/index
+   docs/controls-overviews/control-system-hardware
+   docs/hardware/hardware-basics/hardware-overview
+   docs/hardware/hardware-basics/status-lights-ref
+   docs/software/can-devices/index
 
 .. toctree::
    :maxdepth: 1
-   :caption: API Reference
+   :caption: Programming Fundamentals
    :hidden:
 
+   docs/software/what-is-wpilib
+   docs/controls-overviews/control-system-software
+   docs/software/basic-programming/index
+   docs/software/hardware-apis/index
+   docs/software/commandbased/index
+   docs/software/python/index
+   docs/software/programming-snippets
+   docs/software/examples-tutorials/wpilib-examples
+   docs/software/examples-tutorials/third-party-examples
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Robot Behavior and Autonomy
+   :hidden:
+
+   docs/software/kinematics-and-odometry/index
+   docs/software/pathplanning/index
+   docs/software/advanced-controls/index
+   docs/software/wpilib-tools/robot-simulation/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Reference
+   :hidden:
+
+   docs/yearly-overview/index
    docs/api-reference
+   docs/software/support/support-resources
+   docs/software/frc-glossary
 
 .. toctree::
    :maxdepth: 1
@@ -332,10 +310,4 @@ WPILib Documentation
    docs/contributing/wpilib-docs/index
    docs/contributing/wpilib/index
    docs/legal/privacy-policy
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Report an Issue
-   :hidden:
-
    Report an Issue <https://github.com/wpilibsuite/frc-docs/issues>

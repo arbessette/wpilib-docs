@@ -58,11 +58,22 @@ through Blockly, with no local install required for either.
 
 .. note::
 
-   **Going with OnBot or Blockly?** Parts 1-5 below walk through the VS Code
-   path. Systemcore-specific OnBot/Blockly deploy-and-drive steps are
-   still being written; in the meantime,
-   `Running Your OpMode (All Languages) <https://ftc-docs.firstinspires.org/en/latest/programming_resources/tutorial_specific/blocks/running_op_modes/Running-Your-Op-Mode.html>`_
-   covers the current system and carries over conceptually.
+   **Going with OnBot or Blockly?** Parts 1-5 below are the VS Code path;
+   they are not OnBot or Blockly instructions. Systemcore-specific creation,
+   deployment, and driving steps for those environments are still being
+   written. Current FTC Control Hub users should follow the
+   `official FTC programming tutorials
+   <https://ftc-docs.firstinspires.org/en/latest/programming_resources/index.html>`_.
+
+.. card:: Blocks Programming Samples →
+   :link: blocks-drivetrain-samples
+   :link-type: ref
+   :class-card: sw-card-shared
+
+   **FRC + FTC: Blockly**
+   ^^^
+   Preview the built-in differential-drive and mecanum projects, then open
+   :guilabel:`Samples...` in the Blocks interface to create an editable copy.
 
 .. rubric:: Part 1: Create Your Robot Project
 
@@ -102,7 +113,7 @@ project.
 
    .. grid-item-card:: Common Vendor Libraries
 
-      - **REVLib**: SPARK MAX and SPARK Flex
+      - **REVLib**: SPARK MAX, SPARK Flex, and the 2027 A301 on Motioncore
       - **Phoenix 6**: Talon FX, CANcoder, Pigeon 2
       - **PathplannerLib**: autonomous trajectories
       - **PhotonLib**: PhotonVision camera support
@@ -114,47 +125,67 @@ project.
       - Paste the vendor JSON URL from their docs
       - Build the project to download dependencies
 
+.. note::
+
+   **Using an A301 with Motioncore?** Keep its firmware and REVLib versions
+   compatible, and identify the Motioncore channel with ``CANBusMap`` rather
+   than a raw integer. Motioncore channel D0 is not the same bus as Systemcore
+   bus 0. See the current `A301 testing guide
+   <https://github.com/wpilibsuite/SystemcoreTesting/blob/main/A301.md>`_
+   for the required version pair and channel examples.
+
 .. rubric:: Part 3: Basic Arcade Drive
 
-A minimal working drivetrain. Replace ``PWMSparkMax`` with your actual
-controller class.
+A minimal drivetrain has three long-lived objects: the two motor controllers
+and the ``DifferentialDrive``. Create them once as fields of the robot class
+(or in its constructor), not inside ``teleopPeriodic()``. The periodic method
+should only read the controller and command the existing drive object.
 
 .. tab-set-code::
 
    ```java
-   // In Robot.java, inside teleopPeriodic()
-   PWMSparkMax leftMotor  = new PWMSparkMax(0);
-   PWMSparkMax rightMotor = new PWMSparkMax(1);
-   DifferentialDrive drive = new DifferentialDrive(leftMotor, rightMotor);
+   // Fields in the Robot class; construct these only once.
+   private final PWMSparkMax leftMotor = new PWMSparkMax(0);
+   private final PWMSparkMax rightMotor = new PWMSparkMax(1);
+   private final DifferentialDrive drive =
+       new DifferentialDrive(leftMotor::setThrottle, rightMotor::setThrottle);
+   private final Gamepad controller = new Gamepad(0);
 
    @Override
    public void teleopPeriodic() {
-       // left stick Y = speed, right stick X = rotation
-       drive.arcadeDrive(-m_stick.getY(), m_stick.getX());
+       drive.arcadeDrive(-controller.getLeftY(), -controller.getRightX());
    }
    ```
 
    ```c++
-   // In Robot.h / Robot.cpp
-   frc::PWMSparkMax leftMotor{0};
-   frc::PWMSparkMax rightMotor{1};
-   frc::DifferentialDrive drive{leftMotor, rightMotor};
+   // Members of the Robot class; construct these only once.
+   wpi::PWMSparkMax leftMotor{0};
+   wpi::PWMSparkMax rightMotor{1};
+   wpi::DifferentialDrive drive{
+       [&](double output) { leftMotor.SetThrottle(output); },
+       [&](double output) { rightMotor.SetThrottle(output); }};
+   wpi::Gamepad controller{0};
 
    void Robot::TeleopPeriodic() {
-     // left stick Y = speed, right stick X = rotation
-     drive.ArcadeDrive(-m_stick.GetY(), m_stick.GetX());
+     drive.ArcadeDrive(-controller.GetLeftY(), controller.GetRightX());
    }
    ```
 
    ```python
-   # In robot.py, inside teleopPeriodic()
-   self.left_motor = wpilib.PWMSparkMax(0)
-   self.right_motor = wpilib.PWMSparkMax(1)
-   self.drive = wpilib.drive.DifferentialDrive(self.left_motor, self.right_motor)
+   def __init__(self):
+       super().__init__()
+       # Construct hardware objects only once, during robot startup.
+       self.left_motor = wpilib.PWMSparkMax(0)
+       self.right_motor = wpilib.PWMSparkMax(1)
+       self.drive = wpilib.DifferentialDrive(
+           self.left_motor, self.right_motor
+       )
+       self.controller = wpilib.Gamepad(0)
 
    def teleopPeriodic(self):
-       # left stick Y = speed, right stick X = rotation
-       self.drive.arcadeDrive(-self.stick.getY(), self.stick.getX())
+       self.drive.arcadeDrive(
+           -self.controller.getLeftY(), -self.controller.getRightX()
+       )
    ```
 
 .. card:: Full drivetrain walkthrough →
@@ -164,6 +195,13 @@ controller class.
 
    Complete guide: project setup, motor controller configuration,
    and deploy steps for Java, C++, and Python.
+
+.. important::
+
+   The snippets above show object placement and control flow, but omit imports,
+   class declarations, motor inversion, and safety setup. Start from the tested
+   complete example in the full drivetrain walkthrough rather than pasting an
+   isolated snippet into an empty file.
 
 .. rubric:: Part 4: Deploy to the Robot
 
@@ -177,7 +215,8 @@ controller class.
 
    .. grid-item-card:: Deploy over USB
 
-      Connect USB-A to USB-B from laptop to Systemcore.
+      Connect the laptop to the Systemcore's USB device port with the
+      appropriate data-capable cable.
       WPILib auto-detects USB and deploys without Wi-Fi.
 
 .. card:: Running and testing your program →
@@ -195,19 +234,25 @@ controller class.
 
    .. grid-item-card:: Pre-enable checklist
 
-      - Robot on floor or safely elevated
+      - First test: robot safely elevated with every drive wheel off the floor
       - All team members clear of moving parts
       - Driver Station shows "Robot Code" (green)
       - Joystick connected and recognized in DS
-      - Battery voltage above 12.0 V
+      - Driver Station reports a plausible robot battery voltage
 
    .. grid-item-card:: Enable steps
 
       - Open FRC Driver Station
       - Select **TeleOperated** mode
-      - Click **Enable** (or press Enter)
+      - Announce that the robot is about to enable, then click **Enable**
       - Move joystick: robot should respond
-      - Press **Disable** (or Spacebar) to stop
+      - Click **Disable** or press :kbd:`Enter` to stop
+
+.. warning::
+
+   The :kbd:`Space` bar triggers **Emergency Stop**; it is not the ordinary
+   disable shortcut. An emergency-stopped robot must be rebooted before it can
+   be enabled again.
 
 .. tip::
 

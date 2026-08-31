@@ -260,7 +260,11 @@ Now let's look at various parts of the code.
 
 Our code needs to reference the components of WPILib that are used. In C++ this is accomplished using ``#include`` statements; in Java and Python it is done with ``import`` statements. The program references classes for ``Gamepad`` (for driving), ``PWMSparkMax`` / ``TalonFX`` / ``CANSparkMax`` / ``WPI_TalonSRX`` (for controlling motors), ``TimedRobot`` (the base class used for the example), ``Timer`` (used for autonomous), and ``DifferentialDrive`` (for connecting the Gamepad to the motors).
 
-.. note:: The ``Gamepad`` class is used with the 2027 FIRST Driver station. If you are using the NI Driver station, you will need to use the ``NiDsXboxController`` class instead.
+.. note:: The ``Gamepad`` class is used with the 2027 FIRST Driver Station. If
+   you are using the NI Driver Station, use the ``NiDsXboxController`` class
+   instead. The pinned Python PWM example above still shows
+   ``NiDsXboxController``; replace it with ``wpilib.Gamepad(0)`` when following
+   this guide with the 2027 Driver Station.
 
 ## Defining the variables for our sample robot
 
@@ -578,4 +582,3 @@ Utility Mode is used for testing robot functionality or running other code that 
             ```
 
       For more detailed instructions, see :doc:`Deploy Python code </docs/software/python/subcommands/deploy>`.
-

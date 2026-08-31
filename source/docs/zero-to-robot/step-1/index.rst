@@ -1,4 +1,4 @@
-# Step 1: Build Your Robot
+# Step 1: Build and Wire Your Robot
 
 .. container:: sw-step-badge
 
@@ -10,11 +10,40 @@
 
       .. container:: sw-step-info-title
 
-         Build Your Robot
+         Build and Wire Your Robot
 
       .. container:: sw-step-info-sub
 
          Step 1 of 5
+
+Before starting, turn robot power **Off** and disconnect the battery. For FRC,
+switch the main breaker off; for FTC, use the robot's power switch. Keep the
+drivetrain safely supported so the wheels cannot move the robot during later
+testing.
+
+.. rubric:: What You Need for This Step
+
+.. list-table::
+   :header-rows: 1
+   :widths: 28 36 36
+
+   * - For every build
+     - Alpha Systemcore power
+     - Beta Systemcore power
+   * - Systemcore and robot battery
+     - 18 AWG red and black wire
+     - Provided MicroFit Pwr/Bridge cable, when using Motioncore
+   * - Compatible power distribution hardware
+     - White Weidmuller ferrules and a ferrule crimper
+     - Provided MicroFit-to-XT30 cable, when not using Motioncore
+   * - Computer with Wi-Fi or a data-capable USB cable
+     - Wire stripper and small flat-blade screwdriver
+     - Matching XT30 extension only if bare-wire power is required
+
+Do not prepare or connect power wiring until you have identified whether your
+Systemcore is an Alpha or Beta unit. Alpha units were distributed during the
+initial FRC alpha test; FTC test units are Beta hardware. If the revision is
+unclear, check the unit and kit labeling before continuing.
 
 .. rubric:: Part 1: Assemble Your Robot
 
@@ -52,11 +81,32 @@ distribution board. Use 18 AWG wire with white Weidmuller ferrules.
    your kit. If you need bare wires instead, cut the ends off an XT30
    extension cable.
 
+Use the provided cables whenever possible. If your team must build a cable,
+follow the `Systemcore and Motioncore cable specifications
+<https://downloads.limelightvision.io/documents/systemcore_motioncore_cable_specifications.pdf>`_
+for its pinout, wire, and connector requirements. Systemcore connectors use
+gold contacts in the Alpha specification; do not mate them with tin contacts.
+
+Before connecting the battery, inspect every power connection:
+
+- Red wire goes to positive and black wire goes to negative.
+- No bare copper is visible outside a connector.
+- Each connector is fully seated and cannot be pulled out gently.
+- The Systemcore is connected by exactly one of the power methods above.
+
 .. warning::
 
    Never power the Systemcore through a regulator (such as a VRM). It
    needs battery voltage directly, and some regulators can't supply
    enough current under full load.
+
+.. important::
+
+   The USB-C **LINK** port carries data only and does not power the
+   Systemcore. On an Alpha unit, having LINK connected when robot power is
+   applied starts flash mode instead of a normal boot. For an ordinary USB
+   connection, power the Alpha Systemcore first and connect LINK after it
+   starts.
 
 .. rubric:: Part 3: Confirm It's Alive
 
@@ -67,9 +117,11 @@ to it directly, before any radio or field network is involved.
    :header-rows: 1
 
    * - Connection
-     - Address
+     - Default value
    * - Built-in Wi-Fi SSID
      - ``SYSTEMCORE``
+   * - Built-in Wi-Fi password
+     - ``PASSWORD``
    * - Wi-Fi access point IP
      - ``172.30.0.1``
    * - USB (Windows)
@@ -82,10 +134,44 @@ to it directly, before any radio or field network is involved.
    Units on OS image 9 or earlier use ``172.28.0.1`` (USB, Windows) or
    ``172.29.0.1`` (USB, macOS/Linux) instead.
 
+1. Connect the battery and turn robot power **On**.
+2. Confirm that the **Power** LED becomes solid green. The **Status** LED
+   should be off when there are no hardware faults. A solid or blinking red
+   Status LED indicates a fault; read the onboard display for details before
+   continuing.
+3. Connect the computer to the ``SYSTEMCORE`` Wi-Fi network using password
+   ``PASSWORD``, or connect it to the USB-C LINK port with a data-capable
+   cable. On Alpha hardware, connect LINK only after power-up for a normal
+   boot.
+4. Open ``http://robot.local`` in a browser. If that name does not resolve,
+   use the appropriate IP address from the table.
+5. Confirm that the Systemcore web interface loads and identifies the unit.
+   The onboard display also shows connection information such as IP addresses.
+
+If the web interface loads, the Systemcore has power, has booted, and can
+communicate with the computer. It does not yet mean that the radio, motor
+controllers, or drivetrain are configured.
+
+.. warning::
+
+   If the Systemcore does not boot, a connector becomes hot, a breaker trips,
+   or you see or smell smoke, turn robot power off and disconnect the
+   battery immediately. Recheck polarity, exposed conductors, and shorts before
+   applying power again.
+
+.. note::
+
+   These LED meanings and the custom-connector requirements come from the
+   Alpha hardware specification. Check the production specification before
+   applying them to hardware whose labeling or revision differs.
+
 .. rubric:: Part 4: Wire the Rest of the Control System
 
 Motor controllers, radio, CAN bus, and pneumatics wiring still follow
 the reference guides below.
+
+Turn robot power **Off** and disconnect the battery again before making any of
+these connections.
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -100,52 +186,70 @@ the reference guides below.
       .. rubric:: FTC
          :class: wl-ftc-text
 
-   .. grid-item-card:: Basic Robot Wiring
+   .. grid-item-card:: FRC Robot Wiring Walkthrough
       :link: basic-robot-wiring
       :link-type: doc
       :class-card: sw-card-frc
 
       **FRC**
       ^^^
-      Simplified wiring reference for drivetrain-only builds.
-      Good starting point for rookie teams.
+      **Wiring your first robot?**
 
-   .. grid-item-card:: Basic FTC Robot Wiring
+      Complete, start-to-finish instructions for wiring a basic
+      drivetrain robot. Start here and follow the steps in order.
+
+   .. grid-item-card:: FTC Robot Wiring Walkthrough
       :link: ../../ftc/basic-ftc-robot-wiring
       :link-type: doc
       :class-card: sw-card-ftc
 
       **FTC Coming 2027-2028**
       ^^^
-      Covers just enough to power a drivetrain on Systemcore
-      and Motioncore. Skip the extras until you're ready.
+      **Wiring your first robot?**
 
-   .. grid-item-card:: FRC Robot Wiring Overview
+      Complete, start-to-finish instructions for wiring a basic
+      Systemcore and Motioncore drivetrain robot. Start here and
+      follow the steps in order.
+
+   .. grid-item-card:: FRC Robot Wiring Reference
       :link: intro-to-frc-robot-wiring
       :link-type: doc
       :class-card: sw-card-frc
 
       **FRC**
       ^^^
-      Full walkthrough of control system wiring with diagrams:
-      PDH, radio, motor controllers, and pneumatics.
+      **Looking up a connection?**
 
-   .. grid-item-card:: FTC Robot Wiring Overview
+      Connection diagrams and component details to look up while
+      wiring or troubleshooting an FRC control system.
+
+   .. grid-item-card:: FTC Robot Wiring Reference
       :link: ../../ftc/ftc-robot-wiring-overview
       :link-type: doc
       :class-card: sw-card-ftc
 
       **FTC Coming 2027-2028**
       ^^^
-      Every connection for a competition-ready build, including
-      mechanisms and sensors beyond the basic drivetrain.
+      **Looking up a connection?**
 
-.. note::
+      Connection diagrams and component details to look up while
+      wiring or troubleshooting an FTC control system.
 
-   **These two FRC guides still describe the roboRIO-era control
-   system** and haven't been updated for Systemcore yet. Use them for
-   PDH, motor controller, and radio wiring; Systemcore itself is
-   covered in Part 2 above.
+.. admonition:: Wiring Guide Compatibility
+
+   Use **Part 2 on this page** for the current 2027 instructions for powering
+   and connecting Systemcore.
+
+   The FRC walkthrough and reference still show roboRIO-era hardware. Their
+   guidance remains useful for the PDH or PDP, main breaker, motor controllers,
+   CAN bus, radio, and pneumatics. Do not follow their roboRIO power or data
+   connections when building a Systemcore robot.
+
+   The FTC walkthrough and reference are placeholders for the fall 2027
+   Systemcore and Motioncore release. Until those instructions are published,
+   teams using the REV Control Hub or Expansion Hub should follow the
+   `current FTC Robot Wiring Guide
+   <https://ftc-docs.firstinspires.org/en/latest/robot_building/wiring_guide/wiring-guide.html>`_.
 
 .. tip::
 
@@ -158,7 +262,7 @@ the reference guides below.
 
 .. container:: sw-nav
 
-   :doc:`← Introduction <../introduction>`
+   :doc:`← Zero to Robot <../introduction>`
 
    .. container:: sw-next
 
@@ -169,5 +273,7 @@ the reference guides below.
    :hidden:
 
    Kitbot / Starter Bot Assembly <kitbot-starterbot-assembly>
-   FRC Robot Wiring Overview <intro-to-frc-robot-wiring>
-   Basic Robot Wiring <basic-robot-wiring>
+   FRC Robot Wiring Walkthrough <basic-robot-wiring>
+   FTC Robot Wiring Walkthrough </docs/ftc/basic-ftc-robot-wiring>
+   FRC Robot Wiring Reference <intro-to-frc-robot-wiring>
+   FTC Robot Wiring Reference </docs/ftc/ftc-robot-wiring-overview>

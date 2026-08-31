@@ -1,14 +1,15 @@
-# Basic FTC Robot Wiring
+# FTC Robot Wiring Walkthrough
 
 .. admonition:: Coming 2027-2028
 
-   This guide will be published ahead of the 2027-2028 FTC season when
-   full WPILib support for FIRST Tech Challenge launches.
+   This guide will be published ahead of the fall 2027 launch for the
+   2027-2028 FTC season.
 
    `Follow the WPILib blog for updates → <https://wpilib.org/blog>`_
 
-This page will cover simplified wiring for the Systemcore and Motioncore
-controllers, a good starting point for rookie FTC teams.
+This page will provide complete, start-to-finish instructions for wiring a
+basic drivetrain robot with Systemcore and Motioncore. It is the best starting
+point for teams wiring this control system for the first time.
 
 Topics planned for this guide:
 

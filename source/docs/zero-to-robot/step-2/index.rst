@@ -19,6 +19,13 @@
 Choose how you'll write code. **OnBot** runs in the browser with nothing
 to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
 
+.. important::
+
+   **This page mixes a complete path with preview paths.** The FRC VS Code
+   path is documented end to end. Systemcore OnBot and the new FTC workflow
+   are under active development; use the linked current FTC documentation
+   if you are working with a REV Control Hub today.
+
 .. tab-set::
 
    .. tab-item:: OnBot
@@ -30,17 +37,16 @@ to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
       .. note::
 
          **Systemcore-specific OnBot setup steps are still being written.**
-         In the meantime,
-         `Running Your OpMode (All Languages) <https://ftc-docs.firstinspires.org/en/latest/programming_resources/tutorial_specific/blocks/running_op_modes/Running-Your-Op-Mode.html>`_
-         covers the current system and carries over conceptually.
+         In the meantime, do not substitute current REV Control Hub connection addresses or
+         deployment steps. See the `current FTC programming-tool guide
+         <https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/choosing_program_lang/choosing-program-lang.html>`_
+         when using current FTC hardware.
 
       .. tip::
 
          **FRC teams:** OnBot replaces the code editor, not the Driver
          Station. You'll still need the FRC Driver Station installed
-         locally for competition; see the **VS Code** tab's Part 2, or
-         install it directly from
-         `GitHub releases <https://github.com/wpilibsuite/FirstDriverStation-Public>`_.
+         locally for competition. See **Set Up Driver Software** below.
 
    .. tab-item:: VS Code
       :sync: vscode
@@ -51,7 +57,7 @@ to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
 
       .. rubric:: System Requirements
 
-      .. grid:: 1 1 3 3
+      .. grid:: 1 1 2 2
          :gutter: 3
 
          .. grid-item-card:: Coding Only
@@ -74,24 +80,9 @@ to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
             - WPILib + VS Code for writing code
             - Robot simulation is currently FRC only
 
-         .. grid-item-card:: Required for Driver Station
-            :class-card: sw-card-frc
-
-            **FRC only: Windows**
-            ^^^
-            - Windows 11 (required for 2027+)
-            - 8 GB RAM minimum, 16 GB recommended
-            - Driver Station must be run on Windows for competition
-            - All WPILib tools available
-
-      .. warning::
-
-         **Windows 10 is no longer supported as of 2027.**
-         Upgrade to Windows 11 before installing the Driver Station.
-
       .. rubric:: Installation Steps
 
-      .. grid:: 1 1 2 2
+      .. grid:: 1 1 3 3
          :gutter: 3
 
          .. grid-item-card:: WPILib Installer
@@ -99,47 +90,26 @@ to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
             :link-type: doc
             :class-card: sw-card-shared
 
-            **Part 1: FRC + FTC**
+            **FRC + FTC**
             ^^^
             Installs Visual Studio Code, WPILib extensions, and all
             desktop tools (Glass, Elastic, OutlineViewer).
             Required for Java, C++, and Python teams.
-
-         .. grid-item-card:: FRC Driver Station
-            :link: first-driver-station
-            :link-type: doc
-            :class-card: sw-card-frc
-
-            **Part 2: FRC only, Windows**
-            ^^^
-            Installs the FRC Driver Station, distributed via GitHub releases.
-            Required on the laptop that will drive the robot at competition.
 
          .. grid-item-card:: RobotPy Setup
             :link: python-setup
             :link-type: doc
             :class-card: sw-card-shared
 
-            **Part 3: FRC + FTC, Python teams only**
+            **FRC + FTC, Python teams only**
             ^^^
             Install RobotPy and the required Python packages.
             Java and C++ teams can skip this part.
-
-         .. grid-item-card:: FTC Driver Station
-            :link: ../../ftc/index
-            :link-type: doc
-            :class-card: sw-card-ftc
-
-            **Coming 2027-2028**
-            ^^^
-            Systemcore and Motioncore bring their own Driver Station app for
-            FTC. See the FTC overview for status.
 
          .. grid-item-card:: Offline Installation
             :link: offline-installation-preparations
             :link-type: doc
             :class-card: sw-card-shared
-            :columns: 12 12 12 12
 
             **Optional: FRC + FTC**
             ^^^
@@ -183,9 +153,47 @@ to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
          Libraries like REVLib and Phoenix 6 are added per-project in Step 4
          using the WPILib Dependency Manager. You do not need them yet.
 
+.. rubric:: Set Up Driver Software
+
+Your programming environment and your competition driver software are
+separate choices. Set up the driver software required by your program,
+regardless of whether you selected OnBot or VS Code above.
+
+.. grid:: 1 1 2 2
+   :gutter: 3
+
+   .. grid-item-card:: FRC Driver Station
+      :link: first-driver-station
+      :link-type: doc
+      :class-card: sw-card-frc
+
+      **FRC only: Windows 11**
+      ^^^
+      Install this on the Windows laptop that will drive the robot at
+      competition. The 2027 production release supports the official FMS.
+      During pre-season testing, match alpha Driver Station builds with a
+      compatible Systemcore release.
+
+   .. grid-item-card:: FTC Driver Station
+      :link: ../../ftc/index
+      :link-type: doc
+      :class-card: sw-card-ftc
+
+      **Coming Fall 2027 for the 2027-2028 Season**
+      ^^^
+      Systemcore and Motioncore use FTC-specific driver software. See the
+      FTC overview for release status. Teams using the REV Control Hub today
+      should continue using the current FTC Driver Station app.
+
+.. warning::
+
+   **Windows 10 is not supported by the FRC Driver Station beginning in
+   2027.** Upgrade the FRC driver-station computer to Windows 11 before
+   installing it.
+
 .. container:: sw-nav
 
-   :doc:`← Step 1: Build Your Robot <../step-1/index>`
+   :doc:`← Step 1: Build and Wire Your Robot <../step-1/index>`
 
    .. container:: sw-next
 

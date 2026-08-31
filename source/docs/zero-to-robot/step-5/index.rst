@@ -19,6 +19,22 @@
 Problems can show up at any point in Zero to Robot. Find the section
 below that matches where you're stuck.
 
+Start at the top of this sequence and stop when a check fails:
+
+1. **Power:** Systemcore and radio status lights are on and the Driver Station
+   reports a plausible battery voltage.
+2. **Network:** the laptop can reach ``robot.local`` over USB or the robot
+   network.
+3. **Communication:** the Driver Station communication indicator is green.
+4. **Code:** the Driver Station robot-code indicator is green.
+5. **Input:** the controller appears in the USB/controller view and its axes
+   move.
+6. **Output:** the robot is enabled and the configured motor channels match
+   the wiring.
+
+The first failed check identifies which section below to investigate. Change
+one thing at a time, then repeat the check.
+
 .. rubric:: Code & Drive Issues (Step 4)
 
 .. grid:: 1 1 2 2
@@ -27,26 +43,29 @@ below that matches where you're stuck.
    .. grid-item-card:: "No Robot Communication"
       :class-card: sw-card-err
 
-      Check Wi-Fi connection to robot network.
-      Verify Systemcore and radio are powered. Try USB deploy cable as a fallback.
+      Verify Systemcore and radio power first. Connect directly over USB and
+      try ``robot.local``. If USB works, investigate the radio, Wi-Fi, team
+      number, and firewall rather than redeploying code.
 
    .. grid-item-card:: "No Robot Code"
       :class-card: sw-card-err
 
-      Code was not deployed or crashed on startup.
-      Re-deploy from VS Code. Check the Driver Station log for exceptions.
+      Communication works, but no user program is running. Re-deploy from
+      WPILib VS Code, then inspect the deploy output and Driver Station log for
+      the first error. Fix that error before deploying again.
 
    .. grid-item-card:: Robot does not move
       :class-card: sw-card-err
 
-      Verify joystick axis mapping in Driver Station USB tab.
-      Confirm motor controller wiring and correct PWM port numbers in code.
+      Confirm the robot-code and joystick indicators are green. Safely elevate
+      the drivetrain, verify axes in the Driver Station USB/controller view,
+      then compare the PWM ports or CAN IDs in code with the physical wiring.
 
    .. grid-item-card:: Robot moves in wrong direction
       :class-card: sw-card-err
 
-      Invert one motor controller in code (``motor.setInverted(true)``)
-      or flip the motor power leads on the controller.
+      Disable the robot and invert the affected drivetrain side in code. Do not
+      swap motor power leads as a substitute for correct software configuration.
 
 .. rubric:: Radio & Configuration Issues (Step 3)
 

@@ -54,4 +54,4 @@ that actually involves depends on which program you're in.
 
    .. container:: sw-next
 
-      :doc:`Continue to Zero to Robot: Introduction → <introduction>`
+      :doc:`Continue to Zero to Robot → <introduction>`

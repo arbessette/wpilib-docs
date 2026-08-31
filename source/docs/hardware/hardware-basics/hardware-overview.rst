@@ -123,16 +123,18 @@ robot.
             **FRC Standard**
             ^^^
             The standard FRC robot radio. Must be programmed annually with the
-            FRC Radio Configuration Utility to set team number, SSID, and
-            firmware. Powered via VRM barrel connector.
+            current configuration process to set team number, SSID, and
+            firmware. Designed to run directly from robot battery voltage
+            through its 12 VDC Weidmuller input; a VRM is not required.
 
          .. grid-item-card:: OpenMesh OM5P-AC
             :class-card: sw-card-frc
 
-            **FRC Legal**
+            **FRC Legacy / Regional Use**
             ^^^
-            Updated version of the OM5P-AN with the same FRC configuration
-            process. 802.11ac support. Preferred for new builds.
+            Legacy radio retained for teams and regions that still use it.
+            Requires regulated 12 V / 2 A power and the legacy FRC Radio
+            Configuration Utility. Do not select it for a new VH-109 build.
 
       .. rubric:: Motor Controllers
 
@@ -249,9 +251,9 @@ robot.
 
             **FRC**
             ^^^
-            Powers the radio (12 V / 2 A) and other 5 V accessories.
-            Plugs into a dedicated PDH/PDP port. Required for radio power
-            on most builds.
+            Provides regulated 12 V / 2 A and 5 V accessory power. Still used
+            by legacy OpenMesh radio installations and other accessories, but
+            is not required to power a VH-109.
 
          .. grid-item-card:: Driver Station Laptop
             :class-card: sw-card-frc

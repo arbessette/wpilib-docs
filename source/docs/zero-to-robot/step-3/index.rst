@@ -29,13 +29,15 @@ team number.
 
 .. rubric:: Part 1: Image the Systemcore
 
-No special software is required, the Systemcore images itself through its
-own web interface at ``robot.local``.
+For a Systemcore that boots normally and runs OS version 11 or later, no
+specialized imaging software is required. Routine updates run through its web
+interface at ``robot.local``.
 
 1. Download the current season's ``.llupdate`` file from the
    `Systemcore releases page <https://github.com/LimelightVision/systemcore-os-public/releases/latest>`_.
    Make sure to grab the alpha or beta update that matches your unit.
-2. Connect to the Systemcore over Wi-Fi or USB.
+2. Boot the Systemcore normally and connect over Wi-Fi or USB. For an Alpha
+   unit, connect USB-C LINK after power-up to avoid entering flash mode.
 3. Open a browser and navigate to ``robot.local``.
 4. Click the settings (gear) icon and open the configure/update section.
 5. Under **OS Update**, click **Select File**, choose the ``.llupdate``
@@ -49,13 +51,25 @@ own web interface at ``robot.local``.
    **Wi-Fi connection:** the Systemcore reboots as part of the update.
    Manually reconnect and refresh the page to see the completion status.
 
+After the reboot, reopen ``robot.local`` and confirm the installed OS version.
+In the configuration tab, set the Systemcore team number, then confirm that the
+onboard display shows the new value. Enter the same team number in the Driver
+Station settings.
+
+.. important::
+
+   Units running an OS version older than 11, units that do not boot normally,
+   and releases that require a full image use the Limelight Hardware Manager
+   recovery procedure in the full guide below. Recovery images and routine
+   ``.llupdate`` files are not interchangeable.
+
 .. card:: Full Systemcore imaging guide
    :link: imaging-your-systemcore
    :link-type: doc
    :class-card: sw-card-shared
 
    Complete reference, including OS version prerequisites and the
-   Limelight Hardware Client fallback for older units.
+   Limelight Hardware Manager recovery procedure for older units.
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -141,13 +155,17 @@ correct firmware before the robot can communicate wirelessly.
    Firmware updates, alternative one-radio setups, and troubleshooting
    for teams that can't reach the configuration page.
 
-.. rubric:: Part 3: Verify Power-Up
+.. rubric:: Part 3: Verify Configuration
 
-- Systemcore boots and status light cycles
-- Radio powers on
-- Radio SSID appears as <TEAM>_Robot in Wi-Fi list
-- Connect laptop to robot Wi-Fi: Driver Station shows
-  "Robot Communication" in green
+- Systemcore web interface and onboard display show the expected OS version
+- Systemcore display and Driver Station show the same team number
+- Systemcore Power LED is solid green and Status LED is off
+- Radio powers on and its configured SSID appears in the Wi-Fi list
+- Laptop connects through the intended USB or radio path
+- Driver Station shows robot communication in green
+
+The robot-code indicator may remain off until the first program is deployed in
+Step 4. That does not mean Step 3 failed.
 
 .. container:: sw-nav
 

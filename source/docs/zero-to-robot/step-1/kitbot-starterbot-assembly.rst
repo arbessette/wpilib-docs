@@ -35,8 +35,8 @@
 
       .. admonition:: Coming 2027-2028
 
-         This guide will be published ahead of the 2027-2028 FTC season when
-         full WPILib support for FIRST Tech Challenge launches.
+         This guide will be published ahead of the fall 2027 launch for the
+         2027-2028 FTC season.
 
          `Follow the WPILib blog for updates → <https://wpilib.org/blog>`_
 
