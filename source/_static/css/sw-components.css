@@ -30,6 +30,13 @@
    .wl-tab-btn:hover { border-color:var(--shared); color:var(--shared); }
    .wl-tab-btn.active { background:var(--shared); border-color:var(--shared); color:#fff; }
    .wl-tab-btn:visited { color: inherit; }
+   .wl-tab-btn:focus-visible { outline:3px solid var(--frc); outline-offset:3px; }
+   .wl-tab-link { display:inline-flex; align-items:center; text-decoration:none; }
+   .wl-tab-link:hover { text-decoration:none; }
+
+   @media (prefers-reduced-motion:reduce) {
+     .wl-tab-btn { transition:none; }
+   }
 
    /* ── PANELS ── */
    .wl-panel { display:none; padding-bottom:40px; }
@@ -88,7 +95,7 @@
    }
 
    /* ── CARDS GRID ── */
-   .wl-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-bottom:24px; }
+   .wl-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:24px; width:100%; }
 
    .wl-card {
      display:flex; align-items:flex-start; gap:14px;
@@ -96,6 +103,7 @@
      border:2px solid var(--color-background-border,#ddd);
      text-decoration:none; color:inherit;
      background:var(--color-background-primary,#fff);
+     box-sizing:border-box;
      transition:border-color 0.2s, box-shadow 0.2s;
    }
    .wl-btn { cursor:pointer; text-align:left; width:100%; }

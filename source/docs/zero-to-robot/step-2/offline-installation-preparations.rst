@@ -6,7 +6,10 @@ This article contains instructions/links to components you will want to gather i
 
 .. tip:: This document compiles all the download links from the following documents to make it easier to install on offline computers or on multiple computers. If you are you installing on a single computer that is connected to the internet, you can skip this page.
 
-.. note:: The order in which these tools are installed does not matter for Java and C++ teams.  LabVIEW should be installed before the FRC Driver Station or 3rd Party Libraries.
+.. note::
+
+   The order in which the desktop tools are installed does not matter. OnBot
+   LabVIEW is hosted by Systemcore and does not have a desktop installer.
 
 ## Documentation
 

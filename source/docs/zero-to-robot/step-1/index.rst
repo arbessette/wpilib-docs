@@ -14,7 +14,11 @@
 
       .. container:: sw-step-info-sub
 
-         Step 1 of 5
+         Step 1 of 4
+
+**By the end of this step:** your drivetrain and control system will be
+assembled, Systemcore will power on, and its web interface will open from your
+computer.
 
 Before starting, turn robot power **Off** and disconnect the battery. For FRC,
 switch the main breaker off; for FTC, use the robot's power switch. Keep the
@@ -45,6 +49,9 @@ Systemcore is an Alpha or Beta unit. Alpha units were distributed during the
 initial FRC alpha test; FTC test units are Beta hardware. If the revision is
 unclear, check the unit and kit labeling before continuing.
 
+.. TODO: Add a labeled comparison photo showing how to identify Alpha and Beta
+   Systemcore hardware.
+
 .. rubric:: Part 1: Assemble Your Robot
 
 .. grid:: 1
@@ -64,22 +71,32 @@ unclear, check the unit and kit labeling before continuing.
 
 How you power the Systemcore depends on your hardware revision.
 
-**Alpha units:** connect the Systemcore directly to your robot's power
-distribution board. Use 18 AWG wire with white Weidmuller ferrules.
+.. grid:: 1 1 2 2
+   :gutter: 3
+
+   .. grid-item-card:: Alpha Systemcore
+      :class-card: sw-card-shared
+
+      Connect Systemcore directly to the robot's power distribution board.
+      Use 18 AWG wire with white Weidmuller ferrules.
+
+   .. grid-item-card:: Beta Systemcore
+      :class-card: sw-card-shared
+
+      Power Systemcore through the MicroFit Pwr/Bridge port only.
+
+      - With Motioncore, connect Systemcore's Pwr/Bridge port to Motioncore's
+        Bridge port using a provided MicroFit cable.
+      - Without Motioncore, use the included MicroFit-to-XT30 cable. If bare
+        wires are required, cut the ends from an XT30 extension cable.
 
 .. warning::
 
    Do not use both power inputs on Alpha units (Bridge + Weidmuller)
    at the same time.
 
-**Beta units:** power comes through the MicroFit Pwr/Bridge port only.
-
-1. If you have a Motioncore, connect the Pwr/Bridge port on Systemcore
-   to the Bridge port on Motioncore using one of the provided MicroFit
-   cables.
-2. Without a Motioncore, use the MicroFit-to-XT30 cable included in
-   your kit. If you need bare wires instead, cut the ends off an XT30
-   extension cable.
+.. TODO: Add a close-up photo showing the Systemcore Pwr/Bridge connector and
+   correct MicroFit cable orientation.
 
 Use the provided cables whenever possible. If your team must build a cable,
 follow the `Systemcore and Motioncore cable specifications
@@ -147,6 +164,9 @@ to it directly, before any radio or field network is involved.
    use the appropriate IP address from the table.
 5. Confirm that the Systemcore web interface loads and identifies the unit.
    The onboard display also shows connection information such as IP addresses.
+
+.. TODO: Add a paired image of the successful robot.local page and the matching
+   Systemcore onboard display.
 
 If the web interface loads, the Systemcore has power, has booted, and can
 communicate with the computer. It does not yet mean that the radio, motor
@@ -259,6 +279,16 @@ these connections.
    **Power Distribution Panel (PDP)** is the Cross The Road Electronics unit
    (oval shape, 16 slots). Both are legal; wiring diagrams for each are in
    the wiring overview above.
+
+.. container:: sw-success
+
+   .. container:: sw-success-h
+
+      ✓ Your robot is assembled, powered, and ready for software setup.
+
+   Continue when every power connection passes inspection, Systemcore's Power
+   LED is solid green, and ``robot.local`` opens from the computer. The radio,
+   motor controllers, and drivetrain do not need to be configured yet.
 
 .. container:: sw-nav
 

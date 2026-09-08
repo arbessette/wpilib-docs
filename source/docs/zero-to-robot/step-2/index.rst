@@ -14,17 +14,39 @@
 
       .. container:: sw-step-info-sub
 
-         Step 2 of 5
+         Step 2 of 4
+
+**By the end of this step:** your selected programming environment will open
+successfully, and the driver software required by your program will be ready
+for robot setup and testing.
+
+.. grid:: 1 1 2 2
+   :gutter: 3
+
+   .. grid-item-card:: Programming Computer
+      :class-card: sw-card-shared
+
+      - The computer you plan to use for programming
+      - Administrator access if you selected desktop development
+      - Internet access, or offline packages downloaded in advance
+
+   .. grid-item-card:: FRC Driver Station Computer
+      :class-card: sw-card-frc
+
+      FRC teams also need a Windows 11 computer for the competition Driver
+      Station. It may be the same computer used for programming.
 
 Choose how you'll write code. **OnBot** runs in the browser with nothing
-to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
+to install; **VS Code** is the full desktop IDE. Both are supported for FRC
+and FTC with Systemcore. Keep using the environment and language you selected
+on the Zero to Robot page.
 
 .. important::
 
-   **This page mixes a complete path with preview paths.** The FRC VS Code
-   path is documented end to end. Systemcore OnBot and the new FTC workflow
-   are under active development; use the linked current FTC documentation
-   if you are working with a REV Control Hub today.
+   **Some 2027 instructions are still being completed.** The FRC VS Code path
+   is documented end to end. Detailed Systemcore OnBot and FTC walkthroughs
+   will be added as their software is finalized. If you are using a REV
+   Control Hub today, use the linked current FTC documentation instead.
 
 .. tab-set::
 
@@ -33,6 +55,10 @@ to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
 
       OnBot runs directly in the browser, hosted on the Systemcore itself.
       There's nothing to download or install.
+
+      **Languages:** Java, Blocks, Python, and LabVIEW.
+
+      .. TODO: Add a screenshot of the Systemcore OnBot landing page with the editor choices labeled.
 
       .. note::
 
@@ -55,6 +81,8 @@ to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
       **FRC and FTC**. Where a tool or step is program-specific (like the FRC
       Driver Station or simulation), it's labeled.
 
+      **Languages:** Java, Blocks, C++, and Python.
+
       .. rubric:: System Requirements
 
       .. grid:: 1 1 2 2
@@ -76,7 +104,7 @@ to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
 
             **FRC + FTC: Windows**
             ^^^
-            - Windows 10 or 11
+            - Windows 11
             - WPILib + VS Code for writing code
             - Robot simulation is currently FRC only
 
@@ -120,7 +148,7 @@ to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
 
       After completing all parts above, confirm the installation is working:
 
-      .. grid:: 1 2 3 3
+      .. grid:: 1 1 2 2
          :gutter: 3
 
          .. grid-item-card:: Open VS Code
@@ -139,13 +167,7 @@ to install; **VS Code** is the full desktop IDE. Both work for FRC and FTC.
             Press :kbd:`Ctrl+Shift+P` (or :kbd:`Cmd+Shift+P` on Mac)
             and type *WPILib*. You should see WPILib commands in the palette.
 
-         .. grid-item-card:: Check Driver Station
-            :class-card: sw-card-frc
-
-            **FRC only**
-            ^^^
-            Open the FRC Driver Station (Windows only). It should launch
-            without errors. "No Robot Communication" is expected.
+      .. TODO: Add a screenshot showing the WPILib activity-bar icon and WPILib commands in the VS Code command palette.
 
       .. tip::
 
@@ -190,6 +212,16 @@ regardless of whether you selected OnBot or VS Code above.
    **Windows 10 is not supported by the FRC Driver Station beginning in
    2027.** Upgrade the FRC driver-station computer to Windows 11 before
    installing it.
+
+.. container:: sw-success
+
+   .. container:: sw-success-h
+
+      ✓ Your programming environment is ready.
+
+   Continue when your selected editor opens successfully. FRC teams should
+   also confirm that the FRC Driver Station opens; "No Robot Communication"
+   is expected until the robot is configured in Step 3.
 
 .. container:: sw-nav
 

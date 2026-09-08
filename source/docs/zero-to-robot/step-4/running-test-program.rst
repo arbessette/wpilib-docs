@@ -2,10 +2,14 @@
 
 # Running Your Test Program
 
-This page covers the FRC Driver Station path. Create and deploy the complete
+**By the end of this page:** you will have confirmed that an FRC drivetrain
+responds correctly while tethered and through the radio, with its wheels safely
+off the floor.
+
+This page covers the FRC Driver Station path. First, create and deploy the
 :doc:`Java, C++, or Python drivetrain program
 </docs/zero-to-robot/step-4/creating-test-drivetrain-program-cpp-java-python>`
-before continuing.
+and complete the Step 3 communication checks.
 
 ## Before You Enable
 
@@ -89,4 +93,23 @@ Only continue after tethered operation works.
 
 Passing both tests confirms that the program, Systemcore, controller, and radio
 path are working together. Lower the robot to the floor only after disabling
-it and confirming that all drivetrain directions are correct.
+it and confirming that all drivetrain directions are correct. For the first
+floor test, use a clear open area, begin with small controller inputs, and keep
+another person ready to disable or power off the robot.
+
+.. container:: sw-success
+
+   .. container:: sw-success-h
+
+      ✓ Your FRC drivetrain passed its supported-wheel tests.
+
+   The robot is ready for a careful floor test in a clear area.
+
+.. container:: sw-nav
+
+   :doc:`← Create Your Test Drivetrain Program
+   <creating-test-drivetrain-program-cpp-java-python>`
+
+   .. container:: sw-next
+
+      :doc:`Return to Step 4 → <index>`

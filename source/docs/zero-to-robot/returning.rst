@@ -41,11 +41,13 @@ that actually involves depends on which program you're in.
 .. grid:: 1
    :gutter: 3
 
-   .. grid-item-card:: Nothing to Migrate Yet
+   .. grid-item-card:: Start the WPILib Transition
       :class-card: sw-card-ftc
 
       Systemcore and Motioncore are the first WPILib-based FTC control
-      system, so there's nothing from last year to carry over.
+      system, so there is no previous WPILib robot project to import. Plan to
+      map your existing robot design and programming experience to the new
+      hardware and WPILib APIs.
       ^^^
       If you're picking up WPILib for the first time, start with
       :doc:`New to WPILib <new-to-wpilib>` instead.

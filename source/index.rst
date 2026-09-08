@@ -25,65 +25,66 @@ WPILib Documentation
 
      <!-- ── TAB SELECTOR ──────────────────────────── -->
      <div class="wl-tab-selector">
-       <p class="wl-tab-prompt">Where are you starting from?</p>
-       <div class="wl-tab-buttons">
-         <button class="wl-tab-btn" id="btn-new" onclick="wlSelectTab('new')">New to FIRST Programming</button>
-         <button class="wl-tab-btn" id="btn-returning" onclick="wlSelectTab('returning')">Returning WPILib User</button>
+       <p class="wl-tab-prompt" id="wl-tab-prompt">How can we help?</p>
+       <div class="wl-tab-buttons" role="group" aria-labelledby="wl-tab-prompt">
+         <button class="wl-tab-btn" id="btn-new" type="button" aria-controls="panel-new" aria-expanded="false" onclick="wlSelectTab('new')">New to FIRST Programming</button>
+         <button class="wl-tab-btn" id="btn-returning" type="button" aria-controls="panel-returning" aria-expanded="false" onclick="wlSelectTab('returning')">Returning WPILib User</button>
+         <a class="wl-tab-btn wl-tab-link" href="#core-documentation">Core Documentation</a>
        </div>
      </div>
 
      <!-- ── NEW USER PANEL ────────────────────────── -->
-     <div class="wl-panel" id="panel-new">
+     <div class="wl-panel" id="panel-new" aria-labelledby="btn-new">
 
        <!-- Screen 1: Experience level -->
        <div id="new-s1">
          <div class="wl-welcome">
-           <h2 class="wl-welcome-h">You're in the right place.</h2>
-           <p class="wl-welcome-p">No coding background needed. We'll get your tools installed and your robot moving.</p>
+           <h2 class="wl-welcome-h">New to WPILib? You're in the right place.</h2>
+           <p class="wl-welcome-p">You don't need prior programming or robot experience. Follow the guide in order and check your work at the end of each step.</p>
          </div>
-         <h3 class="wl-sh">Where are you right now?</h3>
+         <h3 class="wl-sh">Start with the guided path</h3>
          <div class="wl-legend">
            <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-frc"></span>FRC</span>
            <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-ftc"></span>FTC</span>
            <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-shared"></span>Shared</span>
-           <span class="wl-legend-note">Every card below is clickable.</span>
+           <span class="wl-legend-note">The guide supports both programs.</span>
          </div>
          <a class="wl-card wl-card-shared wl-btn wl-feature-card" href="docs/zero-to-robot/introduction.html">
            <span class="wl-num wl-shared-text">→</span>
            <div>
              <div class="wl-card-title">Zero to Robot</div>
-             <div class="wl-card-desc">The full path: wire your robot, install tools, configure, and drive.</div>
+             <div class="wl-card-desc">Four steps: build and wire, set up your tools, configure the control system, then write code and drive.</div>
            </div>
          </a>
          <div class="wl-tip wl-tip-shared">
-           <strong>Already written code before?</strong>
-           See <a href="docs/zero-to-robot/new-to-wpilib.html">New to WPILib</a> first to understand how the pieces fit together.
+           <strong>Already comfortable programming?</strong>
+           Read <a href="docs/zero-to-robot/new-to-wpilib.html">New to WPILib</a> for a quick map of robot code, hardware, and tools, then join the guided path wherever you need it.
          </div>
        </div>
 
      </div>
 
      <!-- ── RETURNING PANEL ────────────────────────── -->
-     <div class="wl-panel" id="panel-returning">
+     <div class="wl-panel" id="panel-returning" aria-labelledby="btn-returning">
 
        <div class="wl-welcome">
-         <h2 class="wl-welcome-h">Welcome back. Here is what has changed for 2027.</h2>
-         <p class="wl-welcome-p">Run through the checklist below before your first practice session. Several tools were removed in 2027 : check the deprecations section if you have not yet migrated.</p>
+         <h2 class="wl-welcome-h">Welcome back. Get your team ready for 2027.</h2>
+         <p class="wl-welcome-p">Start with the season checklist, update your project and vendor libraries, then review any tool migrations that apply to your team.</p>
        </div>
 
        <div class="wl-grid">
          <a class="wl-card wl-card-shared wl-btn" href="docs/zero-to-robot/returning.html">
            <span class="wl-num wl-shared-text">0</span>
            <div>
-             <div class="wl-card-title">Returning this season</div>
-             <div class="wl-card-desc">The full FRC checklist and FTC status, in one place.</div>
+             <div class="wl-card-title">Review the 2027 checklist</div>
+             <div class="wl-card-desc">See the FRC update sequence and the FTC Systemcore release status in one place.</div>
            </div>
          </a>
          <a class="wl-card wl-card-shared wl-btn" href="docs/zero-to-robot/step-2/index.html">
            <span class="wl-num wl-shared-text">1</span>
            <div>
-             <div class="wl-card-title">Ready to install</div>
-             <div class="wl-card-desc">Skip the explanation and go straight to installing WPILib and your dev tools.</div>
+             <div class="wl-card-title">Install the 2027 tools</div>
+             <div class="wl-card-desc">Go directly to the WPILib, programming-environment, and Driver Station setup paths.</div>
            </div>
          </a>
        </div>
@@ -108,8 +109,8 @@ WPILib Documentation
 
            <div class="wl-ret-card wl-ret-frc">
              <div class="wl-ret-label wl-frc-label">FRC</div>
-             <h3 class="wl-ret-h">Removed in 2027 : No Longer Available</h3>
-             <p class="wl-ret-copy">These tools were <strong>removed in the 2027 season</strong>. Migrate now if you haven't already.</p>
+             <h3 class="wl-ret-h">Tools to Replace for 2027</h3>
+             <p class="wl-ret-copy">These tools are <strong>not available in the 2027 release</strong>. Choose a replacement before your first robot test.</p>
              <ul>
                <li><strong>Shuffleboard</strong> : migrate to <a href="https://github.com/Gold872/elastic-dashboard">Elastic</a> or AdvantageScope</li>
                <li><strong>SmartDashboard</strong> : migrate to Glass or Elastic (uses deprecated NT v3)</li>
@@ -120,7 +121,7 @@ WPILib Documentation
 
            <div class="wl-ret-card wl-ret-frc">
              <div class="wl-ret-label wl-frc-label">FRC</div>
-             <h3 class="wl-ret-h">What is New for 2027</h3>
+             <h3 class="wl-ret-h">What Is New for 2027</h3>
              <ul>
                <li>FRC now uses Systemcore: see the hardware migration guide</li>
                <li>2027 field images and AprilTag layout data included in WPILib</li>
@@ -137,7 +138,7 @@ WPILib Documentation
 
            <div class="wl-ret-card wl-ret-ftc">
              <div class="wl-ret-label wl-ftc-label">FTC</div>
-             <h3 class="wl-ret-h">FTC Teams : Your Options Right Now</h3>
+             <h3 class="wl-ret-h">FTC Teams: Prepare for 2027-2028</h3>
              <p class="wl-ret-copy wl-ret-copy-spacious">WPILib FTC support launches with Systemcore in fall 2027 for the 2027-2028 FTC season. The FRC Systemcore release is earlier, in January 2027:</p>
              <strong class="wl-ret-subhead">Using REV Control Hub / Expansion Hub?</strong>
              <ul class="wl-ret-compact-list">
@@ -148,7 +149,7 @@ WPILib Documentation
              <strong class="wl-ret-subhead wl-ret-subhead-spaced">Using Systemcore with WPILib?</strong>
              <ul class="wl-ret-compact-list">
                <li>Systemcore and Motioncore bring full WPILib support to FTC</li>
-               <li>Same Java / C++ / Python toolchain as FRC : skills transfer directly</li>
+               <li>WPILib programming concepts and tools transfer between FRC and FTC</li>
                <li>Try the <a href="docs/xrp-robot/index.html">XRP Platform</a> to start learning WPILib today</li>
                <li><a href="docs/ftc/index.html">WPILib FTC overview</a></li>
              </ul>
@@ -156,13 +157,13 @@ WPILib Documentation
 
            <div class="wl-ret-card wl-ret-shared">
              <div class="wl-ret-label wl-shared-label">FRC + FTC</div>
-             <h3 class="wl-ret-h">Looking Ahead to 2028</h3>
+             <h3 class="wl-ret-h">Skills Carry Across FRC + FTC</h3>
              <ul>
-               <li>Continued improvements to <strong>Systemcore</strong> and <strong>Motioncore</strong> toolchains</li>
-               <li>Expanded <strong>FTC</strong> WPILib documentation and library support</li>
-               <li>Watch the WPILib blog for 2028 season previews</li>
+               <li>Both programs use the same WPILib concepts and core libraries</li>
+               <li>Java, Blocks, C++, Python, and LabVIEW paths are documented where supported</li>
+               <li>Use the XRP to practice without waiting for a competition robot</li>
              </ul>
-             <a href="https://wpilib.org/blog" class="wl-shared-text wl-ret-link">Follow the WPILib blog for previews</a>
+             <a href="https://wpilib.org/blog" class="wl-shared-text wl-ret-link">Follow the WPILib blog for release updates</a>
            </div>
 
          </div>
@@ -175,10 +176,21 @@ WPILib Documentation
 
    <script>
    function wlSelectTab(tab) {
-     document.querySelectorAll('.wl-panel').forEach(p => p.classList.remove('active'));
-     document.querySelectorAll('.wl-tab-btn').forEach(b => b.classList.remove('active'));
-     document.getElementById('panel-' + tab).classList.add('active');
-     document.getElementById('btn-' + tab).classList.add('active');
+     if (tab !== 'new' && tab !== 'returning') tab = 'new';
+     document.querySelectorAll('.wl-panel').forEach(function(panel) {
+       panel.classList.remove('active');
+       panel.hidden = true;
+     });
+     document.querySelectorAll('.wl-tab-buttons button').forEach(function(button) {
+       button.classList.remove('active');
+       button.setAttribute('aria-expanded', 'false');
+     });
+     var panel = document.getElementById('panel-' + tab);
+     var button = document.getElementById('btn-' + tab);
+     panel.hidden = false;
+     panel.classList.add('active');
+     button.classList.add('active');
+     button.setAttribute('aria-expanded', 'true');
      try { localStorage.setItem('wpilib-tab', tab); } catch(e) {}
    }
    (function() {
@@ -190,7 +202,7 @@ WPILib Documentation
 .. raw:: html
 
    <hr class="wl-core-intro"/>
-   <h2 class="wl-sh wl-core-heading">Core Documentation</h2>
+   <h2 class="wl-sh wl-core-heading" id="core-documentation">Core Documentation</h2>
    <p class="wl-core-copy">Shared across all supported programs.</p>
 
    <h3 class="wl-sh">Foundations</h3>

@@ -14,68 +14,116 @@
 
       .. container:: sw-step-info-sub
 
-         Step 4 of 5
+         Step 4 of 4
 
-.. rubric:: Choose Your Environment
+**By the end of this step:** you will create or open a drivetrain project in
+your selected environment, put code on the robot, enable it safely, and drive.
 
-Writing the code itself is largely the same experience across FRC and FTC.
-Both programs can write code in VS Code (Part 1 below covers Java, C++,
-and Python), directly on the Systemcore through OnBot, or visually
-through Blockly, with no local install required for either.
-
-.. grid:: 1 1 3 3
+.. grid:: 1 1 2 2
    :gutter: 3
 
-   .. grid-item-card:: VS Code (Java, C++, Python)
-      :link: ../step-2/wpilib-setup
-      :link-type: doc
+   .. grid-item-card:: Control System Ready
       :class-card: sw-card-shared
 
-      **FRC + FTC**
-      ^^^
-      The full desktop IDE. Covered in Part 1 below: project templates,
-      vendor libraries, and deploy.
+      - Step 3 is complete
+      - Driver Station communication is green
+      - Your controller is connected to the driver computer
 
-   .. grid-item-card:: OnBot (Java, Python, LabVIEW)
-      :link: ../../ftc/index
-      :link-type: doc
+   .. grid-item-card:: Test Area Ready
       :class-card: sw-card-shared
 
-      **FRC + FTC**
-      ^^^
-      Write, save, and deploy code directly from a browser running on
-      the Systemcore itself. No VS Code install required.
+      - The drivetrain is securely supported with every wheel off the floor
+      - People, tools, hair, and loose clothing are clear of moving parts
+      - Someone is ready to turn off robot power
 
-   .. grid-item-card:: Blockly
-      :link: https://ftc-docs.firstinspires.org/en/latest/programming_resources/blocks/Blocks-Tutorial.html
-      :link-type: url
-      :class-card: sw-card-shared
+.. rubric:: Continue with Your Programming Choice
 
-      **FRC + FTC**
-      ^^^
-      Drag-and-drop visual programming in the browser. A good starting
-      point even if you already know Java.
+Use the same environment and language you selected on the Zero to Robot page
+and set up in Step 2. Both environments are supported for FRC and FTC with
+Systemcore.
 
-.. note::
+.. tab-set::
 
-   **Going with OnBot or Blockly?** Parts 1-5 below are the VS Code path;
-   they are not OnBot or Blockly instructions. Systemcore-specific creation,
-   deployment, and driving steps for those environments are still being
-   written. Current FTC Control Hub users should follow the
-   `official FTC programming tutorials
-   <https://ftc-docs.firstinspires.org/en/latest/programming_resources/index.html>`_.
+   .. tab-item:: OnBot
+      :sync: onbot
 
-.. card:: Blocks Programming Samples →
-   :link: blocks-drivetrain-samples
-   :link-type: ref
-   :class-card: sw-card-shared
+      OnBot runs in a browser hosted by Systemcore. Open the editor, then use
+      the row for your language.
 
-   **FRC + FTC: Blockly**
-   ^^^
-   Preview the built-in differential-drive and mecanum projects, then open
-   :guilabel:`Samples...` in the Blocks interface to create an editable copy.
+      .. list-table::
+         :header-rows: 1
+         :widths: 18 22 60
 
-.. rubric:: Part 1: Create Your Robot Project
+         * - Language
+           - Availability
+           - Next action
+         * - **Java**
+           - Available
+           - Create a Java project in OnBot. The Systemcore-specific guided
+             walkthrough is in progress.
+         * - **Blocks**
+           - Available
+           - Open :ref:`blocks-drivetrain-samples`, then create an editable
+             copy from :guilabel:`Samples...` in the Blocks interface.
+         * - **C++**
+           - Desktop only
+           - Select the **Desktop / VS Code** tab.
+         * - **Python**
+           - Available
+           - Create a Python project in OnBot. The Systemcore-specific guided
+             walkthrough is in progress.
+         * - **LabVIEW**
+           - Available
+           - Create a LabVIEW project in OnBot. The Systemcore-specific guided
+             walkthrough is in progress.
+
+      .. note::
+
+         Current FTC Control Hub users should follow the
+         `official FTC programming tutorials
+         <https://ftc-docs.firstinspires.org/en/latest/programming_resources/index.html>`_.
+         Those connection and deployment steps do not apply to Systemcore.
+
+   .. tab-item:: Desktop / VS Code
+      :sync: vscode
+
+      The desktop path uses WPILib VS Code and the tools installed in Step 2.
+
+      .. list-table::
+         :header-rows: 1
+         :widths: 18 22 60
+
+         * - Language
+           - Availability
+           - Next action
+         * - **Java**
+           - Available
+           - Follow the :doc:`drivetrain walkthrough
+             <creating-test-drivetrain-program-cpp-java-python>` below.
+         * - **Blocks**
+           - Available
+           - Open :ref:`blocks-drivetrain-samples`, then create an editable
+             copy from :guilabel:`Samples...` in the Blocks interface.
+         * - **C++**
+           - Available
+           - Follow the :doc:`drivetrain walkthrough
+             <creating-test-drivetrain-program-cpp-java-python>` below.
+         * - **Python**
+           - Available
+           - Follow the :doc:`drivetrain walkthrough
+             <creating-test-drivetrain-program-cpp-java-python>` below.
+         * - **LabVIEW**
+           - OnBot only
+           - Select the **OnBot** tab.
+
+.. rubric:: Desktop / VS Code Path
+
+The five parts below apply to desktop Java, C++, and Python projects. Desktop
+Blocks teams should start from a drivetrain sample, then rejoin at Part 4 to
+deploy. OnBot teams should use their editor's save and deploy workflow, then
+rejoin at Part 5 for the shared safety and driving checks.
+
+.. rubric:: Desktop Part 1: Create Your Robot Project
 
 Open the WPILib VS Code and create a new project from the template.
 
@@ -102,7 +150,7 @@ Open the WPILib VS Code and create a new project from the template.
       - Set team number and project folder
       - Add vendor libraries via *Manage Vendor Libraries*
 
-.. rubric:: Part 2: Install Vendor Libraries
+.. rubric:: Desktop Part 2: Install Vendor Libraries
 
 Vendor libraries add support for motor controllers and sensors.
 They are per-project and must be added each time you create or import a
@@ -134,7 +182,7 @@ project.
    <https://github.com/wpilibsuite/SystemcoreTesting/blob/main/A301.md>`_
    for the required version pair and channel examples.
 
-.. rubric:: Part 3: Basic Arcade Drive
+.. rubric:: Desktop Part 3: Basic Arcade Drive
 
 A minimal drivetrain has three long-lived objects: the two motor controllers
 and the ``DifferentialDrive``. Create them once as fields of the robot class
@@ -203,7 +251,7 @@ should only read the controller and command the existing drive object.
    complete example in the full drivetrain walkthrough rather than pasting an
    isolated snippet into an empty file.
 
-.. rubric:: Part 4: Deploy to the Robot
+.. rubric:: Desktop Part 4: Deploy to the Robot
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -219,6 +267,9 @@ should only read the controller and command the existing drive object.
       appropriate data-capable cable.
       WPILib auto-detects USB and deploys without Wi-Fi.
 
+.. TODO: Add a screenshot of a successful WPILib deploy terminal showing that
+   robot code started.
+
 .. card:: Running and testing your program →
    :link: running-test-program
    :link-type: doc
@@ -227,7 +278,7 @@ should only read the controller and command the existing drive object.
    Connect Driver Station, plug in joystick, verify robot code
    is running, and enable teleop for the first time.
 
-.. rubric:: Part 5: Enable and Drive
+.. rubric:: Shared Part 5: Enable and Drive
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -240,7 +291,7 @@ should only read the controller and command the existing drive object.
       - Joystick connected and recognized in DS
       - Driver Station reports a plausible robot battery voltage
 
-   .. grid-item-card:: Enable steps
+   .. grid-item-card:: FRC enable steps
 
       - Open FRC Driver Station
       - Select **TeleOperated** mode
@@ -248,15 +299,26 @@ should only read the controller and command the existing drive object.
       - Move joystick: robot should respond
       - Click **Disable** or press :kbd:`Enter` to stop
 
+   .. grid-item-card:: FTC enable steps
+
+      - Open the FTC Driver Station software
+      - Select and initialize your TeleOp program
+      - Announce that the robot is about to start, then start the program
+      - Move the controller: robot should respond
+      - Stop the program before approaching the robot
+
+.. TODO: Add a screenshot showing the controller recognized and the robot ready
+   to enable in Driver Station.
+
 .. warning::
 
-   The :kbd:`Space` bar triggers **Emergency Stop**; it is not the ordinary
-   disable shortcut. An emergency-stopped robot must be rebooted before it can
-   be enabled again.
+   **FRC Driver Station:** the :kbd:`Space` bar triggers **Emergency Stop**;
+   it is not the ordinary disable shortcut. An emergency-stopped robot must be
+   rebooted before it can be enabled again.
 
 .. tip::
 
-   **Something not working?** See :doc:`Step 5: Troubleshooting <../step-5/index>`.
+   **Something not working?** See :doc:`Troubleshooting <../step-5/index>`.
 
 .. container:: sw-success
 
@@ -275,10 +337,6 @@ should only read the controller and command the existing drive object.
 .. container:: sw-nav
 
    :doc:`← Step 3: Configure Your Control System <../step-3/index>`
-
-   .. container:: sw-next
-
-      :doc:`Step 5: Troubleshooting → <../step-5/index>`
 
 .. toctree::
    :maxdepth: 1

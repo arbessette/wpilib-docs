@@ -13,15 +13,42 @@ This guide gets you from parts on a table to a driving robot.
    FTC season**. Alpha and Beta teams may be able to use the hardware earlier,
    but those testing workflows are not the production competition release.
 
-.. rubric:: Choose Your Programming Language
+.. rubric:: Choose How You Will Program
    :class: wl-shared-text
 
-WPILib supports multiple languages. The available tools depend on your
-program and control system, so use the table to choose a supported path.
+Make two choices before installing anything. First choose where you want to
+write code, then choose one of the languages available there. Both environments
+work for FRC and FTC.
+
+**Choice 1: Programming environment**
+
+.. grid:: 1 1 2 2
+   :gutter: 3
+
+   .. grid-item-card:: OnBot: Program in a Browser
+      :class-card: sw-card-shared
+
+      **Nothing to install for coding**
+      ^^^
+      Open the editor hosted by Systemcore from a browser. Choose Java,
+      Blocks, Python, or LabVIEW.
+
+   .. grid-item-card:: Desktop: Program in VS Code
+      :class-card: sw-card-shared
+
+      **Full desktop development tools**
+      ^^^
+      Install WPILib and write code on your computer. Choose Java, Blocks,
+      C++, or Python.
+
+**Choice 2: Programming language**
+
+Every listed language is a supported team choice. Pick the style that fits
+your team; you can change later without changing the robot hardware.
 
 .. list-table::
    :header-rows: 1
-   :widths: 11 16 8 8 22 35
+   :widths: 13 18 13 13 22 21
 
    * - Language
      - Style
@@ -29,18 +56,18 @@ program and control system, so use the table to choose a supported path.
      - Desktop
      - Best for
      - Notes
-   * - **Blockly**
-     - Graphical (blocks)
-     - ✓
-     - ✓
-     - Beginners with no prior syntax knowledge
-     - Outputs Python under the hood
    * - **Java**
      - Text, statically typed
      - ✓
      - ✓
      - New teams, most teams
      - Most community examples
+   * - **Blocks (Blockly)**
+     - Graphical blocks
+     - ✓
+     - ✓
+     - Teams that prefer visual programming
+     - Outputs Python under the hood
    * - **C++**
      - Text, statically typed
      - ✗
@@ -68,8 +95,9 @@ the `current FTC programming-tool guide
 It supports Blocks, OnBot Java, and Android Studio; its instructions are
 not interchangeable with the Systemcore instructions in this guide.
 
-On Systemcore, OnBot runs in a browser with nothing to install. LabVIEW
-is available through OnBot only.
+On Systemcore, LabVIEW is available through OnBot only, while C++ is available
+through desktop development only. Step 2 gives setup instructions for the
+environment you choose.
 
 .. tip::
 
@@ -146,8 +174,8 @@ is available through OnBot only.
    :class: wl-shared-text
 
 For the complete **FRC VS Code path**, follow Steps 1 through 4 in order;
-you will have a driving robot by the end of Step 4. Step 5 is a
-troubleshooting reference to use whenever you get stuck. Systemcore
+you will have a driving robot by the end of Step 4. The separate
+Troubleshooting page is available whenever you get stuck. Systemcore
 OnBot, Blockly, and FTC-specific paths are still being completed and are
 clearly marked where they diverge.
 
@@ -161,7 +189,7 @@ clearly marked where they diverge.
    meantime; the same WPILib code runs on Systemcore when your hardware
    is ready.
 
-.. grid:: 1 2 3 5
+.. grid:: 1 2 4 4
    :gutter: 3
 
    .. grid-item-card:: Build and Wire Your Robot
@@ -203,14 +231,13 @@ clearly marked where they diverge.
       Create your first robot project, deploy code to the robot,
       and enable it with the Driver Station.
 
-   .. grid-item-card:: Troubleshooting
-      :link: step-5/index
-      :link-type: doc
-      :class-card: sw-card-shared
+.. card:: Something not working? Open Troubleshooting →
+   :link: step-5/index
+   :link-type: doc
+   :class-card: sw-card-shared
 
-      **05**
-      ^^^
-      Something not working? Find your symptom and fix it here.
+   Diagnose power, networking, communication, code, controller, and motor
+   problems without leaving the Zero to Robot guide.
 
 .. rubric:: Tips for New Teams
    :class: wl-shared-text
@@ -246,4 +273,4 @@ clearly marked where they diverge.
    Step 2: Set Up Your Environment <step-2/index>
    Step 3: Configure Your Control System <step-3/index>
    Step 4: Write and Drive <step-4/index>
-   Step 5: Troubleshooting <step-5/index>
+   Troubleshooting <step-5/index>
