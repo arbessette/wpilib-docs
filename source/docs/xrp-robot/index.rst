@@ -117,7 +117,7 @@ work on the XRP.
      - External (per motor controller)
    * - IMU / gyro
      - ✓ Built-in
-     - External (NavX, Pigeon 2)
+     - ✓ Built into Systemcore
    * - Driver Station
      - ✓ Same (Windows)
      - ✓ Same (Windows)

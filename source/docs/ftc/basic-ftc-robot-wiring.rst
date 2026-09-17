@@ -15,6 +15,6 @@ Topics planned for this guide:
 
 - Powering the Systemcore
 - Connecting the Motioncore motor controller hub
-- Wiring motors and servos
+- Wiring motors
 - Connecting sensors
 - Basic cable management

@@ -49,8 +49,10 @@ Same building blocks whether you're on FRC or FTC.
 At this introductory level, the most visible differences are the Driver
 Station and where motors connect. FRC uses the FRC Driver Station, with motor
 controllers wired into the FRC control system. FTC uses its own Driver Station
-software, and motors and servos connect through Motioncore. The programming
-building blocks above apply to both programs; the
+software, and motors connect through Motioncore. Servos will not be supported
+for FTC on Systemcore.
+
+The programming building blocks above apply to both programs; the
 :doc:`Zero to Robot guide <introduction>` identifies the program-specific
 steps.
 

@@ -74,7 +74,7 @@ LabVIEW.
 
       **Coming 2027-2028**
       ^^^
-      Motor and servo controller hub for FTC robots.
+      Motor controller hub for FTC robots.
       Works alongside Systemcore to drive mechanisms.
 
 .. rubric:: Related Resources
