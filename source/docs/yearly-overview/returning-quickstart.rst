@@ -15,7 +15,7 @@ should begin with :doc:`New to WPILib </docs/zero-to-robot/new-to-wpilib>`.
 4. Update the firmware on and :doc:`program the VH-109 radios
    </docs/zero-to-robot/step-3/radio-programming>`.
 5. :doc:`Install the FIRST Driver Station
-   </docs/zero-to-robot/step-2/first-driver-station>`.
+   </docs/zero-to-robot/step-2/first-driver-station-installation>`.
 6. Set up the environment for your language:
 
    - **Java or C++:** :doc:`install WPILib

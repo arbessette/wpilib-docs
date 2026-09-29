@@ -424,6 +424,10 @@ FTC Systemcore, or XRP code.
 
 .. rubric:: Source Code and API Docs
 
+- `Java source code <https://github.com/wpilibsuite/allwpilib/tree/v2027.0.0-alpha-7/wpilibj/src/main/java/org/wpilib>`_
+- `C++ source code <https://github.com/wpilibsuite/allwpilib/tree/v2027.0.0-alpha-7/wpilibc/src/main/native/cpp>`_
+- `Python source code <https://github.com/robotpy/mostrobotpy>`_
+
 .. grid:: 1 2 3 3
    :gutter: 3
 

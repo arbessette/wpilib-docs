@@ -18,12 +18,15 @@ and units that cannot boot use the recovery procedure later on this page.
    Update files are hardware-specific. Do not install an Alpha update on a
    Beta Systemcore or a Beta update on an Alpha Systemcore.
 
+Alpha units shipped without port labels; Beta units have port labels. Confirm
+the hardware revision before selecting the update.
+
 ## Routine Web Update
 
 1. Download the ``.llupdate`` file for the current season from the
    `Systemcore releases page <https://github.com/LimelightVision/systemcore-os-public/releases/latest>`_.
 
-   .. image:: images/imaging-your-systemcore/llupdate.png
+   .. image:: images/imaging-systemcore/llupdate.png
       :alt: The Systemcore release page with the .llupdate file download link boxed in yellow.
 
 2. Boot the Systemcore normally. Connect over Wi-Fi, or connect a
@@ -31,19 +34,19 @@ and units that cannot boot use the recovery procedure later on this page.
 3. Open a browser and navigate to ``robot.local``.
 4. Click the settings (gear) icon and open the configure/update section.
 
-   .. image:: images/imaging-your-systemcore/configuretab.png
+   .. image:: images/imaging-systemcore/configuretab.png
       :alt: The Systemcore home page with a box around the settings wheel tab that leads to the configure and update tab.
 
 5. Under **OS Update**, click **Select File**, choose the ``.llupdate``
    file you downloaded, then click **Flash Update**. The process takes
    several minutes to complete.
 
-   .. image:: images/imaging-your-systemcore/findos.png
+   .. image:: images/imaging-systemcore/findos.png
       :alt: The Systemcore configuration page at the OS Update section.
 
 Once the update finishes, every step shows a check mark:
 
-.. image:: images/imaging-your-systemcore/rebootfinished.png
+.. image:: images/imaging-systemcore/rebootfinished.png
    :alt: The finished OS Update page with all processes marked with a check mark.
 
 .. note::

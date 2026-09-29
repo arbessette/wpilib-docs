@@ -257,7 +257,7 @@ WPILib Documentation
 
    docs/software/vscode-overview/index
    docs/software/vscode-overview/3rd-party-libraries
-   docs/software/driverstation/index
+   docs/software/firstdriverstation/index
    docs/software/dashboards/index
    docs/software/telemetry/index
    docs/software/wpilib-tools/outlineviewer/index

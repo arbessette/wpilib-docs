@@ -41,12 +41,20 @@ separates program and controller problems from radio configuration problems.
      connect LINK after the Systemcore boots so it does not enter flash mode.
    - Or connect directly by Ethernet.
 
-3. Open **FIRST Driver Station**.
+3. Open **FIRST Driver Station** from the desktop or Start menu.
+
+   .. image:: /docs/software/firstdriverstation/images/driver-station/first-ds-icon.png
+      :alt: The FIRST Driver Station desktop icon.
+
 4. In Driver Station settings, enter the team number shown on the Systemcore
    display.
-5. Open the controller/USB view. Assign the controller to port 0 and verify
-   that its axes and buttons respond. Use :kbd:`F1` to rescan if a controller
-   was reconnected.
+
+   .. image:: /docs/software/firstdriverstation/images/driver-station/settings-tab(1).png
+      :alt: The Driver Station settings tab used to enter the team number.
+
+5. Open the **Gamepad** tab. Assign the controller to port 0 and verify
+   that its axes and buttons respond. Keep this tab open when reconnecting a
+   controller so Driver Station refreshes the connected-device list.
 6. Confirm that Driver Station shows:
 
    - Robot communication

@@ -10,7 +10,7 @@ The purpose of this task is to test any newly developed or heavily modified feat
 
 **All languages**
 
-- Use the new A-Stop functionality built into the :doc:`Driver Station's Practice mode </docs/software/driverstation/driver-station>`.
+- Use the new A-Stop functionality built into the :doc:`Driver Station's Match mode </docs/software/firstdriverstation/first-driver-station-introduction>`.
 
 **LabVIEW**
 

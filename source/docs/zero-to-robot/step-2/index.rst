@@ -185,7 +185,7 @@ regardless of whether you selected OnBot or VS Code above.
    :gutter: 3
 
    .. grid-item-card:: FRC Driver Station
-      :link: first-driver-station
+      :link: first-driver-station-installation
       :link-type: doc
       :class-card: sw-card-frc
 
@@ -237,7 +237,7 @@ regardless of whether you selected OnBot or VS Code above.
    :hidden:
 
    offline-installation-preparations
-   first-driver-station
+   first-driver-station-installation
    wpilib-setup
    python-setup
    step-2-next-steps
