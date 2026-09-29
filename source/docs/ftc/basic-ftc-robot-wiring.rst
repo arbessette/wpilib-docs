@@ -1,11 +1,13 @@
 # FTC Robot Wiring Walkthrough
 
-.. admonition:: Coming 2027-2028
+.. note::
 
-   This guide will be published ahead of the fall 2027 launch for the
-   2027-2028 FTC season.
+   The Systemcore and Motioncore instructions on this page are still being
+   developed.
 
-   `Follow the WPILib blog for updates → <https://wpilib.org/blog>`_
+FTC teams using a REV Control Hub or Expansion Hub should use
+the `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_ for
+legacy hardware setup and programming.
 
 This page will provide complete, start-to-finish instructions for wiring a
 basic drivetrain robot with Systemcore and Motioncore. It is the best starting

@@ -2,11 +2,11 @@
 
 # Getting Started with XRP
 
-The XRP (eXperimental Robot Platform), powered by
+The XRP (Experiential Robotics Platform), powered by
 `Worcester Polytechnic Institute <http://wpi.edu>`_, is a small, low-cost robot
 designed for learning WPILib programming without full FRC hardware.
-The same tools, language, and code patterns used for full FRC robots
-work on the XRP.
+Practice the WPILib tools and programming patterns used by FRC robots
+and FTC robots running Systemcore.
 
 .. rubric:: Why Use the XRP?
 
@@ -18,8 +18,8 @@ work on the XRP.
 
       **Learn**
       ^^^
-      Write the same Java, C++, or Python code you would deploy to
-      a full FRC robot.
+      Practice Java, C++, or Python with WPILib. XRP-specific classes
+      provide access to its motors, servos, and gyro.
 
    .. grid-item-card:: No Control System Required
       :class-card: sw-card-shared
@@ -40,7 +40,7 @@ work on the XRP.
    .. grid-item-card:: FTC Prep
       :class-card: sw-card-ftc
 
-      **FTC 2027-2028+**
+      **FTC with Systemcore**
       ^^^
       Systemcore teams use the same WPILib toolchain. XRP skills
       transfer directly to FTC robot programming.
@@ -50,9 +50,9 @@ work on the XRP.
 .. tip::
 
    XRP code runs on your **laptop as a simulation**, communicating
-   with the XRP hardware over Wi-Fi. You use the same
-   **WPILib VS Code tools and Driver Station** as FRC:
-   the XRP just appears as a simulated robot that drives real motors.
+   with the XRP hardware over Wi-Fi. Use **WPILib VS Code** to launch
+   the program and the **simulation GUI** to control robot state and
+   joystick inputs. The simulated robot drives real XRP motors.
 
 .. grid:: 1 2 3 3
    :gutter: 3
@@ -67,10 +67,11 @@ work on the XRP.
       Launch with **Simulate Robot Code** instead of Deploy.
       The simulation connects to the XRP over Wi-Fi.
 
-   .. grid-item-card:: Drive with Driver Station
+   .. grid-item-card:: Drive with the simulation GUI
 
-      Open the FRC Driver Station (Windows) and enable TeleOp.
-      Your joystick controls the XRP just like a full robot.
+      Assign your joystick and select Teleoperated in the simulation GUI.
+      See :doc:`Simulation GUI </docs/software/wpilib-tools/robot-simulation/simulation-gui>`
+      for robot state and joystick controls.
 
 .. rubric:: Hardware Specifications
 
@@ -81,21 +82,24 @@ work on the XRP.
    * - Component
      - Details
    * - **Processor**
-     - Raspberry Pi RP2040 dual-core Cortex-M0+ at 133 MHz
+     - RP2350 on the XRP Controller; RP2040 on the Beta controller
    * - **Wireless**
      - Wi-Fi 802.11 b/g/n (2.4 GHz) for host communication
    * - **Drive motors**
      - 2 brushed DC gear motors with integrated quadrature encoders
    * - **IMU**
-     - Built-in 6-axis LSM6DS3 (gyro + accelerometer)
+     - Built-in gyro and accelerometer; component varies by board version
    * - **Servo ports**
-     - 2 user servo outputs
+     - Connector count varies by board version; see the hardware overview
    * - **User I/O**
      - Reflectance sensor, ultrasonic distance sensor port
    * - **Power**
-     - USB-C or 3×AA battery pack
-   * - **Cost**
-     - ~$75 USD assembled (WPI / SparkFun)
+     - 4 AA battery pack; USB connection for setup
+
+
+See the `SparkFun hardware overview
+<https://docs.sparkfun.com/SparkFun_XRP_Controller/introduction/>`_ to identify
+your board, and :doc:`hardware-support` for devices supported by WPILib.
 
 .. rubric:: XRP vs Full FRC Robot
 
@@ -107,7 +111,7 @@ work on the XRP.
      - XRP
      - FRC Robot
    * - WPILib API
-     - ✓ Same Java/C++/Python API
+     - Supported WPILib classes plus XRP-specific hardware classes
      - ✓ Full API
    * - Command-based
      - ✓ Yes
@@ -118,9 +122,9 @@ work on the XRP.
    * - IMU / gyro
      - ✓ Built-in
      - ✓ Built into Systemcore
-   * - Driver Station
-     - ✓ Same (Windows)
-     - ✓ Same (Windows)
+   * - Robot control
+     - Simulation GUI
+     - Driver Station
    * - Deploy method
      - Simulate (Wi-Fi to laptop)
      - Deploy to Systemcore
@@ -128,11 +132,9 @@ work on the XRP.
      - ✗ Not available
      - ✓ Full CAN support
    * - Vendor libraries
-     - Not applicable
+     - XRP vendordep provides hardware support
      - REVLib, Phoenix 6, etc.
-   * - Cost
-     - ~$75
-     - $3,000–10,000+
+
 
 .. rubric:: Prerequisites
 
@@ -142,14 +144,14 @@ work on the XRP.
    .. grid-item-card:: Software (all platforms)
 
       - :doc:`WPILib installed <../zero-to-robot/step-2/wpilib-setup>`
-      - FRC Driver Station (Windows, for enabling)
+      - WPILib simulation GUI
       - XRP firmware flashed on the board
 
    .. grid-item-card:: Hardware
 
       - XRP robot kit (assembled)
-      - USB-C cable (for initial firmware flash)
-      - 3×AA batteries or USB-C power bank
+      - USB data cable: USB-C for XRP, Micro-USB for Beta XRP
+      - 4 AA batteries
       - 2.4 GHz Wi-Fi on your laptop
 
 .. rubric:: Getting Started
@@ -187,7 +189,7 @@ work on the XRP.
       Create an XRP project in WPILib VS Code, run the simulation,
       and drive your robot.
 
-.. rubric:: Example Projects
+.. rubric:: Examples and Hardware Support
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -204,7 +206,7 @@ work on the XRP.
       :link-type: doc
       :class-card: sw-card-frc
 
-      Read encoder distances, gyro heading, and reflectance sensor.
+      Check supported devices and the XRP-specific classes used to access them.
 
 .. tip::
 

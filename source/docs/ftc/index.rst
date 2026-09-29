@@ -1,21 +1,31 @@
 # FTC with WPILib
 
-.. admonition:: Practice Now, Compete in 2027-2028
+FTC teams can use Systemcore with WPILib or REV Control Hub / Expansion Hub
+with the FTC SDK. Choose the documentation that matches your control system.
 
-   **Systemcore** and **Motioncore** launch for FTC in **fall 2027** and become
-   competition legal for the **2027-2028 FTC season**. This is separate from
-   the Systemcore launch for the 2027 FRC season in January 2027. Alpha and
-   Beta hardware can be used for testing before the FTC launch: see
-   :doc:`Zero to Robot </docs/zero-to-robot/introduction>` to power one up and
-   start coding.
+.. grid:: 1 1 2 2
+   :gutter: 3
 
-   `Follow the WPILib blog for updates → <https://wpilib.org/blog>`_
+   .. grid-item-card:: Systemcore and Motioncore
+      :link: /docs/zero-to-robot/introduction
+      :link-type: doc
+      :class-card: sw-card-ftc
 
-This page is a reference for WPILib support in FTC: what's here and what's
-coming. For step-by-step setup, start with
-:doc:`Zero to Robot </docs/zero-to-robot/introduction>` instead. It covers
-the same tools and languages used in FRC: Java, Python, Blockly, and
-LabVIEW.
+      **WPILib**
+      ^^^
+      Use the tools and programming concepts described on this site.
+      Start with Zero to Robot for setup and programming instructions.
+
+   .. grid-item-card:: REV Control Hub / Expansion Hub
+      :link: https://ftc-docs.firstinspires.org/en/latest/
+      :link-type: url
+      :class-card: sw-card-ftc
+
+      **FTC SDK**
+      ^^^
+      Use FTC Docs for hardware setup, wiring, and programming instructions.
+
+The programming options below describe Systemcore with WPILib.
 
 .. rubric:: Programming
    :class: wl-ftc-text
@@ -26,7 +36,7 @@ LabVIEW.
    .. grid-item-card:: Java
       :class-card: sw-card-ftc
 
-      **Coming 2027-2028**
+      **Systemcore**
       ^^^
       Full Java support via the OnBot browser editor and VS Code
       with the WPILib extension.
@@ -34,7 +44,7 @@ LabVIEW.
    .. grid-item-card:: Python
       :class-card: sw-card-ftc
 
-      **Coming 2027-2028**
+      **Systemcore**
       ^^^
       Python support in both the OnBot environment and
       desktop VS Code.
@@ -42,7 +52,7 @@ LabVIEW.
    .. grid-item-card:: Blockly
       :class-card: sw-card-ftc
 
-      **Coming 2027-2028**
+      **Systemcore**
       ^^^
       Visual block-based programming in the browser,
       no installation required.
@@ -50,7 +60,7 @@ LabVIEW.
    .. grid-item-card:: LabVIEW
       :class-card: sw-card-ftc
 
-      **Coming 2027-2028**
+      **Systemcore**
       ^^^
       Graphical programming via the browser-based
       OnBot editor.
@@ -64,7 +74,7 @@ LabVIEW.
    .. grid-item-card:: Systemcore
       :class-card: sw-card-ftc
 
-      **Coming 2027-2028**
+      **Systemcore**
       ^^^
       The main FTC robot controller. Runs the full WPILib stack,
       the same software foundation used in FRC.
@@ -72,7 +82,7 @@ LabVIEW.
    .. grid-item-card:: Motioncore
       :class-card: sw-card-ftc
 
-      **Coming 2027-2028**
+      **Systemcore**
       ^^^
       Motor controller hub for FTC robots.
       Works alongside Systemcore to drive mechanisms.
@@ -107,10 +117,3 @@ LabVIEW.
       Team registration, mentor resources, budgeting, and the
       competition manual, program-wide and independent of which
       control system your team uses.
-
-.. note::
-
-   **Currently using FTC Legacy (REV)?**
-   Continue programming with the FTC SDK as normal.
-   Full documentation at
-   `ftc-docs.firstinspires.org <https://ftc-docs.firstinspires.org>`_.

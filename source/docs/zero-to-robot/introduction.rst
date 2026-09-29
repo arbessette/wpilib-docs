@@ -6,12 +6,11 @@ Welcome to WPILib, the standard programming library for *FIRST*\ |reg| Robotics 
 (FRC\ |reg|) and FIRST Tech Challenge (FTC).
 This guide gets you from parts on a table to a driving robot.
 
-.. important::
+This guide covers robots using **Systemcore**.
 
-   **Release timeline:** Systemcore launches for the **2027 FRC season in
-   January 2027**. FTC support launches in **fall 2027** for the **2027-2028
-   FTC season**. Alpha and Beta teams may be able to use the hardware earlier,
-   but those testing workflows are not the production competition release.
+FTC teams using a REV Control Hub or Expansion Hub should use
+the `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_ for
+legacy hardware setup and programming.
 
 .. rubric:: Choose How You Will Program
    :class: wl-shared-text
@@ -87,13 +86,6 @@ your team; you can change later without changing the robot hardware.
      - ✗
      - Teams with a LabVIEW background
      - Graphical dataflow programming
-
-The table describes the planned 2027 Systemcore workflow. Until that
-workflow is released, FTC teams using the REV Control Hub should follow
-the `current FTC programming-tool guide
-<https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/choosing_program_lang/choosing-program-lang.html>`_.
-It supports Blocks, OnBot Java, and Android Studio; its instructions are
-not interchangeable with the Systemcore instructions in this guide.
 
 On Systemcore, LabVIEW is available through OnBot only, while C++ is available
 through desktop development only. Step 2 gives setup instructions for the
@@ -181,13 +173,11 @@ clearly marked where they diverge.
 
 .. note::
 
-   **FTC teams:** Robot assembly and Motioncore-specific wiring arrive with
-   the FTC launch in fall 2027 for the 2027-2028 season, but you don't need
-   to wait to get started. Powering and connecting to the Systemcore
-   (Step 1, Parts 2-3) and installing your tools (Step 2) already apply
-   today. Practice with the :doc:`XRP robot <../xrp-robot/index>` in the
-   meantime; the same WPILib code runs on Systemcore when your hardware
-   is ready.
+   **FTC teams:** The Systemcore and Motioncore assembly and wiring
+   walkthroughs are still being completed. Start with powering and connecting
+   Systemcore (Step 1, Parts 2-3) and choosing your tools (Step 2).
+   You can also practice WPILib programming with the
+   :doc:`XRP robot <../xrp-robot/index>`.
 
 .. grid:: 1 2 4 4
    :gutter: 3

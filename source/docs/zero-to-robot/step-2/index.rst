@@ -201,11 +201,12 @@ regardless of whether you selected OnBot or VS Code above.
       :link-type: doc
       :class-card: sw-card-ftc
 
-      **Coming Fall 2027 for the 2027-2028 Season**
+      **FTC with Systemcore**
       ^^^
       Systemcore and Motioncore use FTC-specific driver software. See the
-      FTC overview for release status. Teams using the REV Control Hub today
-      should continue using the current FTC Driver Station app.
+      FTC overview for Systemcore resources. Teams using a REV Control Hub or
+      Expansion Hub should use the
+      `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_.
 
 .. warning::
 

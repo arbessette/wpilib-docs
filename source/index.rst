@@ -138,14 +138,10 @@ WPILib Documentation
 
            <div class="wl-ret-card wl-ret-ftc">
              <div class="wl-ret-label wl-ftc-label">FTC</div>
-             <h3 class="wl-ret-h">FTC Teams: Prepare for 2027-2028</h3>
-             <p class="wl-ret-copy wl-ret-copy-spacious">WPILib FTC support launches with Systemcore in fall 2027 for the 2027-2028 FTC season. The FRC Systemcore release is earlier, in January 2027:</p>
+             <h3 class="wl-ret-h">FTC: Choose Your Control System</h3>
+             <p class="wl-ret-copy wl-ret-copy-spacious">FTC teams use Systemcore with WPILib or REV Control Hub / Expansion Hub with the FTC SDK. Choose the documentation for your hardware.</p>
              <strong class="wl-ret-subhead">Using REV Control Hub / Expansion Hub?</strong>
-             <ul class="wl-ret-compact-list">
-               <li>Continue programming with the <strong>FTC SDK</strong> as normal : Java or Blocks</li>
-               <li>Full documentation at <a href="https://ftc-docs.firstinspires.org">ftc-docs.firstinspires.org</a></li>
-               <li>REV Duo hardware remains legal and fully supported for the current season</li>
-             </ul>
+             <p class="wl-ret-copy">Follow <a href="https://ftc-docs.firstinspires.org/en/latest/">FTC Docs</a> for setup, wiring, and programming.</p>
              <strong class="wl-ret-subhead wl-ret-subhead-spaced">Using Systemcore with WPILib?</strong>
              <ul class="wl-ret-compact-list">
                <li>Systemcore and Motioncore bring full WPILib support to FTC</li>

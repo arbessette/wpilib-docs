@@ -33,15 +33,11 @@
 
    .. grid-item::
 
-      .. admonition:: Coming 2027-2028
+      .. admonition:: Guide in Progress
 
-         This guide will be published ahead of the fall 2027 launch for the
-         2027-2028 FTC season.
-
-         `Follow the WPILib blog for updates → <https://wpilib.org/blog>`_
-
-         In the meantime, official kit hardware and assembly guides are on the
-         `FTC Starter Bot Resources <https://ftc-resources.firstinspires.org/ftc/team>`_ page.
+         The Systemcore and Motioncore assembly guide is still being developed.
+         For legacy FTC hardware, use the
+         `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_.
 
       This page will cover assembling an FTC starter bot using
       Systemcore and Motioncore hardware. Several vendor kits

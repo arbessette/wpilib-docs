@@ -223,7 +223,7 @@ these connections.
       :link-type: doc
       :class-card: sw-card-ftc
 
-      **FTC Coming 2027-2028**
+      **FTC with Systemcore**
       ^^^
       **Wiring your first robot?**
 
@@ -248,7 +248,7 @@ these connections.
       :link-type: doc
       :class-card: sw-card-ftc
 
-      **FTC Coming 2027-2028**
+      **FTC with Systemcore**
       ^^^
       **Looking up a connection?**
 
@@ -265,9 +265,9 @@ these connections.
    CAN bus, radio, and pneumatics. Do not follow their roboRIO power or data
    connections when building a Systemcore robot.
 
-   The FTC walkthrough and reference are placeholders for the fall 2027
-   Systemcore and Motioncore release. Until those instructions are published,
-   teams using the REV Control Hub or Expansion Hub should follow the
+   The FTC Systemcore and Motioncore walkthrough and reference are still
+   being developed. Teams using the REV Control Hub or Expansion Hub should
+   follow the
    `current FTC Robot Wiring Guide
    <https://ftc-docs.firstinspires.org/en/latest/robot_building/wiring_guide/wiring-guide.html>`_.
 

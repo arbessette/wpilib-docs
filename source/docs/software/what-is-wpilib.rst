@@ -11,7 +11,7 @@ WPILib is the standard software library for programming
 *FIRST*\ |reg| robots.
 It provides the classes and tools needed to control motors, read sensors,
 communicate with the Driver Station, and run autonomous routines across
-FRC\ |reg| and (from 2027-2028) FTC\ |reg| via Systemcore.
+FRC\ |reg| and FTC\ |reg| via Systemcore.
 
 .. image:: /assets/wpi-logo.png
    :alt: Worcester Polytechnic Institute (WPI) logo.
@@ -25,7 +25,7 @@ FIRST\ |reg|, and volunteer developers from the community.
 
 .. rubric:: Which path are you on?
 
-.. grid:: 1 1 3 3
+.. grid:: 1 2 2 4
    :gutter: 3
 
    .. grid-item-card:: FIRST Robotics Competition
@@ -48,10 +48,20 @@ FIRST\ |reg|, and volunteer developers from the community.
    .. grid-item-card:: FTC Systemcore
       :class-card: sw-card-ftc
 
-      **FTC 2027-2028+**
+      **FTC with Systemcore**
       ^^^
       WPILib now supports FTC via Systemcore and Motioncore.
       Same Java/C++/Python toolchain as FRC.
+
+   .. grid-item-card:: FTC REV Control Hub / Expansion Hub
+      :link: https://ftc-docs.firstinspires.org/en/latest/
+      :link-type: url
+      :class-card: sw-card-ftc
+
+      **FTC SDK**
+      ^^^
+      An alternative FTC control system using the FTC SDK.
+      Follow FTC Docs for setup, wiring, and programming instructions.
 
 .. rubric:: What WPILib Includes
 
@@ -232,6 +242,8 @@ directly on the Systemcore with no local install.
    :gutter: 3
 
    .. grid-item-card:: OnBot Java / Android Studio
+      :link: https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/choosing_program_lang/choosing-program-lang.html
+      :link-type: url
       :class-card: sw-card-ftc
 
       **FTC Legacy (REV)**
@@ -241,6 +253,8 @@ directly on the Systemcore with no local install.
       `ftc-docs.firstinspires.org <https://ftc-docs.firstinspires.org>`_.
 
    .. grid-item-card:: Blocks (FTC SDK)
+      :link: https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/choosing_program_lang/choosing-program-lang.html
+      :link-type: url
       :class-card: sw-card-ftc
 
       **FTC Legacy (REV)**
@@ -354,6 +368,8 @@ directly on the Systemcore with no local install.
       for time.
 
    .. grid-item-card:: Road Runner and PedroPathing
+      :link: https://ftc-docs.firstinspires.org/en/latest/programming_resources/index.html
+      :link-type: url
       :class-card: sw-card-ftc
 
       **FTC Legacy (REV)**

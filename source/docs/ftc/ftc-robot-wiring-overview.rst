@@ -1,15 +1,13 @@
 # FTC Robot Wiring Reference
 
-.. admonition:: Coming 2027-2028
+.. note::
 
-   This reference will be published ahead of the fall 2027 launch for the
-   2027-2028 FTC season.
+   The Systemcore and Motioncore instructions on this page are still being
+   developed.
 
-   `Follow the WPILib blog for updates → <https://wpilib.org/blog>`_
-
-   In the meantime, the official
-   `Robot Wiring Guide <https://ftc-docs.firstinspires.org/en/latest/robot_building/wiring_guide/wiring-guide.html>`_
-   covers current control system wiring in detail.
+FTC teams using a REV Control Hub or Expansion Hub should use
+the `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_ for
+legacy hardware setup and programming.
 
 This page will be a reference for looking up FTC control system connections
 and component details while wiring or troubleshooting a robot.
