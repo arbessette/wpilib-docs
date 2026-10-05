@@ -45,6 +45,7 @@ separates program and controller problems from radio configuration problems.
 
    .. image:: /docs/software/firstdriverstation/images/driver-station/first-ds-icon.png
       :alt: The FIRST Driver Station desktop icon.
+      :width: 64
 
 4. In Driver Station settings, enter the team number shown on the Systemcore
    display.
@@ -104,6 +105,13 @@ path are working together. Lower the robot to the floor only after disabling
 it and confirming that all drivetrain directions are correct. For the first
 floor test, use a clear open area, begin with small controller inputs, and keep
 another person ready to disable or power off the robot.
+
+.. tip::
+
+   If a check fails, use :doc:`Robot troubleshooting
+   </docs/software/support/troubleshooting>` or the
+   :doc:`Driver Station errors and warnings
+   </docs/software/firstdriverstation/first-driver-station-errors-warnings>`.
 
 .. container:: sw-success
 

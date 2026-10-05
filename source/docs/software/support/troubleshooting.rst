@@ -1,7 +1,7 @@
 # Troubleshooting
 
-Problems can show up at any point in Zero to Robot. Find the section
-below that matches where you're stuck.
+Use this page when setting up, programming, or testing a robot with Systemcore.
+Find the section below that matches the symptom you see.
 
 Start at the top of this sequence and stop when a check fails:
 
@@ -19,7 +19,7 @@ Start at the top of this sequence and stop when a check fails:
 The first failed check identifies which section below to investigate. Change
 one thing at a time, then repeat the check.
 
-.. rubric:: Power & Wiring Issues (Step 1)
+.. rubric:: Power & Wiring Issues
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -36,16 +36,17 @@ one thing at a time, then repeat the check.
       :class-card: sw-card-err
 
       Confirm the Power LED is solid green, then try a data-capable USB cable
-      and the USB IP address listed in Step 1. On Alpha hardware, connect LINK
+      and the USB IP address listed in
+      :doc:`Connecting to Systemcore </docs/zero-to-robot/step-1/index>`. On Alpha hardware, connect LINK
       only after Systemcore has booted normally.
 
-.. rubric:: Install Issues (Step 2)
+.. rubric:: Install Issues
 
 .. grid:: 1
    :gutter: 3
 
    .. grid-item-card:: WPILib VS Code won't open or commands are missing
-      :link: ../step-2/index
+      :link: /docs/zero-to-robot/step-2/index
       :link-type: doc
       :class-card: sw-card-shared
 
@@ -53,13 +54,13 @@ one thing at a time, then repeat the check.
       system VS Code install. Re-run the installer if the WPILib icon
       doesn't appear in the activity bar.
 
-.. rubric:: Radio & Configuration Issues (Step 3)
+.. rubric:: Radio & Configuration Issues
 
 .. grid:: 1 1 2 2
    :gutter: 3
 
    .. grid-item-card:: Can't reach radio.local
-      :link: ../step-3/radio-programming
+      :link: /docs/zero-to-robot/step-3/radio-programming
       :link-type: doc
       :class-card: sw-card-frc
 
@@ -68,14 +69,14 @@ one thing at a time, then repeat the check.
       radio guide.
 
    .. grid-item-card:: Systemcore update won't finish
-      :link: ../step-3/imaging-your-systemcore
+      :link: /docs/zero-to-robot/step-3/imaging-your-systemcore
       :link-type: doc
       :class-card: sw-card-shared
 
       On Wi-Fi, Systemcore reboots as part of the update; reconnect and refresh
       the page. On USB, look for the success message.
 
-.. rubric:: Code & Drive Issues (Step 4)
+.. rubric:: Code & Drive Issues
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -110,16 +111,16 @@ one thing at a time, then repeat the check.
 .. rubric:: Still Stuck?
 
 .. card:: Support Resources
-   :link: ../../software/support/support-resources
+   :link: support-resources
    :link-type: doc
    :class-card: sw-card-shared
 
    Community forums and additional documentation for FRC and FTC teams.
 
-.. container:: sw-nav
+.. seealso::
 
-   :doc:`← Step 4: Write and Drive <../step-4/index>`
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
+   :doc:`Driver Station errors and warnings
+   </docs/software/firstdriverstation/first-driver-station-errors-warnings>`
+   and :doc:`Driver Station logs
+   </docs/software/firstdriverstation/first-driver-station-log-viewer>`
+   provide more detail when the basic checks do not identify the problem.

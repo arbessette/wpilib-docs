@@ -42,79 +42,37 @@ Use the same environment and language you selected on the Zero to Robot page
 and set up in Step 2. Both environments are supported for FRC and FTC with
 Systemcore.
 
-.. tab-set::
+.. grid:: 1 1 2 2
+   :gutter: 3
 
-   .. tab-item:: OnBot
-      :sync: onbot
+   .. grid-item-card:: Java, C++, or Python in VS Code
+      :link: creating-test-drivetrain-program-cpp-java-python
+      :link-type: doc
+      :class-card: sw-card-shared
 
-      OnBot runs in a browser hosted by Systemcore. Open the editor, then use
-      the row for your language.
+      Create a project, configure the motor controllers, and deploy using
+      the full drivetrain walkthrough. C++ uses desktop development only.
 
-      .. list-table::
-         :header-rows: 1
-         :widths: 18 22 60
+   .. grid-item-card:: Blocks
+      :link: create_blocks_project
+      :link-type: ref
+      :class-card: sw-card-shared
 
-         * - Language
-           - Availability
-           - Next action
-         * - **Java**
-           - Available
-           - Create a Java project in OnBot. The Systemcore-specific guided
-             walkthrough is in progress.
-         * - **Blocks**
-           - Available
-           - Open :ref:`blocks-drivetrain-samples`, then create an editable
-             copy from :guilabel:`Samples...` in the Blocks interface.
-         * - **C++**
-           - Desktop only
-           - Select the **Desktop / VS Code** tab.
-         * - **Python**
-           - Available
-           - Create a Python project in OnBot. The Systemcore-specific guided
-             walkthrough is in progress.
-         * - **LabVIEW**
-           - Available
-           - Create a LabVIEW project in OnBot. The Systemcore-specific guided
-             walkthrough is in progress.
+      Start with a drivetrain sample in the Blocks editor. Choose the sample
+      for your hardware, make an editable copy, and check its configuration.
 
-      .. note::
+   .. grid-item-card:: Java or Python in OnBot
+      :class-card: sw-card-shared
 
-         Current FTC Control Hub users should follow the
-         `official FTC programming tutorials
-         <https://ftc-docs.firstinspires.org/en/latest/programming_resources/index.html>`_.
-         Those connection and deployment steps do not apply to Systemcore.
+      Open the editor hosted by Systemcore. The detailed project-creation
+      and deployment walkthroughs are still being completed.
 
-   .. tab-item:: Desktop / VS Code
-      :sync: vscode
+   .. grid-item-card:: LabVIEW: OnBot or Desktop
+      :class-card: sw-card-shared
 
-      The desktop path uses WPILib VS Code and the tools installed in Step 2.
-
-      .. list-table::
-         :header-rows: 1
-         :widths: 18 22 60
-
-         * - Language
-           - Availability
-           - Next action
-         * - **Java**
-           - Available
-           - Follow the :doc:`drivetrain walkthrough
-             <creating-test-drivetrain-program-cpp-java-python>` below.
-         * - **Blocks**
-           - Available
-           - Open :ref:`blocks-drivetrain-samples`, then create an editable
-             copy from :guilabel:`Samples...` in the Blocks interface.
-         * - **C++**
-           - Available
-           - Follow the :doc:`drivetrain walkthrough
-             <creating-test-drivetrain-program-cpp-java-python>` below.
-         * - **Python**
-           - Available
-           - Follow the :doc:`drivetrain walkthrough
-             <creating-test-drivetrain-program-cpp-java-python>` below.
-         * - **LabVIEW**
-           - OnBot only
-           - Select the **OnBot** tab.
+      Use the LabVIEW environment you selected in Step 2. The Systemcore
+      project-creation and deployment walkthroughs for both environments
+      are still being completed.
 
 .. rubric:: Desktop / VS Code Path
 
@@ -318,7 +276,7 @@ should only read the controller and command the existing drive object.
 
 .. tip::
 
-   **Something not working?** See :doc:`Troubleshooting <../step-5/index>`.
+   **Something not working?** See :doc:`Troubleshooting </docs/software/support/troubleshooting>`.
 
 .. container:: sw-success
 

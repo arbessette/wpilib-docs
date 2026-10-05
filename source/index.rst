@@ -308,6 +308,7 @@ WPILib Documentation
    docs/yearly-overview/index
    docs/api-reference
    docs/software/support/support-resources
+   docs/software/support/troubleshooting
    docs/software/frc-glossary
 
 .. toctree::

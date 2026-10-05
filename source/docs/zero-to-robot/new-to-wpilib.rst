@@ -2,7 +2,7 @@ New to WPILib
 ==============
 
 If you already know how to write code, this page maps familiar programming
-ideas to a WPILib robot. WPILib is what lets your code talk to motors, sensors,
+ideas to a robot that uses WPILib. WPILib is what lets your code talk to motors, sensors,
 and everything else wired into the control system.
 
 .. tip::

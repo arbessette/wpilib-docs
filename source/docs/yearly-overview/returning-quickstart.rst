@@ -25,8 +25,8 @@ should begin with :doc:`New to WPILib </docs/zero-to-robot/new-to-wpilib>`.
      environment too if you want its VS Code setup and tools.
    - **Blocks:** choose either the OnBot or desktop path in :doc:`Step 2
      </docs/zero-to-robot/step-2/index>`.
-   - **LabVIEW:** use the OnBot path in Step 2. Desktop LabVIEW is not
-     available for Systemcore.
+   - **LabVIEW:** choose OnBot or desktop LabVIEW in Step 2. Detailed
+     Systemcore setup instructions are still being completed.
 
 7. Open last season's project:
 

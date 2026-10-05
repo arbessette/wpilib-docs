@@ -9,7 +9,8 @@ This article contains instructions/links to components you will want to gather i
 .. note::
 
    The order in which the desktop tools are installed does not matter. OnBot
-   LabVIEW is hosted by Systemcore and does not have a desktop installer.
+   runs on Systemcore. Desktop LabVIEW requires its own installation;
+   Systemcore-specific offline installation instructions are still being completed.
 
 ## Documentation
 

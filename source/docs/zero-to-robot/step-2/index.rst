@@ -37,8 +37,8 @@ for robot setup and testing.
       Station. It may be the same computer used for programming.
 
 Choose how you'll write code. **OnBot** runs in the browser with nothing
-to install; **VS Code** is the full desktop IDE. Both are supported for FRC
-and FTC with Systemcore. Keep using the environment and language you selected
+to install; **desktop development** uses tools installed on your computer,
+including WPILib VS Code or LabVIEW. These paths support FRC and FTC with Systemcore. Keep using the environment and language you selected
 on the Zero to Robot page.
 
 .. important::
@@ -175,11 +175,17 @@ on the Zero to Robot page.
          Libraries like REVLib and Phoenix 6 are added per-project in Step 4
          using the WPILib Dependency Manager. You do not need them yet.
 
+.. rubric:: Desktop LabVIEW
+
+LabVIEW is also available for desktop development. Its Systemcore installation
+and project-creation walkthroughs are still being completed. The VS Code
+installation steps above apply to Java, Blocks, C++, and Python.
+
 .. rubric:: Set Up Driver Software
 
 Your programming environment and your competition driver software are
 separate choices. Set up the driver software required by your program,
-regardless of whether you selected OnBot or VS Code above.
+regardless of whether you selected OnBot, VS Code, or desktop LabVIEW.
 
 .. grid:: 1 1 2 2
    :gutter: 3

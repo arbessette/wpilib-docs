@@ -1,7 +1,7 @@
-# Create Your Test Drivetrain Program (Java/C++/Python)
+# Create Your Test Drivetrain Program
 
-**By the end of this page:** you will have a Java, C++, or Python drivetrain
-project configured for your robot and deployed to Systemcore.
+Use the Java, C++, or Python walkthrough to configure and deploy a drivetrain
+project, or start with the Blocks sample workflow below.
 
 Before beginning, confirm that WPILib and any language-specific tools from
 :doc:`Step 2 <../step-2/index>` are installed, Step 3 is complete, and you know
@@ -14,6 +14,7 @@ explains the code you must check before deploying it to your robot.
 
 * :ref:`create_java_cpp_project`
 * :ref:`create_python_project`
+* :ref:`create_blocks_project`
 
 .. important::
 
@@ -24,6 +25,34 @@ explains the code you must check before deploying it to your robot.
    :doc:`vendor library </docs/software/vscode-overview/3rd-party-libraries>`,
    update the devices, and assign unique CAN IDs using the manufacturer's
    instructions.
+
+.. _create_blocks_project:
+
+## Starting a Drivetrain Project in Blocks
+
+In the Blocks editor, select :guilabel:`Samples...`, choose a drivetrain
+sample, then select :guilabel:`Create New Project From Sample` to make an
+editable copy. Choose the sample that matches your hardware:
+
+- **DifferentialDrive301:** a two-motor differential drivetrain with A301
+  motor controllers.
+- **MecanumRobot301:** a four-motor mecanum drivetrain with A301 motor
+  controllers.
+- **MecanumRobotExpansionHub:** a four-motor mecanum drivetrain with motors
+  connected to a REV Expansion Hub.
+
+See :ref:`blocks-drivetrain-samples` for screenshots and links to each sample's
+source. Before running a sample, check the motor connections, controller
+assignment, and inversion against your robot. A sample for a different motor
+controller is not a drop-in replacement for your hardware.
+
+.. note::
+
+   The detailed Systemcore Blocks deployment walkthrough is still being
+   completed. Once your program is deployed, FRC teams can follow
+   :doc:`running-test-program` for the pre-enable checks and first drive.
+
+The remaining sections describe the Java, C++, and Python workflow.
 
 .. _create_java_cpp_project:
 

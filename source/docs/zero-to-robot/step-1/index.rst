@@ -27,30 +27,20 @@ testing.
 
 .. rubric:: What You Need for This Step
 
-.. list-table::
-   :header-rows: 1
-   :widths: 28 36 36
+- Systemcore and a robot battery
+- Compatible power distribution hardware
+- The provided MicroFit Pwr/Bridge cable when using Motioncore
+- The provided MicroFit-to-XT30 cable when not using Motioncore
+- A matching XT30 extension if bare-wire power is required
+- A computer with Wi-Fi or a data-capable USB cable
 
-   * - For every build
-     - Alpha Systemcore power
-     - Beta Systemcore power
-   * - Systemcore and robot battery
-     - 18 AWG red and black wire
-     - Provided MicroFit Pwr/Bridge cable, when using Motioncore
-   * - Compatible power distribution hardware
-     - White Weidmuller ferrules and a ferrule crimper
-     - Provided MicroFit-to-XT30 cable, when not using Motioncore
-   * - Computer with Wi-Fi or a data-capable USB cable
-     - Wire stripper and small flat-blade screwdriver
-     - Matching XT30 extension only if bare-wire power is required
+These instructions cover Systemcore hardware with the **MicroFit Pwr/Bridge**
+power connector.
 
-Do not prepare or connect power wiring until you have identified whether your
-Systemcore is an Alpha or Beta unit. Alpha units were distributed during the
-initial FRC alpha test; FTC test units are Beta hardware. If the revision is
-unclear, check the unit and kit labeling before continuing.
+.. note::
 
-.. TODO: Add a labeled comparison photo showing how to identify Alpha and Beta
-   Systemcore hardware.
+   For earlier Alpha hardware, use the
+   `Systemcore testing guide <https://github.com/wpilibsuite/SystemcoreTesting#powering-on>`_.
 
 .. rubric:: Part 1: Assemble Your Robot
 
@@ -67,33 +57,26 @@ unclear, check the unit and kit labeling before continuing.
       Step-by-step guide to assembling the FRC Kit of Parts chassis or
       an FTC starter bot into a drive-ready robot.
 
-.. rubric:: Part 2: Power the Systemcore
+.. rubric:: Part 2: Wire Your Systemcore
 
-How you power the Systemcore depends on your hardware revision.
+Power Systemcore through the **MicroFit Pwr/Bridge** port. Choose the
+connection that matches your control system:
 
 .. grid:: 1 1 2 2
    :gutter: 3
 
-   .. grid-item-card:: Alpha Systemcore
+   .. grid-item-card:: With Motioncore
       :class-card: sw-card-shared
 
-      Connect Systemcore directly to the robot's power distribution board.
-      Use 18 AWG wire with white Weidmuller ferrules.
+      Connect Systemcore's **Pwr/Bridge** port to Motioncore's **Bridge** port
+      using a provided MicroFit cable.
 
-   .. grid-item-card:: Beta Systemcore
+   .. grid-item-card:: Without Motioncore
       :class-card: sw-card-shared
 
-      Power Systemcore through the MicroFit Pwr/Bridge port only.
-
-      - With Motioncore, connect Systemcore's Pwr/Bridge port to Motioncore's
-        Bridge port using a provided MicroFit cable.
-      - Without Motioncore, use the included MicroFit-to-XT30 cable. If bare
-        wires are required, cut the ends from an XT30 extension cable.
-
-.. warning::
-
-   Do not use both power inputs on Alpha units (Bridge + Weidmuller)
-   at the same time.
+      Use the included **MicroFit-to-XT30** cable. If your power distribution
+      hardware requires bare wires, use an XT30 extension cable with one end
+      removed.
 
 .. TODO: Add a close-up photo showing the Systemcore Pwr/Bridge connector and
    correct MicroFit cable orientation.
@@ -101,8 +84,7 @@ How you power the Systemcore depends on your hardware revision.
 Use the provided cables whenever possible. If your team must build a cable,
 follow the `Systemcore and Motioncore cable specifications
 <https://downloads.limelightvision.io/documents/systemcore_motioncore_cable_specifications.pdf>`_
-for its pinout, wire, and connector requirements. Systemcore connectors use
-gold contacts in the Alpha specification; do not mate them with tin contacts.
+for its pinout, wire, and connector requirements.
 
 Before connecting the battery, inspect every power connection:
 
@@ -120,10 +102,8 @@ Before connecting the battery, inspect every power connection:
 .. important::
 
    The USB-C **LINK** port carries data only and does not power the
-   Systemcore. On an Alpha unit, having LINK connected when robot power is
-   applied starts flash mode instead of a normal boot. For an ordinary USB
-   connection, power the Alpha Systemcore first and connect LINK after it
-   starts.
+   Systemcore. Connect robot power through Pwr/Bridge before checking the
+   USB connection.
 
 .. rubric:: Part 3: Confirm It's Alive
 
@@ -152,14 +132,11 @@ to it directly, before any radio or field network is involved.
    ``172.29.0.1`` (USB, macOS/Linux) instead.
 
 1. Connect the battery and turn robot power **On**.
-2. Confirm that the **Power** LED becomes solid green. The **Status** LED
-   should be off when there are no hardware faults. A solid or blinking red
-   Status LED indicates a fault; read the onboard display for details before
-   continuing.
+2. Confirm that Systemcore powers on and check the onboard display for
+   hardware faults before continuing.
 3. Connect the computer to the ``SYSTEMCORE`` Wi-Fi network using password
    ``PASSWORD``, or connect it to the USB-C LINK port with a data-capable
-   cable. On Alpha hardware, connect LINK only after power-up for a normal
-   boot.
+   cable.
 4. Open ``http://robot.local`` in a browser. If that name does not resolve,
    use the appropriate IP address from the table.
 5. Confirm that the Systemcore web interface loads and identifies the unit.
@@ -178,12 +155,6 @@ controllers, or drivetrain are configured.
    or you see or smell smoke, turn robot power off and disconnect the
    battery immediately. Recheck polarity, exposed conductors, and shorts before
    applying power again.
-
-.. note::
-
-   These LED meanings and the custom-connector requirements come from the
-   Alpha hardware specification. Check the production specification before
-   applying them to hardware whose labeling or revision differs.
 
 .. rubric:: Part 4: Wire the Rest of the Control System
 
@@ -286,8 +257,8 @@ these connections.
 
       ✓ Your robot is assembled, powered, and ready for software setup.
 
-   Continue when every power connection passes inspection, Systemcore's Power
-   LED is solid green, and ``robot.local`` opens from the computer. The radio,
+   Continue when every power connection passes inspection, Systemcore has
+   booted normally, and ``robot.local`` opens from the computer. The radio,
    motor controllers, and drivetrain do not need to be configured yet.
 
 .. container:: sw-nav

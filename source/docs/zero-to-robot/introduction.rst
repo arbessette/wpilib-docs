@@ -4,7 +4,8 @@
 
 Welcome to WPILib, the standard programming library for *FIRST*\ |reg| Robotics Competition
 (FRC\ |reg|) and FIRST Tech Challenge (FTC).
-This guide gets you from parts on a table to a driving robot.
+This guide walks you through setting up the control system, choosing your
+programming tools, and running your first program on a robot that uses WPILib.
 
 This guide covers robots using **Systemcore**.
 
@@ -32,13 +33,13 @@ work for FRC and FTC.
       Open the editor hosted by Systemcore from a browser. Choose Java,
       Blocks, Python, or LabVIEW.
 
-   .. grid-item-card:: Desktop: Program in VS Code
+   .. grid-item-card:: Desktop: Program on Your Computer
       :class-card: sw-card-shared
 
       **Full desktop development tools**
       ^^^
-      Install WPILib and write code on your computer. Choose Java, Blocks,
-      C++, or Python.
+      Write code on your computer. Use WPILib VS Code for Java, Blocks,
+      C++, or Python, or choose desktop LabVIEW.
 
 **Choice 2: Programming language**
 
@@ -65,7 +66,7 @@ your team; you can change later without changing the robot hardware.
      - Graphical blocks
      - ✓
      - ✓
-     - Teams that prefer visual programming
+     - Teams new to programming or that prefer visual programming
      - Outputs Python under the hood
    * - **C++**
      - Text, statically typed
@@ -83,13 +84,13 @@ your team; you can change later without changing the robot hardware.
    * - **LabVIEW**
      - Graphical (dataflow)
      - ✓
-     - ✗
+     - ✓
      - Teams with a LabVIEW background
      - Graphical dataflow programming
 
-On Systemcore, LabVIEW is available through OnBot only, while C++ is available
-through desktop development only. Step 2 gives setup instructions for the
-environment you choose.
+LabVIEW is available through OnBot and desktop development. C++ is available
+through desktop development only. Step 2 describes the environment you choose;
+the desktop LabVIEW installation walkthrough is still being completed.
 
 .. tip::
 
@@ -112,8 +113,7 @@ environment you choose.
       ^^^
       - Systemcore controller
       - Power Distribution Hub (PDH) or Panel (PDP)
-      - Vivid VH-109 Radio (powered directly from robot battery voltage; no VRM required)
-      - 18 AWG wire for VH-109 power
+      - Vivid VH-109 Radio
       - Motor controllers (SPARK MAX, Talon FX, etc.)
       - Drive motors and wheels
       - 12 V robot battery and fuse
@@ -199,7 +199,8 @@ clearly marked where they diverge.
 
       **02**
       ^^^
-      Choose OnBot or VS Code, and get your Driver Station installed.
+      Choose your programming environment and install the driver software
+      for your robot.
 
    .. grid-item-card:: Configure Your Control System
       :link: step-3/index
@@ -222,12 +223,12 @@ clearly marked where they diverge.
       and enable it with the Driver Station.
 
 .. card:: Something not working? Open Troubleshooting →
-   :link: step-5/index
+   :link: /docs/software/support/troubleshooting
    :link-type: doc
    :class-card: sw-card-shared
 
    Diagnose power, networking, communication, code, controller, and motor
-   problems without leaving the Zero to Robot guide.
+   problems during setup or whenever you test your robot.
 
 .. rubric:: Tips for New Teams
    :class: wl-shared-text
@@ -263,4 +264,3 @@ clearly marked where they diverge.
    Step 2: Set Up Your Environment <step-2/index>
    Step 3: Configure Your Control System <step-3/index>
    Step 4: Write and Drive <step-4/index>
-   Troubleshooting <step-5/index>
