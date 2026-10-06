@@ -42,7 +42,7 @@ WPILib Documentation
            <h2 class="wl-welcome-h">New to WPILib? You're in the right place.</h2>
            <p class="wl-welcome-p">You don't need prior programming or robot experience. Follow the guide in order and check your work at the end of each step.</p>
          </div>
-         <h3 class="wl-sh">Start with the guided path</h3>
+         <h3 class="wl-sh">Set Up and Program Your Robot</h3>
          <div class="wl-legend">
            <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-frc"></span>FRC</span>
            <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-ftc"></span>FTC</span>
@@ -53,7 +53,7 @@ WPILib Documentation
            <span class="wl-num wl-shared-text">→</span>
            <div>
              <div class="wl-card-title">Zero to Robot</div>
-             <div class="wl-card-desc">Four steps: build and wire, set up your tools, configure the control system, then write code and drive.</div>
+             <div class="wl-card-desc">Connect Systemcore, set up your tools, configure the control system, then write code and drive. Assembly and wiring resources are linked along the way.</div>
            </div>
          </a>
          <div class="wl-tip wl-tip-shared">
@@ -124,7 +124,7 @@ WPILib Documentation
              <h3 class="wl-ret-h">What Is New for 2027</h3>
              <ul>
                <li>FRC now uses Systemcore: see the hardware migration guide</li>
-               <li>2027 field images and AprilTag layout data included in WPILib</li>
+               <li>2027 field images and AprilTag layout data (included in WPILib after kickoff)</li>
                <li>Windows 10 is no longer supported: Windows 11 is required</li>
                <li>Vendor library updates required: check the Dependency Manager</li>
              </ul>
@@ -195,15 +195,50 @@ WPILib Documentation
    })();
    </script>
 
+.. rubric:: Find the Right Documentation
+
+.. grid:: 1 1 3 3
+   :gutter: 3
+
+   .. grid-item-card:: WPILib: Systemcore and Robot Programming
+      :link: /docs/zero-to-robot/introduction
+      :link-type: doc
+      :class-card: sw-card-shared
+
+      Start here for Systemcore setup, robot programming, libraries,
+      simulation, and debugging, with links to hardware, vendor, and
+      program resources when you need them.
+
+   .. grid-item-card:: FRC Docs: Team, Hardware, and Vendor Resources
+      :link: /docs/hardware/hardware-basics/hardware-overview
+      :link-type: doc
+      :class-card: sw-card-frc
+
+      **Separate site coming soon**
+      ^^^
+      General FRC guidance, hardware references, vendor links, and team
+      resources. For now, use the FRC guides hosted here.
+
+      +++
+      Browse current FRC resources →
+
+   .. grid-item-card:: FTC Docs: FTC-Specific Guidance
+      :link: https://ftc-docs.firstinspires.org/en/latest/
+      :link-type: url
+      :class-card: sw-card-ftc
+
+      Find FTC assembly, wiring, and program resources. Choose instructions
+      for your control system. Use WPILib docs for Systemcore programming.
+
 .. raw:: html
 
    <hr class="wl-core-intro"/>
    <h2 class="wl-sh wl-core-heading" id="core-documentation">Core Documentation</h2>
-   <p class="wl-core-copy">Shared across all supported programs.</p>
+   <p class="wl-core-copy">Systemcore setup and robot programming, with supporting hardware and vendor references.</p>
 
    <h3 class="wl-sh">Foundations</h3>
    <div class="wl-core-grid">
-     <a class="wl-core-card" href="docs/hardware/hardware-basics/hardware-overview.html"><div class="wl-core-title">Hardware Overview</div><div class="wl-core-desc">Motors, sensors, pneumatics, cameras, and FRC-legal components.</div></a>
+     <a class="wl-core-card" href="docs/hardware/hardware-basics/hardware-overview.html"><div class="wl-core-title">Hardware Overview</div><div class="wl-core-desc">Systemcore, supported hardware interfaces, and connections between robot code and devices.</div></a>
      <a class="wl-core-card" href="docs/software/what-is-wpilib.html"><div class="wl-core-title">Software Overview</div><div class="wl-core-desc">WPILib tools, VS Code extensions, vendor libraries, and the full software ecosystem.</div></a>
      <a class="wl-core-card" href="docs/software/commandbased/index.html"><div class="wl-core-title">Robot Programming</div><div class="wl-core-desc">Command-based framework, subsystems, triggers, and drive code patterns.</div></a>
    </div>

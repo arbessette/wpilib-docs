@@ -1,7 +1,13 @@
 # FTC with WPILib
 
-FTC teams can use Systemcore with WPILib or REV Control Hub / Expansion Hub
-with the FTC SDK. Choose the documentation that matches your control system.
+Use WPILib docs for Systemcore setup and robot programming, including tools,
+libraries, and supporting hardware and vendor references.
+Use `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_ for FTC-specific
+assembly, wiring, and program resources.
+
+Choose programming instructions for the software running on your robot:
+Systemcore uses WPILib, while the Android-based FTC control system uses the
+FTC SDK. Check the hardware and software covered by a guide before following it.
 
 .. grid:: 1 1 2 2
    :gutter: 3

@@ -44,6 +44,12 @@ power connector.
 
 .. rubric:: Part 1: Assemble Your Robot
 
+Use the assembly and wiring resources for your program to prepare the
+chassis, drivetrain, and power distribution. The FRC references remain on
+this site; `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_ provides
+FTC-specific resources. Check the hardware covered by each guide before
+following it. Parts 2 and 3 below cover the shared Systemcore connection.
+
 .. grid:: 1
    :gutter: 3
 

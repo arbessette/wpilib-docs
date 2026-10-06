@@ -1,7 +1,13 @@
 # Troubleshooting
 
 Use this page when setting up, programming, or testing a robot with Systemcore.
-Find the section below that matches the symptom you see.
+Find the section below that matches the symptom you see. This page focuses on
+Systemcore connectivity, programming tools, deployment, and robot-code issues.
+
+For detailed hardware checks, follow the
+:doc:`FRC wiring reference </docs/zero-to-robot/step-1/intro-to-frc-robot-wiring>`
+or `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_, using the guide
+that matches your control system.
 
 Start at the top of this sequence and stop when a check fails:
 

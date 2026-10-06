@@ -2,9 +2,15 @@
 
 # Control System Hardware Overview
 
-This page summarizes the major hardware components in the WPILib-based
-control system. Use it as a reference when wiring or troubleshooting your
-robot.
+This page introduces the hardware interfaces used by WPILib: Systemcore,
+motor controllers, sensors, and their connections to robot software.
+
+For chassis assembly and program-specific wiring, use the
+:doc:`FRC wiring reference </docs/zero-to-robot/step-1/intro-to-frc-robot-wiring>`,
+:doc:`kitbot and starter-bot resources </docs/zero-to-robot/step-1/kitbot-starterbot-assembly>`,
+or `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_. The FRC guides
+are currently hosted on this site. Check each guide's hardware scope before
+following its wiring diagrams.
 
 .. tab-set::
 

@@ -7,7 +7,14 @@ Welcome to WPILib, the standard programming library for *FIRST*\ |reg| Robotics 
 This guide walks you through setting up the control system, choosing your
 programming tools, and running your first program on a robot that uses WPILib.
 
-This guide covers robots using **Systemcore**.
+This guide covers robots using **Systemcore**. It focuses on the shared
+control-system and programming steps: connect Systemcore, install your tools,
+configure the controller, and write and test robot code.
+
+Robot assembly and program-specific wiring are prerequisites. Step 1 links
+to the FRC assembly and wiring guides currently hosted here and to
+`FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_ for FTC resources.
+Use instructions that match your hardware.
 
 FTC teams using a REV Control Hub or Expansion Hub should use
 the `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_ for
