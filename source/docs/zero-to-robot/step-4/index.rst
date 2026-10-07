@@ -19,6 +19,10 @@
 **By the end of this step:** you will create or open a drivetrain project in
 your selected environment, put code on the robot, enable it safely, and drive.
 
+.. note::
+
+   FRC KitBot example code will be available after the 2027 kickoff.
+
 .. grid:: 1 1 2 2
    :gutter: 3
 
@@ -60,6 +64,7 @@ Systemcore.
 
       Start with a drivetrain sample in the Blocks editor. Choose the sample
       for your hardware, make an editable copy, and check its configuration.
+      More drivetrain examples for Blocks are coming soon.
 
    .. grid-item-card:: Java or Python in OnBot
       :class-card: sw-card-shared

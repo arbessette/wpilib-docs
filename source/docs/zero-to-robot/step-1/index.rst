@@ -63,6 +63,11 @@ following it. Parts 2 and 3 below cover the shared Systemcore connection.
       Step-by-step guide to assembling the FRC Kit of Parts chassis or
       an FTC starter bot into a drive-ready robot.
 
+.. note::
+
+   FRC KitBot code will be available after the 2027 kickoff in
+   :doc:`Step 4: Write and Drive <../step-4/index>`.
+
 .. rubric:: Part 2: Wire Your Systemcore
 
 Power Systemcore through the **MicroFit Pwr/Bridge** port. Choose the

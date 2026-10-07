@@ -52,6 +52,10 @@ controller is not a drop-in replacement for your hardware.
    completed. Once your program is deployed, FRC teams can follow
    :doc:`running-test-program` for the pre-enable checks and first drive.
 
+.. note::
+
+   More drivetrain examples for Blocks are coming soon.
+
 The remaining sections describe the Java, C++, and Python workflow.
 
 .. _create_java_cpp_project:
