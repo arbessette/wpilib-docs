@@ -8,6 +8,32 @@
      --ftc-light:  #fff3e0;
      --shared:     #2e7d32;   /* shared green */
      --shared-light: #f1f8f1;
+     --sw-warning-background: #fff8e1;
+     --sw-error-background: #fff5f5;
+     --sw-deprecated-background: #ffebee;
+     --sw-deprecated-text: #c62828;
+   }
+
+   /* Use the same tinted surfaces for manual and system dark mode. */
+   body[data-theme="dark"] {
+     --frc-light: rgba(0,156,215,0.12);
+     --ftc-light: rgba(224,112,0,0.12);
+     --shared-light: rgba(46,125,50,0.12);
+     --sw-warning-background: rgba(255,160,0,0.12);
+     --sw-error-background: rgba(211,47,47,0.12);
+     --sw-deprecated-background: rgba(211,47,47,0.16);
+     --sw-deprecated-text: #ef9a9a;
+   }
+   @media (prefers-color-scheme: dark) {
+     body:not([data-theme="light"]):not([data-theme="dark"]) {
+       --frc-light: rgba(0,156,215,0.12);
+       --ftc-light: rgba(224,112,0,0.12);
+       --shared-light: rgba(46,125,50,0.12);
+       --sw-warning-background: rgba(255,160,0,0.12);
+       --sw-error-background: rgba(211,47,47,0.12);
+       --sw-deprecated-background: rgba(211,47,47,0.16);
+       --sw-deprecated-text: #ef9a9a;
+     }
    }
 
    /* ── TAB SELECTOR ── */
@@ -304,7 +330,7 @@
    .sw-card-rec           { border-color:var(--frc); background:var(--frc-light); }
    .sw-card-shared        { border-color:rgba(46,125,50,0.3); background:var(--shared-light); }
    a.sw-card-shared:hover { border-color:var(--shared); }
-   .sw-card-err           { border-color:rgba(211,47,47,0.3); background:#fff5f5; }
+   .sw-card-err           { border-color:rgba(211,47,47,0.3); background:var(--sw-error-background); }
 
    /* sphinx-design's own .sd-card rule has equal specificity to .sw-card-frc/ftc/shared/rec
       and loads after this stylesheet, so it silently wins the cascade on grid-item-card
@@ -319,10 +345,10 @@
       above) plus uncolored text — so both the label and its background read
       grey without these overrides. The header gets a stronger tint than the
       body/title so it still reads as a distinct label bar, not one flat box. */
-   .sd-card.sw-card-frc    .sd-card-title { color:var(--frc); background:var(--frc-light); }
-   .sd-card.sw-card-ftc    .sd-card-title { color:var(--ftc); background:var(--ftc-light); }
-   .sd-card.sw-card-rec    .sd-card-title { color:var(--frc); background:var(--frc-light); }
-   .sd-card.sw-card-shared .sd-card-title { color:var(--shared); background:var(--shared-light); }
+   .sd-card.sw-card-frc    .sd-card-title { color:var(--frc); background:transparent; }
+   .sd-card.sw-card-ftc    .sd-card-title { color:var(--ftc); background:transparent; }
+   .sd-card.sw-card-rec    .sd-card-title { color:var(--frc); background:transparent; }
+   .sd-card.sw-card-shared .sd-card-title { color:var(--shared); background:transparent; }
 
    .sd-card.sw-card-frc    .sd-card-header { color:var(--frc); background:rgba(0,156,215,0.12); border-bottom-color:rgba(0,156,215,0.3); }
    .sd-card.sw-card-ftc    .sd-card-header { color:var(--ftc); background:rgba(224,112,0,0.12); border-bottom-color:rgba(224,112,0,0.3); }
@@ -369,7 +395,7 @@
 
    /* ── TIP / WARN / NOTE ── */
    .sw-tip  { background:var(--shared-light); border:1px solid rgba(46,125,50,0.3); border-radius:6px; padding:14px 18px; font-size:0.875rem; line-height:1.6; margin-bottom:20px; }
-   .sw-warn { background:#fff8e1; border:1px solid rgba(255,160,0,0.4); border-radius:6px; padding:14px 18px; font-size:0.875rem; line-height:1.6; margin-bottom:20px; }
+   .sw-warn { background:var(--sw-warning-background); border:1px solid rgba(255,160,0,0.4); border-radius:6px; padding:14px 18px; font-size:0.875rem; line-height:1.6; margin-bottom:20px; }
    .sw-note { background:var(--frc-light); border:1px solid rgba(0,156,215,0.3); border-radius:6px; padding:14px 18px; font-size:0.875rem; line-height:1.6; margin-bottom:20px; }
    .sw-tip a, .sw-warn a { font-weight:600; }
 
@@ -389,7 +415,7 @@
    .sw-coming { text-align:center; padding:48px 32px; border:2px dashed rgba(224,112,0,0.4); border-radius:12px; background:var(--ftc-light); margin-bottom:28px; }
    .sw-coming-icon { font-size:2.5rem; margin-bottom:12px; }
    .sw-coming-h { font-size:1.3rem; font-weight:700; color:var(--ftc); margin:0 0 10px; }
-   .sw-coming-p { font-size:0.9rem; color:#666; line-height:1.6; max-width:540px; margin:0 auto 20px; }
+   .sw-coming-p { font-size:0.9rem; color:var(--color-foreground-secondary,#666); line-height:1.6; max-width:540px; margin:0 auto 20px; }
 
    /* ── NAV ── */
    .sw-nav { display:flex; justify-content:space-between; margin-top:32px; padding-top:16px; border-top:1px solid var(--color-background-border,#ddd); }
@@ -406,7 +432,7 @@
    .sw-tbl td { padding:8px 12px; border-bottom:1px solid var(--color-background-border,#ddd); vertical-align:top; }
    .sw-tbl tr:nth-child(even) td { background:var(--color-background-secondary,#f8f8f8); }
 
-   .sw-dep { display:inline-block; font-size:0.75rem; font-weight:700; color:#c62828; background:#ffebee; padding:1px 6px; border-radius:3px; margin-left:6px; }
+   .sw-dep { display:inline-block; font-size:0.75rem; font-weight:700; color:var(--sw-deprecated-text); background:var(--sw-deprecated-background); padding:1px 6px; border-radius:3px; margin-left:6px; }
 
    @media(max-width:700px) {
      .sw-grid-2, .sw-grid-3, .sw-grid-4, .sw-grid-6 { grid-template-columns:1fr; }
@@ -446,6 +472,20 @@ body[data-theme="dark"] .sw-warn        { background: rgba(255, 160,   0, 0.12);
 body[data-theme="dark"] .sw-nav p a     { background: var(--color-background-primary, #1a1a1a); }
 
 /* ── DARK MODE: landing page components ── */
+body[data-theme="dark"] .wl-tip-shared {
+  background: rgba(46,125,50,0.12);
+  border-color: rgba(129,199,132,0.35);
+  color: var(--color-foreground-primary, #e8e8e8);
+}
+body[data-theme="dark"] .wl-tip-shared a { color: #81c784; }
+@media (prefers-color-scheme: dark) {
+  body:not([data-theme="light"]):not([data-theme="dark"]) .wl-tip-shared {
+    background: rgba(46,125,50,0.12);
+    border-color: rgba(129,199,132,0.35);
+    color: var(--color-foreground-primary, #e8e8e8);
+  }
+  body:not([data-theme="light"]):not([data-theme="dark"]) .wl-tip-shared a { color: #81c784; }
+}
 body[data-theme="dark"] .wl-card        { background: var(--color-background-secondary, #1e1e1e); border-color: rgba(255,255,255,0.08); }
 body[data-theme="dark"] .wl-card-frc   { border-color: rgba(0,156,215,0.35); }
 body[data-theme="dark"] .wl-card-ftc   { border-color: rgba(224,112,0,0.35); }
