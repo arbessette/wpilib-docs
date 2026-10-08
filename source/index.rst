@@ -278,37 +278,14 @@ WPILib Documentation
 
 .. toctree::
    :maxdepth: 1
-   :caption: FRC, FTC, and Control Systems
+   :caption: Reference
    :hidden:
 
-   docs/ftc/index
-   docs/xrp-robot/index
-   docs/romi-robot/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Tools, Dashboards, and Networking
-   :hidden:
-
-   docs/software/vscode-overview/index
-   docs/software/vscode-overview/3rd-party-libraries
-   docs/software/firstdriverstation/index
-   docs/software/dashboards/index
-   docs/software/telemetry/index
-   docs/software/wpilib-tools/outlineviewer/index
-   docs/software/wpilib-tools/wpical/index
-   docs/networking/networking-introduction/index
-   docs/networking/networking-utilities/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Hardware and Wiring
-   :hidden:
-
-   docs/controls-overviews/control-system-hardware
-   docs/hardware/hardware-basics/hardware-overview
-   docs/hardware/hardware-basics/status-lights-ref
-   docs/software/can-devices/index
+   docs/yearly-overview/index
+   docs/api-reference
+   docs/software/support/support-resources
+   docs/software/support/troubleshooting
+   docs/software/frc-glossary
 
 .. toctree::
    :maxdepth: 1
@@ -327,6 +304,21 @@ WPILib Documentation
 
 .. toctree::
    :maxdepth: 1
+   :caption: Tools, Dashboards, and Networking
+   :hidden:
+
+   docs/software/vscode-overview/index
+   docs/software/vscode-overview/3rd-party-libraries
+   docs/software/firstdriverstation/index
+   docs/software/dashboards/index
+   docs/software/telemetry/index
+   docs/software/wpilib-tools/outlineviewer/index
+   docs/software/wpilib-tools/wpical/index
+   docs/networking/networking-introduction/index
+   docs/networking/networking-utilities/index
+
+.. toctree::
+   :maxdepth: 1
    :caption: Robot Behavior and Autonomy
    :hidden:
 
@@ -337,14 +329,22 @@ WPILib Documentation
 
 .. toctree::
    :maxdepth: 1
-   :caption: Reference
+   :caption: Control Systems
    :hidden:
 
-   docs/yearly-overview/index
-   docs/api-reference
-   docs/software/support/support-resources
-   docs/software/support/troubleshooting
-   docs/software/frc-glossary
+   docs/ftc/index
+   docs/xrp-robot/index
+   docs/romi-robot/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Hardware and Wiring
+   :hidden:
+
+   docs/controls-overviews/control-system-hardware
+   docs/hardware/hardware-basics/hardware-overview
+   docs/hardware/hardware-basics/status-lights-ref
+   docs/software/can-devices/index
 
 .. toctree::
    :maxdepth: 1
