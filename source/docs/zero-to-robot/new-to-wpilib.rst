@@ -1,53 +1,55 @@
 New to WPILib
 ==============
 
-If you already know how to write code, this page maps familiar programming
-ideas to a robot that uses WPILib. WPILib is what lets your code talk to motors, sensors,
-and everything else wired into the control system.
+Already know how to write code? Start here to learn how a WPILib robot
+program is organized. WPILib provides the classes you use to control motors,
+read sensors, and communicate with the Driver Station.
 
 .. tip::
 
    **New to programming too?** Start with :doc:`Zero to Robot <introduction>`.
-   It teaches the programming concepts as you build and bring up the robot.
+   Follow the setup steps, then write and run your first robot program.
 
 .. rubric:: How the Pieces Fit Together
    :class: wl-shared-text
 
-Same building blocks whether you're on FRC or FTC.
+These are the main pieces you'll encounter in WPILib code, plus a comparison
+with FTC SDK OpModes.
 
 .. grid:: 1 2 3 5
    :gutter: 3
 
    .. grid-item-card:: Robot Class
 
-      The entry point for your program. Defines what runs when the robot
+      Defines what runs when the robot
       is enabled, disabled, or switches modes.
 
-   .. grid-item-card:: Subsystems
+   .. grid-item-card:: Mechanisms
 
-      A piece of the robot (drivetrain, arm, intake) wrapped in code
-      that owns its own motors and sensors.
+      Groups the code for a mechanism, such as a drivetrain, arm, or intake.
+      It owns the mechanism's motors and sensors.
 
    .. grid-item-card:: Commands
 
-      An action a subsystem performs, like "drive forward" or "raise the
-      arm to height." You schedule commands; you don't call them directly.
+      Defines an action, such as driving forward or raising an arm.
+      The command scheduler runs the action and manages which commands
+      can use each subsystem.
 
    .. grid-item-card:: OpModes
 
-      Coming from FTC, this is what you already know. A WPILib Robot
-      Class fills a similar role by defining what runs in each robot mode.
+      If you've used the FTC SDK, you've written OpModes. In WPILib,
+      the Robot Class defines what runs in each robot mode.
 
    .. grid-item-card:: Hardware APIs
 
       The classes for motor controllers, encoders, and other devices.
-      This is what actually puts a signal on the wire.
+      Use them to set motor outputs and read sensor values.
 
 .. rubric:: Where FRC and FTC Differ
    :class: wl-shared-text
 
-At this introductory level, the most visible differences are the Driver
-Station and where motors connect. FRC uses the FRC Driver Station, with motor
+The Driver Station and motor connections differ between FRC and FTC.
+FRC uses the FRC Driver Station, with motor
 controllers wired into the FRC control system. FTC uses its own Driver Station
 software, and motors connect through Motioncore. Servos will not be supported
 for FTC on Systemcore.
@@ -58,9 +60,9 @@ steps.
 
 .. tip::
 
-   **Need to back up?** If the robot still needs to be built or wired,
-   start with the :doc:`hardware overview </docs/hardware/hardware-basics/hardware-overview>`
-   before writing code against hardware that isn't connected yet.
+   **Still setting up the hardware?** Use the
+   :doc:`hardware overview </docs/hardware/hardware-basics/hardware-overview>`
+   to identify the controllers, power distribution, and connections on your robot.
 
 .. container:: sw-nav
 

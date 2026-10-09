@@ -2,16 +2,14 @@
 
 # Zero to Robot
 
-Welcome to WPILib, the standard programming library for *FIRST*\ |reg| Robotics Competition
-(FRC\ |reg|) and FIRST Tech Challenge (FTC).
-This guide walks you through setting up the control system, choosing your
-programming tools, and running your first program on a robot that uses WPILib.
+This guide takes you from setting up **Systemcore** to running a drivetrain
+program. 
 
-This guide covers robots using **Systemcore**. It focuses on the shared
-control-system and programming steps: connect Systemcore, install your tools,
-configure the controller, and write and test robot code.
+Start with assembly and wiring in Step 1, set up your editor in Step 2,
+configure the control system in Step 3, then write code and test the
+drivetrain in Step 4.
 
-Robot assembly and program-specific wiring are prerequisites. Step 1 links
+Robot assembly and robot specific wiring are prerequisites. Step 1 links
 to the FRC assembly and wiring guides currently hosted here and to
 `FTC Docs <https://ftc-docs.firstinspires.org/en/latest/>`_ for FTC resources.
 Use instructions that match your hardware.
@@ -23,9 +21,8 @@ legacy hardware setup and programming.
 .. rubric:: Choose How You Will Program
    :class: wl-shared-text
 
-Make two choices before installing anything. First choose where you want to
-write code, then choose one of the languages available there. Both environments
-work for FRC and FTC.
+Choose a programming enviroment and a language available for that platform
+Keep those choices as you follow Steps 2 and 4.
 
 **Choice 1: Programming environment**
 
@@ -35,7 +32,7 @@ work for FRC and FTC.
    .. grid-item-card:: OnBot: Program in a Browser
       :class-card: sw-card-shared
 
-      **Nothing to install for coding**
+      **OnBot Developement**
       ^^^
       Open the editor hosted by Systemcore from a browser. Choose Java,
       Blocks, Python, or LabVIEW.
@@ -43,15 +40,16 @@ work for FRC and FTC.
    .. grid-item-card:: Desktop: Program on Your Computer
       :class-card: sw-card-shared
 
-      **Full desktop development tools**
+      **Desktop Development**
       ^^^
       Write code on your computer. Use WPILib VS Code for Java, Blocks,
       C++, or Python, or choose desktop LabVIEW.
 
 **Choice 2: Programming language**
 
-Every listed language is a supported team choice. Pick the style that fits
-your team; you can change later without changing the robot hardware.
+Use the table to check which enviroement support your language. If your team
+already knows a language, start there. If you prefer visual programming,
+look at Blocks or LabVIEW.
 
 .. list-table::
    :header-rows: 1
@@ -61,39 +59,38 @@ your team; you can change later without changing the robot hardware.
      - Style
      - OnBot
      - Desktop
-     - Best for
+     - Useful for
      - Notes
    * - **Java**
      - Text, statically typed
      - ✓
      - ✓
-     - New teams, most teams
-     - Most community examples
+     - Teams choosing a text-based language
+     - Uses classes and explicit type declarations
    * - **Blocks (Blockly)**
      - Graphical blocks
      - ✓
      - ✓
      - Teams new to programming or that prefer visual programming
-     - Outputs Python under the hood
+     - Generates Python code
    * - **C++**
-     - Text, statically typed
+     - Text
      - ✗
      - ✓
      - Teams that already know C++
-     - Highest performance; manual memory management adds
-       complexity for beginners
+     - Desktop development only
    * - **Python**
-     - Text, dynamically typed
+     - Text 
      - ✓
      - ✓
      - Teams already using Python
-     - Easiest syntax; growing set of community examples
+     - Uses indentation to group code
    * - **LabVIEW**
      - Graphical (dataflow)
      - ✓
      - ✓
      - Teams with a LabVIEW background
-     - Graphical dataflow programming
+     - Graphical programming
 
 LabVIEW is available through OnBot and desktop development. C++ is available
 through desktop development only. Step 2 describes the environment you choose;
@@ -144,7 +141,7 @@ the desktop LabVIEW installation walkthrough is still being completed.
    .. grid-item-card:: What Gets Installed
       :class-card: sw-card-shared
 
-      **Software: Only If You Need It**
+      **Software: (If Needed) **
       ^^^
       OnBot teams don't need to download anything to write code. You only
       need desktop software if you're not using OnBot, or if you're an
@@ -165,18 +162,18 @@ the desktop LabVIEW installation walkthrough is still being completed.
 
       **No Full Robot Yet?**
       ^^^
-      The XRP is a desktop robot that runs real WPILib code.
-      Great for learning before build season, and for FTC teams
-      getting a head start on Systemcore programming.
+      Practice reading sensors, controlling motors, and writing drive
+      code on an XRP desktop robot before your competition robot is ready.
 
 .. rubric:: The Steps
    :class: wl-shared-text
 
-For the complete **FRC VS Code path**, follow Steps 1 through 4 in order;
-you will have a driving robot by the end of Step 4. The separate
-Troubleshooting page is available whenever you get stuck. Systemcore
-OnBot, Blockly, and FTC-specific paths are still being completed and are
-clearly marked where they diverge.
+Follow Steps 1 through 4 in order for the **FRC VS Code walkthrough**.
+Step 4 links to the drivetrain example and the first driving test. Use
+Troubleshooting when a connection, deployment, or motor test fails.
+
+Some OnBot, Blocks, and FTC walkthroughs are still being completed.
+Those sections identify what is available and what is still coming.
 
 .. note::
 
@@ -206,8 +203,8 @@ clearly marked where they diverge.
 
       **02**
       ^^^
-      Choose your programming environment and install the driver software
-      for your robot.
+      Set up the editor and language you chose above, and install the
+      Driver Station for your robot.
 
    .. grid-item-card:: Configure Your Control System
       :link: step-3/index
@@ -250,8 +247,8 @@ clearly marked where they diverge.
          **Get driving first**
 
          Wire one drive motor per side, deploy arcade drive, and make sure
-         the robot moves before adding anything else. Every mechanism you add
-         before the robot drives is a variable you can't isolate.
+         the robot responds before adding more mechanisms. This lets you test
+         the controller, motor directions, and drive code separately.
 
    .. grid-item::
 
@@ -260,8 +257,8 @@ clearly marked where they diverge.
          **Check the Driver Station log**
 
          When something goes wrong on the robot, open the Driver Station log
-         viewer. It records exactly when the robot disconnected, what threw
-         an exception, and why the robot disabled.
+         viewer. Check connection events and reported errors to narrow down
+         the problem.
 
 .. toctree::
    :maxdepth: 1

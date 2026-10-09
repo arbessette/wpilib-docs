@@ -284,7 +284,35 @@ user_options = [
 ]
 
 
+def skip_case_only_redirects(app):
+    """Avoid writing redirects over their targets on case-insensitive disks."""
+    if app.builder.format != "html":
+        return
+
+    from sphinxext.rediraffe import create_graph
+
+    redirects = app.config.rediraffe_redirects
+    if isinstance(redirects, str):
+        redirects = create_graph(Path(app.srcdir) / redirects)
+
+    filtered = {}
+    for old, new in redirects.items():
+        old_path = Path(app.srcdir) / old
+        new_path = Path(app.srcdir) / new
+        if (
+            old != new
+            and old.casefold() == new.casefold()
+            and old_path.exists()
+            and new_path.exists()
+            and old_path.samefile(new_path)
+        ):
+            continue
+        filtered[old] = new
+    app.config.rediraffe_redirects = filtered
+
+
 def setup(app):
+    app.connect("builder-inited", skip_case_only_redirects)
     app.add_css_file("css/wpilib-rtd.css")
     app.add_css_file("css/sw-components.css")
 

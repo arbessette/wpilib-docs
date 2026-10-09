@@ -40,25 +40,19 @@ WPILib Documentation
        <div id="new-s1">
          <div class="wl-welcome">
            <h2 class="wl-welcome-h">New to WPILib? You're in the right place.</h2>
-           <p class="wl-welcome-p">You don't need prior programming or robot experience. Follow the guide in order and check your work at the end of each step.</p>
+           <p class="wl-welcome-p">Start with Zero to Robot to connect Systemcore, install WPILib, and write your first robot program. No programming experience is required.</p>
          </div>
          <h3 class="wl-sh">Set Up and Program Your Robot</h3>
-         <div class="wl-legend">
-           <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-frc"></span>FRC</span>
-           <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-ftc"></span>FTC</span>
-           <span class="wl-legend-item"><span class="wl-legend-dot wl-legend-dot-shared"></span>Shared</span>
-           <span class="wl-legend-note">The guide supports both programs.</span>
-         </div>
          <a class="wl-card wl-card-shared wl-btn wl-feature-card" href="docs/zero-to-robot/introduction.html">
            <span class="wl-num wl-shared-text">→</span>
            <div>
              <div class="wl-card-title">Zero to Robot</div>
-             <div class="wl-card-desc">Connect Systemcore, set up your tools, configure the control system, then write code and drive. Assembly and wiring resources are linked along the way.</div>
+             <div class="wl-card-desc">Choose a programming language and editor, connect and configure Systemcore, then deploy code and drive. Assembly and wiring guides are linked in Step 1.</div>
            </div>
          </a>
          <div class="wl-tip wl-tip-shared">
            <strong>Already comfortable programming?</strong>
-           Read <a href="docs/zero-to-robot/new-to-wpilib.html">New to WPILib</a> for a quick map of robot code, hardware, and tools, then join the guided path wherever you need it.
+           Read <a href="docs/zero-to-robot/new-to-wpilib.html">New to WPILib</a> for an introduction to the robot program structure, hardware classes, and development tools. Then continue with the setup step you need.
          </div>
        </div>
 
@@ -68,8 +62,8 @@ WPILib Documentation
      <div class="wl-panel" id="panel-returning" aria-labelledby="btn-returning">
 
        <div class="wl-welcome">
-         <h2 class="wl-welcome-h">Welcome back. Get your team ready for 2027.</h2>
-         <p class="wl-welcome-p">Start with the season checklist, update your project and vendor libraries, then review any tool migrations that apply to your team.</p>
+         <h2 class="wl-welcome-h">Welcome back! Get ready for 2027.</h2>
+         <p class="wl-welcome-p">Use the checklist below to install WPILib, import your project, and update vendor libraries. Check the replacement tools before you deploy.</p>
        </div>
 
        <div class="wl-grid">
@@ -77,14 +71,14 @@ WPILib Documentation
            <span class="wl-num wl-shared-text">0</span>
            <div>
              <div class="wl-card-title">Review the 2027 checklist</div>
-             <div class="wl-card-desc">See the FRC update sequence and the FTC Systemcore release status in one place.</div>
+             <div class="wl-card-desc">Check the FRC update steps and what's available for FTC teams using Systemcore.</div>
            </div>
          </a>
          <a class="wl-card wl-card-shared wl-btn" href="docs/zero-to-robot/step-2/index.html">
            <span class="wl-num wl-shared-text">1</span>
            <div>
              <div class="wl-card-title">Install the 2027 tools</div>
-             <div class="wl-card-desc">Go directly to the WPILib, programming-environment, and Driver Station setup paths.</div>
+             <div class="wl-card-desc">Install WPILib and the Driver Station, or set up your OnBot editor.</div>
            </div>
          </a>
        </div>
@@ -101,7 +95,7 @@ WPILib Documentation
                <li>Download and run the <strong><a href="docs/zero-to-robot/step-2/wpilib-setup.html">2027 WPILib installer</a></strong></li>
                <li><strong><a href="docs/software/systemcore-info/index.html">Update your Systemcore</a></strong> if needed</li>
                <li>Use <strong><a href="docs/software/vscode-overview/importing-last-years-robot-code.html">Import Project</a></strong> in VS Code to migrate your 2026 code</li>
-               <li><strong><a href="docs/software/vscode-overview/3rd-party-libraries.html">Re-add all vendor libraries</a></strong> : they do not carry over on import</li>
+               <li><strong><a href="docs/software/vscode-overview/3rd-party-libraries.html">Re-add all vendor libraries</a></strong>: they don't carry over when you import your project</li>
                <li>Check for <strong><a href="docs/software/vscode-overview/3rd-party-libraries.html">vendor library updates</a></strong> in the Dependency Manager</li>
                <li>Test with the <strong><a href="docs/software/wpilib-tools/robot-simulation/simulation-gui.html">simulator</a></strong> before deploying to hardware</li>
              </ul>
@@ -112,10 +106,10 @@ WPILib Documentation
              <h3 class="wl-ret-h">Tools to Replace for 2027</h3>
              <p class="wl-ret-copy">These tools are <strong>not available in the 2027 release</strong>. Choose a replacement before your first robot test.</p>
              <ul>
-               <li><strong>Shuffleboard</strong> : migrate to <a href="https://github.com/Gold872/elastic-dashboard">Elastic</a> or AdvantageScope</li>
-               <li><strong>SmartDashboard</strong> : migrate to Glass or Elastic (uses deprecated NT v3)</li>
-               <li><strong>PathWeaver</strong> : migrate to <a href="https://github.com/mjansen4857/pathplanner">PathPlanner</a> or <a href="https://sleipnirgroup.github.io/Choreo/">Choreo</a></li>
-               <li><strong>RobotBuilder</strong> : will be removed with control system change in 2027</li>
+               <li><strong>Shuffleboard</strong>: switch to <a href="https://github.com/Gold872/elastic-dashboard">Elastic</a> or AdvantageScope</li>
+               <li><strong>SmartDashboard</strong>: switch to Glass or Elastic (uses deprecated NT v3)</li>
+               <li><strong>PathWeaver</strong>: switch to <a href="https://github.com/mjansen4857/pathplanner">PathPlanner</a> or <a href="https://sleipnirgroup.github.io/Choreo/">Choreo</a></li>
+               <li><strong>RobotBuilder</strong>: being removed with the control system change in 2027</li>
              </ul>
            </div>
 
@@ -144,19 +138,19 @@ WPILib Documentation
              <p class="wl-ret-copy">Follow <a href="https://ftc-docs.firstinspires.org/en/latest/">FTC Docs</a> for setup, wiring, and programming.</p>
              <strong class="wl-ret-subhead wl-ret-subhead-spaced">Using Systemcore with WPILib?</strong>
              <ul class="wl-ret-compact-list">
-               <li>Systemcore and Motioncore bring full WPILib support to FTC</li>
-               <li>WPILib programming concepts and tools transfer between FRC and FTC</li>
-               <li>Try the <a href="docs/xrp-robot/index.html">XRP Platform</a> to start learning WPILib today</li>
+               <li>Systemcore runs your WPILib code; Motioncore connects motors and servos</li>
+               <li>See the FTC overview for release status and setup information</li>
+               <li>Practice writing and running code on an <a href="docs/xrp-robot/index.html">XRP robot</a></li>
                <li><a href="docs/ftc/index.html">WPILib FTC overview</a></li>
              </ul>
            </div>
 
            <div class="wl-ret-card wl-ret-shared">
              <div class="wl-ret-label wl-shared-label">FRC + FTC</div>
-             <h3 class="wl-ret-h">Skills Carry Across FRC + FTC</h3>
+             <h3 class="wl-ret-h">Practice with WPILib</h3>
              <ul>
-               <li>Both programs use the same WPILib concepts and core libraries</li>
-               <li>Java, Blocks, C++, Python, and LabVIEW paths are documented where supported</li>
+               <li>Use WPILib to read sensors, control motors, and write autonomous routines</li>
+               <li>Choose your language and editor in Zero to Robot</li>
                <li>Use the XRP to practice without waiting for a competition robot</li>
              </ul>
              <a href="https://wpilib.org/blog" class="wl-shared-text wl-ret-link">Follow the WPILib blog for release updates</a>
@@ -205,9 +199,8 @@ WPILib Documentation
       :link-type: doc
       :class-card: sw-card-shared
 
-      Start here for Systemcore setup, robot programming, libraries,
-      simulation, and debugging, with links to hardware, vendor, and
-      program resources when you need them.
+      Set up Systemcore, write robot code, and learn how to test and debug it.
+      You'll also find links to hardware guides and vendor documentation.
 
    .. grid-item-card:: FRC Docs: Team, Hardware, and Vendor Resources
       :link: /docs/hardware/hardware-basics/hardware-overview
@@ -216,43 +209,43 @@ WPILib Documentation
 
       **Separate site coming soon**
       ^^^
-      General FRC guidance, hardware references, vendor links, and team
-      resources. For now, use the FRC guides hosted here.
+      Find FRC hardware guides, vendor links, and team resources. These will
+      move to a separate site; for now, they're here in the WPILib docs.
 
       +++
       Browse current FRC resources →
 
-   .. grid-item-card:: FTC Docs: FTC-Specific Guidance
+   .. grid-item-card:: FTC Docs: Hardware and Setup
       :link: https://ftc-docs.firstinspires.org/en/latest/
       :link-type: url
       :class-card: sw-card-ftc
 
-      Find FTC assembly, wiring, and program resources. Choose instructions
-      for your control system. Use WPILib docs for Systemcore programming.
+      Find FTC assembly and wiring guides, plus setup and programming help
+      for the REV control system. For Systemcore programming, use WPILib docs.
 
 .. raw:: html
 
    <hr class="wl-core-intro"/>
    <h2 class="wl-sh wl-core-heading" id="core-documentation">Core Documentation</h2>
-   <p class="wl-core-copy">Systemcore setup and robot programming, with supporting hardware and vendor references.</p>
+   <p class="wl-core-copy">Looking for a specific topic? Start with the links below.</p>
 
    <h3 class="wl-sh">Foundations</h3>
    <div class="wl-core-grid">
-     <a class="wl-core-card" href="docs/hardware/hardware-basics/hardware-overview.html"><div class="wl-core-title">Hardware Overview</div><div class="wl-core-desc">Systemcore, supported hardware interfaces, and connections between robot code and devices.</div></a>
-     <a class="wl-core-card" href="docs/software/what-is-wpilib.html"><div class="wl-core-title">Software Overview</div><div class="wl-core-desc">WPILib tools, VS Code extensions, vendor libraries, and the full software ecosystem.</div></a>
-     <a class="wl-core-card" href="docs/software/commandbased/index.html"><div class="wl-core-title">Robot Programming</div><div class="wl-core-desc">Command-based framework, subsystems, triggers, and drive code patterns.</div></a>
+     <a class="wl-core-card" href="docs/hardware/hardware-basics/hardware-overview.html"><div class="wl-core-title">Hardware Overview</div><div class="wl-core-desc">Compare controllers, power distribution, radios, and sensors.</div></a>
+     <a class="wl-core-card" href="docs/software/what-is-wpilib.html"><div class="wl-core-title">Software Overview</div><div class="wl-core-desc">Choose a programming language and development environment.</div></a>
+     <a class="wl-core-card" href="docs/software/commandbased/index.html"><div class="wl-core-title">Robot Programming</div><div class="wl-core-desc">Write robot code with commands, subsystems, and triggers.</div></a>
    </div>
 
    <h3 class="wl-sh">Everyday Tools</h3>
    <div class="wl-core-grid">
-     <a class="wl-core-card" href="docs/software/dashboards/index.html"><div class="wl-core-title">Dashboards</div><div class="wl-core-desc">Elastic, AdvantageScope, Glass, and NetworkTables for real-time telemetry.</div></a>
-     <a class="wl-core-card" href="docs/software/wpilib-tools/robot-simulation/index.html"><div class="wl-core-title">Simulation</div><div class="wl-core-desc">Test robot code on your laptop : no hardware required.</div></a>
+     <a class="wl-core-card" href="docs/software/dashboards/index.html"><div class="wl-core-title">Dashboards</div><div class="wl-core-desc">Display sensor readings and robot status in Elastic, AdvantageScope, or Glass using NetworkTables.</div></a>
+     <a class="wl-core-card" href="docs/software/wpilib-tools/robot-simulation/index.html"><div class="wl-core-title">Simulation</div><div class="wl-core-desc">Test your code on your computer without a robot.</div></a>
      <a class="wl-core-card" href="docs/api-reference.html"><div class="wl-core-title">API Reference</div><div class="wl-core-desc">Java, C++, and Python class and method documentation.</div></a>
    </div>
 
    <h3 class="wl-sh">Advanced &amp; Autonomy</h3>
    <div class="wl-core-grid">
-     <a class="wl-core-card" href="docs/software/pathplanning/index.html"><div class="wl-core-title">Path Planning</div><div class="wl-core-desc">Autonomous trajectories with PathPlanner, Choreo, and WPILib built-in tools.</div></a>
+     <a class="wl-core-card" href="docs/software/pathplanning/index.html"><div class="wl-core-title">Path Planning</div><div class="wl-core-desc">Plan autonomous paths with PathPlanner, Choreo, and WPILib tools.</div></a>
      <a class="wl-core-card" href="docs/software/advanced-controls/index.html"><div class="wl-core-title">Advanced Controls</div><div class="wl-core-desc">PID, feedforward, state-space, kinematics, and system identification.</div></a>
    </div>
 
@@ -313,7 +306,6 @@ WPILib Documentation
    docs/software/dashboards/index
    docs/software/telemetry/index
    docs/software/wpilib-tools/outlineviewer/index
-   docs/software/wpilib-tools/wpical/index
    docs/networking/networking-introduction/index
    docs/networking/networking-utilities/index
 

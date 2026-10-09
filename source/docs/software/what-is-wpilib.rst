@@ -28,30 +28,13 @@ FIRST\ |reg|, and volunteer developers from the community.
 .. grid:: 1 2 2 4
    :gutter: 3
 
-   .. grid-item-card:: FIRST Robotics Competition
-      :class-card: sw-card-frc
-
-      **FRC**
-      ^^^
-      Full WPILib support. Java, C++, Python. Deploys to Systemcore.
-      Driver Station on Windows required for competition.
-
-   .. grid-item-card:: XRP Practice Robot
-      :class-card: sw-card-shared
-
-      **FRC + FTC**
-      ^^^
-      Same WPILib code on a $75 desktop robot. No control system
-      hardware required. Great for off-season learning and
-      FTC Systemcore prep.
-
    .. grid-item-card:: FTC Systemcore
       :class-card: sw-card-ftc
 
       **FTC with Systemcore**
       ^^^
-      WPILib now supports FTC via Systemcore and Motioncore.
-      Same Java/C++/Python toolchain as FRC.
+      Use WPILib with Systemcore and Motioncore. Write your code in
+      Java, Blocks, C++, or Python.
 
    .. grid-item-card:: FTC REV Control Hub / Expansion Hub
       :link: https://ftc-docs.firstinspires.org/en/latest/
@@ -60,8 +43,26 @@ FIRST\ |reg|, and volunteer developers from the community.
 
       **FTC SDK**
       ^^^
-      An alternative FTC control system using the FTC SDK.
-      Follow FTC Docs for setup, wiring, and programming instructions.
+      Program a REV Control Hub or Expansion Hub with the FTC SDK.
+      FTC Docs covers the hardware, wiring, setup, and programming.
+
+   .. grid-item-card:: FIRST Robotics Competition
+      :class-card: sw-card-frc
+
+      **FRC**
+      ^^^
+      Write your robot code in Java, Blocks, C++, or Python and run it on
+      Systemcore. You'll need a Windows computer for the Driver Station
+      at competition.
+
+   .. grid-item-card:: XRP Practice Robot
+      :class-card: sw-card-shared
+
+      **FRC + FTC**
+      ^^^
+      Practice reading sensors, controlling motors, and writing drive code
+      on an XRP desktop robot. You don't need a competition robot to
+      get started.
 
 .. rubric:: What WPILib Includes
 
@@ -109,33 +110,35 @@ FIRST\ |reg|, and volunteer developers from the community.
    :widths: 20 30 20 30
 
    * - Language
-     - Recommended for
-     - Performance
-     - Community examples
-   * - **Java** *(Recommended)*
-     - New teams, most teams
-     - Good
-     - Most abundant
+     - Useful for
+     - Programming style
+     - Notes
+   * - **Java**
+     - Teams choosing a text-based language
+     - Statically typed
+     - Uses classes and explicit type declarations
+   * - **Blocks (Blockly)**
+     - Teams that prefer visual programming
+     - Graphical blocks
+     - Generates Python code
    * - **C++**
      - Teams with C++ experience
-     - Best
-     - Abundant
+     - Available in the desktop environment only
    * - **Python**
-     - Teams already using Python
-     - Good
-     - Growing
+     - Teams that know Python or want to learn it
+     - Uses indentation to group code
 
 .. tip::
 
-   **All three languages share the same API design.**
+   **Java, C++, and Python use similar APIs.**
    Class names and method names are kept identical or very close across
    Java, C++, and Python.
 
 .. rubric:: Development Environments
 
-WPILib supports two families of development environment: a full
-**desktop IDE** and browser-based **OnBot** environments that run
-directly on the Systemcore with no local install.
+Write code on your computer with a **desktop editor**, or use an
+**OnBot editor** in your browser. OnBot runs on Systemcore and does not
+require a local editor installation.
 
 **Desktop Environment: Java, C++, Python**
 

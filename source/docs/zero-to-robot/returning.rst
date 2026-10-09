@@ -1,8 +1,8 @@
 Returning This Season
 ======================
 
-Welcome back. Every team has to update before the first practice; what
-that actually involves depends on which program you're in.
+Welcome back! Check the season changes,  then
+follow the update steps for your control system if needed.
 
 .. rubric:: Before Your First Practice
    :class: wl-shared-text
@@ -12,13 +12,14 @@ that actually involves depends on which program you're in.
 
    .. grid-item-card:: Read the Changelog
 
-      Review what changed for this season before you update anything.
+      Check changes to WPILib, the control system, and supported tools.
       :doc:`Full 2027 changelog </docs/yearly-overview/yearly-changelog>`
 
    .. grid-item-card:: Check Known Issues
 
-      See if a problem you're hitting is already tracked before filing a
-      new one. :doc:`Known issues </docs/yearly-overview/known-issues>`
+      Having trouble after an update? Check for a known issue and any
+      available workaround before sumbitting an issue 
+      :doc:`Known issues </docs/yearly-overview/known-issues>`
 
 .. rubric:: FRC: What to Update
    :class: wl-frc-text
@@ -29,8 +30,9 @@ that actually involves depends on which program you're in.
    .. grid-item-card:: Pre-Season Checklist
       :class-card: sw-card-frc
 
-      Install the current WPILib and Driver Station, reimage Systemcore,
-      re-add vendor libraries, and import last year's project.
+      Install WPILib (If using Desktop versions) and the Driver Station, reimage Systemcore, import
+      last year's project, and re-add your vendor libraries. Follow the
+      checklist for the full update steps.
       ^^^
       :doc:`Full returning-team checklist </docs/yearly-overview/returning-quickstart>` ·
       :doc:`Removed in 2027 </docs/yearly-overview/removed-features>`
@@ -44,13 +46,13 @@ that actually involves depends on which program you're in.
    .. grid-item-card:: Start the WPILib Transition
       :class-card: sw-card-ftc
 
-      Systemcore and Motioncore are the first WPILib-based FTC control
-      system, so there is no previous WPILib robot project to import. Plan to
-      map your existing robot design and programming experience to the new
-      hardware and WPILib APIs.
+      Moving from the FTC SDK to Systemcore and Motioncore? You'll need
+      to create a WPILib project and configure the motors and sensors for
+      the new control system. Your FTC SDK project cannot be imported as
+      a WPILib project.
       ^^^
-      If you're picking up WPILib for the first time, start with
-      :doc:`New to WPILib <new-to-wpilib>` instead.
+      Start with :doc:`New to WPILib <new-to-wpilib>` for robot program
+      structure, subsystems, commands, and hardware classes.
 
 .. container:: sw-nav
 

@@ -16,8 +16,9 @@
 
          Step 4 of 4
 
-**By the end of this step:** you will create or open a drivetrain project in
-your selected environment, put code on the robot, enable it safely, and drive.
+Create or open a drivetrain project, deploy it to Systemcore, and test it
+with the drive wheels off the floor. Use the editor and language you set up
+in Step 2.
 
 .. note::
 
@@ -42,9 +43,9 @@ your selected environment, put code on the robot, enable it safely, and drive.
 
 .. rubric:: Continue with Your Programming Choice
 
-Use the same environment and language you selected on the Zero to Robot page
-and set up in Step 2. Both environments are supported for FRC and FTC with
-Systemcore.
+Choose your environment below. The VS Code card opens the full drivetrain
+walkthrough; the Blocks card opens the project-creation guide. OnBot and
+LabVIEW walkthroughs are still being completed.
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -81,14 +82,21 @@ Systemcore.
 
 .. rubric:: Desktop / VS Code Path
 
-The five parts below apply to desktop Java, C++, and Python projects. Desktop
-Blocks teams should start from a drivetrain sample, then rejoin at Part 4 to
-deploy. OnBot teams should use their editor's save and deploy workflow, then
-rejoin at Part 5 for the shared safety and driving checks.
+For **Java, C++, or Python in VS Code**, follow Parts 1 through 5 below.
+
+For **Blocks**, create your project from a drivetrain sample, then
+continue with :ref:`deployment <first-drive-deploy>` in Part 4.
+
+For **OnBot**, save and deploy in your browser editor, then continue with
+:ref:`the driving checks <first-drive-enable>` in Part 5.
+
+For **desktop LabVIEW**, save and deploy your code from LabVIEW, then continue
+with :ref:`the driving checks <first-drive-enable>` in Part 5.
 
 .. rubric:: Desktop Part 1: Create Your Robot Project
 
-Open the WPILib VS Code and create a new project from the template.
+Open WPILib VS Code. Use the linked walkthrough for the complete project;
+the checklist below summarizes the setup steps.
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -115,9 +123,13 @@ Open the WPILib VS Code and create a new project from the template.
 
 .. rubric:: Desktop Part 2: Install Vendor Libraries
 
-Vendor libraries add support for motor controllers and sensors.
-They are per-project and must be added each time you create or import a
-project.
+Vendor libraries provide code for motor controllers and sensors, as well as
+software features such as autonomous path following and vision processing.
+
+Add the libraries your project uses each time you create or import it.
+See :doc:`Managing Vendor Dependencies
+</docs/software/vscode-overview/3rd-party-libraries>` for installation and
+update instructions.
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -126,7 +138,7 @@ project.
 
       - **REVLib**: SPARK MAX, SPARK Flex, and the 2027 A301 on Motioncore
       - **Phoenix 6**: Talon FX, CANcoder, Pigeon 2
-      - **PathplannerLib**: autonomous trajectories
+      - **Choreo**: autonomous trajectories
       - **PhotonLib**: PhotonVision camera support
 
    .. grid-item-card:: How to Add a Library
@@ -147,7 +159,7 @@ project.
 
 .. rubric:: Desktop Part 3: Basic Arcade Drive
 
-A minimal drivetrain has three long-lived objects: the two motor controllers
+A minimal drivetrain has three objects: the two motor controllers
 and the ``DifferentialDrive``. Create them once as fields of the robot class
 (or in its constructor), not inside ``teleopPeriodic()``. The periodic method
 should only read the controller and command the existing drive object.
@@ -214,6 +226,8 @@ should only read the controller and command the existing drive object.
    complete example in the full drivetrain walkthrough rather than pasting an
    isolated snippet into an empty file.
 
+.. _first-drive-deploy:
+
 .. rubric:: Desktop Part 4: Deploy to the Robot
 
 .. grid:: 1 1 2 2
@@ -238,8 +252,10 @@ should only read the controller and command the existing drive object.
    :link-type: doc
    :class-card: sw-card-frc
 
-   Connect Driver Station, plug in joystick, verify robot code
-   is running, and enable teleop for the first time.
+   Connect the Driver Station and controller, check that robot code
+   is running, and test teleop with the drive wheels off the floor.
+
+.. _first-drive-enable:
 
 .. rubric:: Shared Part 5: Enable and Drive
 
@@ -287,11 +303,11 @@ should only read the controller and command the existing drive object.
 
    .. container:: sw-success-h
 
-      ✓ You have a driving robot.
+      ✓ First drive test complete.
 
-   Explore the
+   Use the
    :doc:`Command-Based framework <../../software/commandbased/index>`
-   for structured programs,
+   to organize code for more mechanisms,
    :doc:`path planning <../../software/pathplanning/index>`
    for autonomous, and
    :doc:`simulation <../../software/wpilib-tools/robot-simulation/index>`
