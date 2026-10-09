@@ -95,7 +95,7 @@ WPILib Documentation
                <li>Download and run the <strong><a href="docs/zero-to-robot/step-2/wpilib-setup.html">2027 WPILib installer</a></strong></li>
                <li><strong><a href="docs/software/systemcore-info/index.html">Update your Systemcore</a></strong> if needed</li>
                <li>Use <strong><a href="docs/software/vscode-overview/importing-last-years-robot-code.html">Import Project</a></strong> in VS Code to migrate your 2026 code</li>
-               <li><strong><a href="docs/software/vscode-overview/3rd-party-libraries.html">Re-add all vendor libraries</a></strong>: they don't carry over when you import your project</li>
+               <li><strong><a href="docs/software/vscode-overview/3rd-party-libraries.html">Re-add all vendor libraries</a></strong>: they do not carry over when you import your project</li>
                <li>Check for <strong><a href="docs/software/vscode-overview/3rd-party-libraries.html">vendor library updates</a></strong> in the Dependency Manager</li>
                <li>Test with the <strong><a href="docs/software/wpilib-tools/robot-simulation/simulation-gui.html">simulator</a></strong> before deploying to hardware</li>
              </ul>
@@ -106,9 +106,9 @@ WPILib Documentation
              <h3 class="wl-ret-h">Tools to Replace for 2027</h3>
              <p class="wl-ret-copy">These tools are <strong>not available in the 2027 release</strong>. Choose a replacement before your first robot test.</p>
              <ul>
-               <li><strong>Shuffleboard</strong>: switch to <a href="https://github.com/Gold872/elastic-dashboard">Elastic</a> or AdvantageScope</li>
-               <li><strong>SmartDashboard</strong>: switch to Glass or Elastic (uses deprecated NT v3)</li>
-               <li><strong>PathWeaver</strong>: switch to <a href="https://github.com/mjansen4857/pathplanner">PathPlanner</a> or <a href="https://sleipnirgroup.github.io/Choreo/">Choreo</a></li>
+               <li><strong>Shuffleboard</strong>: update to <a href="https://github.com/Gold872/elastic-dashboard">Elastic</a> or AdvantageScope</li>
+               <li><strong>SmartDashboard</strong>: update to Glass or Elastic </li>
+               <li><strong>PathWeaver</strong>: update to <a href="https://github.com/mjansen4857/pathplanner">PathPlanner</a> or <a href="https://sleipnirgroup.github.io/Choreo/">Choreo</a></li>
                <li><strong>RobotBuilder</strong>: being removed with the control system change in 2027</li>
              </ul>
            </div>
@@ -138,7 +138,7 @@ WPILib Documentation
              <p class="wl-ret-copy">Follow <a href="https://ftc-docs.firstinspires.org/en/latest/">FTC Docs</a> for setup, wiring, and programming.</p>
              <strong class="wl-ret-subhead wl-ret-subhead-spaced">Using Systemcore with WPILib?</strong>
              <ul class="wl-ret-compact-list">
-               <li>Systemcore runs your WPILib code; Motioncore connects motors and servos</li>
+               <li>Systemcore works with WPILib code; Motioncore connects motors</li>
                <li>See the FTC overview for release status and setup information</li>
                <li>Practice writing and running code on an <a href="docs/xrp-robot/index.html">XRP robot</a></li>
                <li><a href="docs/ftc/index.html">WPILib FTC overview</a></li>
@@ -210,12 +210,12 @@ WPILib Documentation
       **Separate site coming soon**
       ^^^
       Find FRC hardware guides, vendor links, and team resources. These will
-      move to a separate site; for now, they're here in the WPILib docs.
+      move to a separate site; until then they are here in WPILib docs.
 
       +++
       Browse current FRC resources →
 
-   .. grid-item-card:: FTC Docs: Hardware and Setup
+   .. grid-item-card:: FTC Docs: Hardware and Setup and more
       :link: https://ftc-docs.firstinspires.org/en/latest/
       :link-type: url
       :class-card: sw-card-ftc
@@ -306,6 +306,7 @@ WPILib Documentation
    docs/software/dashboards/index
    docs/software/telemetry/index
    docs/software/wpilib-tools/outlineviewer/index
+   docs/software/wpilib-tools/wpical/index
    docs/networking/networking-introduction/index
    docs/networking/networking-utilities/index
 
